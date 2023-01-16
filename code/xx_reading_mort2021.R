@@ -32,6 +32,8 @@ db_2021 <-
                     con20 = c(300,304)), 
            col_types = "cdcccccccccccccccccccccccc")
 
+write_rds(db_2021, "data_inter/mort2021_cont_causes.rds")
+
 std_2021 <- 
   db_2021 %>% 
   mutate(age = case_when(age2 == 9999 | age2 == 1999 ~ -1,
