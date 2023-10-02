@@ -4,18 +4,17 @@ source("Code/00_functions.R")
 db <- read_rds("data_inter/usa_mort_chapters_1999_2021.rds")
 pp <- read_rds("data_inter/pop_race_sex_age_2010_2021.rds")
 
-
 unique(db$cause)
 
-# marging deaths and population
+# merging deaths and population
 # grouping by 5-y age groups
 db2 <- 
   db %>% 
-  filter(year >= 2010) %>% 
+  filter(year >= 2015) %>% 
   left_join(pp) %>% 
-  filter(age <= 29) %>% 
+  filter(age < 25) %>% 
   mutate(age = case_when(age %in% 1:4 ~ 1,
-                         age %in% 5:29 ~ age - age%%5,
+                         age %in% 5:24 ~ age - age%%5,
                          TRUE ~ age)) %>% 
   group_by(year, race, sex, age, cause) %>% 
   summarise(dts = sum(d),
@@ -26,7 +25,7 @@ db2 <-
 
 db3 <- 
   db2 %>% 
-  filter(year %in% 2014:2021,
+  filter(year %in% 2015:2021,
          sex == "t",
          race == "t",
          cause != "total") %>% 
@@ -49,7 +48,7 @@ unique(cod_sel$cause)
 
 db4 <- 
   db2 %>% 
-  filter(year >= 2014) %>% 
+  filter(year >= 2015) %>% 
   inner_join(cod_sel) %>% 
   bind_rows(db2 %>% 
               filter(cause == "total"))
@@ -57,8 +56,10 @@ db4 <-
 # residual category
 resid <- 
   db2 %>% 
-  filter(year >= 2014) %>% 
+  filter(year >= 2015,
+         cause != "total") %>% 
   anti_join(cod_sel) %>% 
+  # filter(cause != "total") %>%
   group_by(year, race, sex, age) %>% 
   summarise(dts = sum(dts),
             exposure = mean(exposure)) %>% 

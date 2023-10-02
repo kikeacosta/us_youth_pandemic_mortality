@@ -13,6 +13,7 @@ unique(db$cause)
 # grouping by 5-y age groups
 db2 <- 
   db %>% 
+  filter(year >= 2015) %>%
   mutate(dts = ifelse(dts == 0, 1, dts))
 
 
@@ -28,7 +29,6 @@ db2 <-
 
 dts_all_fit <- 
   db2 %>% 
-  # filter(year >= 2015) %>% 
   group_by(race, sex, age, cause) %>% 
   do(est_baseline_pi(chunk = .data)) %>% 
   ungroup()

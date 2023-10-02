@@ -4,6 +4,117 @@ source("Code/00_functions.R")
 bsn <- 
   read_rds("data_inter/p_scores_excess_deaths.rds")
 
+unique(bsn$cause)
+unique(bsn$year)
+unique(bsn$age)
+
+# comparing all-cause and cause-specific excess
+excs <- 
+  bsn %>% 
+  filter(year %in% 2020:2021) %>% 
+  mutate(exc = dts - bsn)
+  
+bycause <- 
+  bsn %>% 
+  filter(cause != "total",
+         year %in% 2020:2021) %>% 
+  mutate(exc = dts - bsn) %>% 
+  group_by(year, race, sex, age) %>% 
+  summarise(exc = sum(exc)) %>% 
+  ungroup() %>% 
+  mutate(source = "by cause")
+
+allcause <- 
+  bsn %>% 
+  filter(cause == "total",
+         year %in% 2020:2021) %>% 
+  mutate(exc = dts - bsn,
+         source = "all cause") %>% 
+  select(year, race, sex, age, source, exc)
+  
+comp <- 
+  bind_rows(allcause, bycause)
+
+comp %>% 
+  filter(sex == "t",
+         race == "t") %>% 
+  ggplot(aes(fill=source, y=exc, x=age)) + 
+  geom_bar(position="dodge", stat="identity")
+
+comp2 <- 
+  comp %>% 
+  filter(race == "t", sex == "t") %>% 
+  spread(source, exc) %>% 
+  mutate(bc_diff_rel = `by cause`/`all cause` - 1,
+         bc_diff_abs = `by cause`-`all cause`)
+
+test <- 
+  comp2 %>% 
+  filter(race == "t", sex == "t") %>% 
+  group_by(year, race, sex, age) %>% 
+  summarise(bc_diff_rel = mean(bc_diff_rel),
+            bc_diff_abs = mean(bc_diff_abs))
+
+test %>% 
+  select(-bc_diff_abs) %>% 
+  spread(year, bc_diff_rel)
+
+test %>% 
+  select(-bc_diff_rel) %>% 
+  spread(year, bc_diff_abs)
+
+
+
+copy_this(test %>% 
+            filter(year >= 2020,
+                   race == "t",
+                   sex == "t") %>% 
+            select(-bc_diff_rel) %>% 
+            spread(year, bc_diff_abs))
+
+
+copy_this(
+  allcause %>% 
+    filter(year >= 2020,
+           race == "t",
+           sex == "t") %>% 
+    spread(year, exc))
+
+copy_this(
+  bycause %>% 
+    filter(year >= 2020,
+           race == "t",
+           sex == "t") %>% 
+    spread(year, exc))
+
+
+
+# testing comparison
+# ~~~~~~~~~~~~~~~~~~
+test <- 
+  bsn %>% 
+  filter(age == 20,
+         sex == "t",
+         race == "t", 
+         year %in% 2020:2021) %>% 
+  mutate(exc = dts - bsn)
+  
+
+tot_test <- 
+  test %>% 
+  filter(cause == "total") %>% 
+  select(year, exc)
+
+byc_test <- 
+  test %>% 
+  filter(cause != "total") %>% 
+  group_by(year) %>% 
+  mutate(exc_all = sum(exc)) %>% 
+  left_join(tot_test %>% rename(texc = exc))
+
+
+
+
 bsn %>% 
   filter(year %in% 2020:2021,
          cause != "covid19") %>% 
@@ -21,22 +132,58 @@ bsn %>%
 
 bsn %>% 
   filter(year %in% 2020:2021,
+         sex == "t",
          cause != "covid19") %>% 
+  mutate(age = factor(age, levels = rev(c(0, 1, 5, 10, 15, 20)))) %>% 
   ggplot()+
   geom_point(aes(psc, cause, col = factor(year)))+
-  facet_nested(age ~ sex + race, scales = "free_y")+
+  facet_nested(age ~ race, scales = "free_y")+
   scale_x_log10()+
   geom_vline(xintercept = 1, linetype = "dashed")+
-  theme_bw()
+  labs(col = "year")+
+  theme_bw()+
+  theme(legend.position = "bottom")
 
-ggsave("figures/pscores_age_sex2.pdf",
-       w = 20,
-       h = 10)
+ggsave("figures/pscores_age_sex2.png",
+       w = 12,
+       h = 12,
+       dpi = 600)
 
 ggsave("figures/pscores_age_sex2.png",
        w = 20,
        h = 10,
        dpi = 600)
+
+
+# p-scores by age ====
+# ~~~~~~~~~~~~~~~~~~~~
+
+# leading causes to excess
+bsn %>% 
+  filter(race == "t", sex == "t",
+         year %in% 2020:2021,
+         cause %in% c("drugs", "homicide", "transport")) %>% 
+  ggplot()+
+  geom_point(aes(psc, factor(age), col = factor(year)), alpha = 0.6)+
+  geom_linerange(aes(xmin = lp, xmax = up, y = factor(age),
+                     col = factor(year)))+
+  facet_nested( ~ cause, scales = "free_y")+
+  scale_x_log10(breaks = c(0.8, 1, 1.2, 1.5, 2, 3))+
+  coord_cartesian(xlim = c(0.8, 3))+
+  geom_vline(xintercept = 1, linetype = "dashed")+
+  theme_bw()+
+  labs(col = "year", y = "Age")
+
+ggsave("figures/pscores_leading_excess_causes.png",
+       dpi = 600,
+       w = 6,
+       h = 3)
+
+
+
+
+
+
 
 
 # drug-related mortality
@@ -90,6 +237,7 @@ dr <-
 
 dr %>% 
   filter(age < 20) %>% 
+  mutate(age = factor(age, levels = rev(c(0, 1, 5, 10, 15, 20)))) %>% 
   ggplot()+
   geom_ribbon(aes(year, ymin = bsn_lp, ymax = bsn_up), alpha = 0.2)+
   geom_point(aes(year, dts))+
@@ -182,6 +330,22 @@ ggsave("figures/baselines_drugs_age_sex.png",
        h = 5,
        dpi = 600)
 
+
+bsn %>% 
+  filter(
+    year > 2019,
+    age < 20,
+         cause %in% c("transport", "suicide", "drugs"),
+         sex == "t",
+         race == "t") %>% 
+  ggplot()+
+  geom_point(aes(psc, factor(age), col = factor(year)))+
+  geom_linerange(aes(xmin = lp, xmax = up, y = factor(age),
+                     col = factor(year)))+
+  facet_nested( ~ cause, scales = "free_y")+
+  scale_x_log10(breaks = c(0.2, 0.5, 0.75, 1, 1.2, 1.5, 5))+
+  geom_vline(xintercept = 1, linetype = "dashed")+
+  theme_bw()
 
 
 

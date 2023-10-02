@@ -15,8 +15,37 @@ d2 <-
          exc_pos_tot = sum(exc_pos)) %>% 
   ungroup() %>% 
   group_by(year, race, sex, cause, age) %>% 
-  mutate(cont = ifelse(exc > 0, exc / exc_pos_tot, 0)) %>% 
+  mutate(cont = ifelse(exc > 0, exc_pos / exc_pos_tot, 0)) %>% 
   ungroup()
+
+dneg <- 
+  bsn %>% 
+  filter(year %in% 2020:2021,
+         cause != "total") %>% 
+  mutate(exc = dts - bsn,
+         exc_neg = ifelse(exc < 0, exc, 0)) %>% 
+  group_by(year, race, sex, age) %>% 
+  mutate(exc_tot = sum(exc),
+         exc_neg_tot = sum(exc_neg)) %>% 
+  ungroup() %>% 
+  group_by(year, race, sex, cause, age) %>% 
+  mutate(cont = ifelse(exc < 0, exc_neg / exc_neg_tot, 0)) %>% 
+  ungroup()
+
+copy_this(
+  dneg %>% 
+  filter(age <= 19, sex == "t", race == "t") %>% 
+  arrange(year, age, -cont) %>% 
+  group_by(year, age) %>% 
+  mutate(rank = 1:n()) %>% 
+  filter(rank <= 3) %>% 
+  group_by(year, age) %>% 
+  summarise(cause = unique(cause) %>% paste(collapse = ", "),
+            cont = sum(cont)) %>% 
+  ungroup()
+)
+
+
 
 d2 %>% 
   filter(age <= 19) %>%
@@ -26,7 +55,36 @@ d2 %>%
            position = "fill",
            alpha = 0.8)+
   facet_nested(sex ~ race, scales = "free_y")
-  
+
+test <- 
+  d2 %>% 
+  filter(age <= 19, sex == "t", race == "t") %>% 
+  arrange(year, age, -cont) %>% 
+  group_by(year, age) %>% 
+  mutate(rank = 1:n()) %>% 
+  filter(rank <= 3)
+
+
+copy_this(
+  test %>% 
+  group_by(year, age) %>% 
+  summarise(cause = unique(cause) %>% paste(collapse = ", "),
+            cont = sum(cont)) %>% 
+  ungroup()
+)
+
+
+d2 %>% 
+  filter(age <= 19, sex == "t", race == "t") %>%
+  ggplot(aes(x = factor(age), y = cont))+
+  geom_bar(aes(fill = cause),
+           stat = "identity", 
+           position = "fill",
+           alpha = 0.8)+
+  facet_nested(sex ~ race, scales = "free_y")
+
+
+
 dr <- 
   d2 %>% 
   filter(age <= 19,
@@ -53,7 +111,8 @@ main <-
   group_by(year, race, sex, age) %>% 
   arrange(-cont) %>% 
   mutate(ord = 1:n()) %>% 
-  ungroup() %>% 
+  ungroup()
+%>% 
   filter(ord <= 3)
 
 main %>% 
