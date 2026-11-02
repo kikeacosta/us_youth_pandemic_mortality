@@ -282,9 +282,12 @@ p_r3 <-
    race_pts(std_c19, "psc_indirect", "psc_indirect_lb", "psc_indirect_ub", 0, "Indirect: (excess - COVID-19) / expected (%)", NULL) +
    race_pts(std_c19, "c19_vs_other", "c19_vs_other_lb", "c19_vs_other_ub", 0, "Baseline-free: COVID-19 / other deaths (%)", NULL)) +
   plot_layout(guides = "collect", nrow = 1) &
+  # common y axis across the four panels (range of all values and CI bounds)
+  coord_cartesian(ylim = range(c(std_c19$psc_lb, std_c19$psc_ub, std_c19$psc_indirect_lb,
+                                 std_c19$psc_indirect_ub, std_c19$psc_direct_ub, std_c19$c19_vs_other))) &
   theme(legend.position = "bottom") &
   guides(colour = guide_legend(nrow = 2), shape = guide_legend(nrow = 2))
-p_r3 <- p_r3 + plot_annotation(caption = "Age-standardised to the 2020 US population aged 0-24. The first three panels carry the 95% CI of the baseline; the fourth needs no baseline.",
+p_r3 <- p_r3 + plot_annotation(caption = "Age-standardised to the 2020 US population aged 0-24, common y axis. The first three panels carry the 95% CI of the baseline; the fourth needs no baseline.",
                                theme = theme(plot.caption = element_text(size = 7, hjust = 0)))
 
 ggsave("figures/alternatives/figR3_direct_indirect_by_race.png", p_r3, width = 12, height = 4.2, dpi = 300)
