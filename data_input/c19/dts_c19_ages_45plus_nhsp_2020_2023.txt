@@ -1,0 +1,87 @@
+"Notes"	"Year"	"Year Code"	"Single Race 6"	"Single Race 6 Code"	Deaths	Population	Crude Rate
+	"2020"	"2020"	"American Indian or Alaska Native"	"1002-5"	3906	900107	433.9
+	"2020"	"2020"	"Asian"	"A"	12349	7430045	166.2
+	"2020"	"2020"	"Black or African American"	"2054-5"	54153	15217110	355.9
+	"2020"	"2020"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	551	202615	271.9
+	"2020"	"2020"	"White"	"2106-3"	207354	95870262	216.3
+	"2020"	"2020"	"More than one race"	"M"	1009	1421056	71.0
+	"2021"	"2021"	"American Indian or Alaska Native"	"1002-5"	4082	912833	447.2
+	"2021"	"2021"	"Asian"	"A"	12083	7667035	157.6
+	"2021"	"2021"	"Black or African American"	"2054-5"	50882	15413915	330.1
+	"2021"	"2021"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	897	210115	426.9
+	"2021"	"2021"	"White"	"2106-3"	261550	95559983	273.7
+	"2021"	"2021"	"More than one race"	"M"	1587	1467929	108.1
+	"2022"	"2022"	"American Indian or Alaska Native"	"1002-5"	1546	915519	168.9
+	"2022"	"2022"	"Asian"	"A"	5261	7948931	66.2
+	"2022"	"2022"	"Black or African American"	"2054-5"	20525	15493721	132.5
+	"2022"	"2022"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	255	216654	117.7
+	"2022"	"2022"	"White"	"2106-3"	132491	95597511	138.6
+	"2022"	"2022"	"More than one race"	"M"	692	1522728	45.4
+	"2023 (provisional)"	"2023"	"American Indian or Alaska Native"	"1002-5"	288	915519	31.5
+	"2023 (provisional)"	"2023"	"Asian"	"A"	1642	7948931	20.7
+	"2023 (provisional)"	"2023"	"Black or African American"	"2054-5"	4050	15493721	26.1
+	"2023 (provisional)"	"2023"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	45	216654	20.8
+	"2023 (provisional)"	"2023"	"White"	"2106-3"	39018	95597511	40.8
+	"2023 (provisional)"	"2023"	"More than one race"	"M"	170	1522728	11.2
+	"2024 (provisional and partial)"	"2024"	"American Indian or Alaska Native"	"1002-5"	86	915519	9.4
+	"2024 (provisional and partial)"	"2024"	"Asian"	"A"	586	7948931	7.4
+	"2024 (provisional and partial)"	"2024"	"Black or African American"	"2054-5"	1482	15493721	9.6
+	"2024 (provisional and partial)"	"2024"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	24	216654	11.1
+	"2024 (provisional and partial)"	"2024"	"White"	"2106-3"	13640	95597511	14.3
+	"2024 (provisional and partial)"	"2024"	"More than one race"	"M"	70	1522728	4.6
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Five-Year Age Groups: 45-49 years; 50-54 years; 55-59 years; 60-64 years ; 65-69 years; 70-74 years; 75-79 years; 80-84 years;"
+"85-89 years; 90-94 years; 95-99 years; 100+ years"
+"Hispanic Origin: Not Hispanic or Latino"
+"UCD - ICD-10 Codes: U07.1 (COVID-19)"
+"Year/Month: 2020; 2021; 2022; 2023 (provisional); 2024 (provisional and partial)"
+"Group By: Year; Single Race 6"
+"Show Totals: False"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Aug 1, 2024 6:50:43 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Aug 1, 2024 6:50:43 AM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"2. Deaths of persons with Hispanic origin ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among"
+"Hispanic Origin groups, so are not included in the Hispanic Origin specific counts and rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"3. Information included on the death certificate about the race and Hispanic ethnicity of the decedent is reported by the"
+"funeral director as provided by an informant, often the surviving next of kin, or, in the absence of an informant, on the basis"
+"of observation. Race and ethnicity information from the census is by self-report. To the extent that race and Hispanic origin"
+"are inconsistent between these two data sources, death rates will be biased. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Racial Differences."
+"4. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"5. Connecticut population estimates for 2022 are reported for 9 planning regions as county equivalent areas, instead of the"
+"former 8 legacy counties in the Vintage 2022 postcensal series released by the Census Bureau on June 22, 2023. Populations"
+"estimates for the former counties are not available for 2022. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Connecticut-2022."
+"6. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#ICD-10 Changes."
+"7. Deaths occurring through July 20, 2024 as of July 28, 2024."
