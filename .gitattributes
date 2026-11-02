@@ -1,0 +1,9 @@
+# Normalise line endings so regenerated outputs do not show as modified on Windows
+* text=auto
+*.csv text eol=lf
+*.txt text eol=lf
+*.R text
+*.md text
+*.png binary
+*.rds binary
+*.docx binary
