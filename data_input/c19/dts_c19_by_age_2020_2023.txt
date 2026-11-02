@@ -1,0 +1,167 @@
+"Notes"	"Five-Year Age Groups"	"Five-Year Age Groups Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate
+	"< 1 year"	"1"	"2020"	"2020"	35	3735010	0.9
+	"< 1 year"	"1"	"2021"	"2021"	91	3564493	2.6
+	"< 1 year"	"1"	"2022"	"2022"	141	3683113	3.8
+	"< 1 year"	"1"	"2023 (provisional)"	"2023"	59	3683113	1.6
+	"< 1 year"	"1"	"2024 (provisional and partial)"	"2024"	20	3683113	0.5
+	"1-4 years"	"1-4"	"2020"	"2020"	19	15566282	Unreliable
+	"1-4 years"	"1-4"	"2021"	"2021"	54	15262845	0.4
+	"1-4 years"	"1-4"	"2022"	"2022"	101	14855240	0.7
+	"1-4 years"	"1-4"	"2023 (provisional)"	"2023"	44	14855240	0.3
+	"1-4 years"	"1-4"	"2024 (provisional and partial)"	"2024"	14	14855240	Unreliable
+	"5-9 years"	"5-9"	"2020"	"2020"	17	20237711	Unreliable
+	"5-9 years"	"5-9"	"2021"	"2021"	63	20291548	0.3
+	"5-9 years"	"5-9"	"2022"	"2022"	62	20009195	0.3
+	"5-9 years"	"5-9"	"2023 (provisional)"	"2023"	26	20009195	0.1
+	"10-14 years"	"10-14"	"2020"	"2020"	32	20754423	0.2
+	"10-14 years"	"10-14"	"2021"	"2021"	79	21447784	0.4
+	"10-14 years"	"10-14"	"2022"	"2022"	69	20889839	0.3
+	"10-14 years"	"10-14"	"2023 (provisional)"	"2023"	24	20889839	0.1
+	"15-19 years"	"15-19"	"2020"	"2020"	118	20960929	0.6
+	"15-19 years"	"15-19"	"2021"	"2021"	351	21564666	1.6
+	"15-19 years"	"15-19"	"2022"	"2022"	161	21635792	0.7
+	"15-19 years"	"15-19"	"2023 (provisional)"	"2023"	31	21635792	0.1
+	"20-24 years"	"20-24"	"2020"	"2020"	383	21594755	1.8
+	"20-24 years"	"20-24"	"2021"	"2021"	1050	21523997	4.9
+	"20-24 years"	"20-24"	"2022"	"2022"	286	22705779	1.3
+	"20-24 years"	"20-24"	"2023 (provisional)"	"2023"	60	22705779	0.3
+	"20-24 years"	"20-24"	"2024 (provisional and partial)"	"2024"	23	22705779	0.1
+	"25-29 years"	"25-29"	"2020"	"2020"	792	23231243	3.4
+	"25-29 years"	"25-29"	"2021"	"2021"	2099	22392477	9.4
+	"25-29 years"	"25-29"	"2022"	"2022"	609	22193164	2.7
+	"25-29 years"	"25-29"	"2023 (provisional)"	"2023"	101	22193164	0.5
+	"25-29 years"	"25-29"	"2024 (provisional and partial)"	"2024"	27	22193164	0.1
+	"30-34 years"	"30-34"	"2020"	"2020"	1462	22838403	6.4
+	"30-34 years"	"30-34"	"2021"	"2021"	4034	23102628	17.5
+	"30-34 years"	"30-34"	"2022"	"2022"	1031	23308136	4.4
+	"30-34 years"	"30-34"	"2023 (provisional)"	"2023"	147	23308136	0.6
+	"30-34 years"	"30-34"	"2024 (provisional and partial)"	"2024"	45	23308136	0.2
+	"35-39 years"	"35-39"	"2020"	"2020"	2267	21828304	10.4
+	"35-39 years"	"35-39"	"2021"	"2021"	6296	22299318	28.2
+	"35-39 years"	"35-39"	"2022"	"2022"	1475	22267949	6.6
+	"35-39 years"	"35-39"	"2023 (provisional)"	"2023"	209	22267949	0.9
+	"35-39 years"	"35-39"	"2024 (provisional and partial)"	"2024"	68	22267949	0.3
+	"40-44 years"	"40-44"	"2020"	"2020"	3812	20307888	18.8
+	"40-44 years"	"40-44"	"2021"	"2021"	9710	21104536	46.0
+	"40-44 years"	"40-44"	"2022"	"2022"	2366	21427416	11.0
+	"40-44 years"	"40-44"	"2023 (provisional)"	"2023"	309	21427416	1.4
+	"40-44 years"	"40-44"	"2024 (provisional and partial)"	"2024"	118	21427416	0.6
+	"45-49 years"	"45-49"	"2020"	"2020"	6598	19970606	33.0
+	"45-49 years"	"45-49"	"2021"	"2021"	14702	19781510	74.3
+	"45-49 years"	"45-49"	"2022"	"2022"	3698	19624098	18.8
+	"45-49 years"	"45-49"	"2023 (provisional)"	"2023"	442	19624098	2.3
+	"45-49 years"	"45-49"	"2024 (provisional and partial)"	"2024"	150	19624098	0.8
+	"50-54 years"	"50-54"	"2020"	"2020"	10366	20395527	50.8
+	"50-54 years"	"50-54"	"2021"	"2021"	22179	20906926	106.1
+	"50-54 years"	"50-54"	"2022"	"2022"	5980	20807547	28.7
+	"50-54 years"	"50-54"	"2023 (provisional)"	"2023"	694	20807547	3.3
+	"50-54 years"	"50-54"	"2024 (provisional and partial)"	"2024"	271	20807547	1.3
+	"55-59 years"	"55-59"	"2020"	"2020"	16631	21603099	77.0
+	"55-59 years"	"55-59"	"2021"	"2021"	31205	21567314	144.7
+	"55-59 years"	"55-59"	"2022"	"2022"	9716	20967014	46.3
+	"55-59 years"	"55-59"	"2023 (provisional)"	"2023"	1331	20967014	6.3
+	"55-59 years"	"55-59"	"2024 (provisional and partial)"	"2024"	459	20967014	2.2
+	"60-64 years "	"60-64"	"2020"	"2020"	25459	20800578	122.4
+	"60-64 years "	"60-64"	"2021"	"2021"	42520	21235750	200.2
+	"60-64 years "	"60-64"	"2022"	"2022"	14536	21118423	68.8
+	"60-64 years "	"60-64"	"2023 (provisional)"	"2023"	2357	21118423	11.2
+	"60-64 years "	"60-64"	"2024 (provisional and partial)"	"2024"	756	21118423	3.6
+	"65-69 years"	"65-69"	"2020"	"2020"	33501	17873667	187.4
+	"65-69 years"	"65-69"	"2021"	"2021"	48149	18394320	261.8
+	"65-69 years"	"65-69"	"2022"	"2022"	18782	18631422	100.8
+	"65-69 years"	"65-69"	"2023 (provisional)"	"2023"	3568	18631422	19.2
+	"65-69 years"	"65-69"	"2024 (provisional and partial)"	"2024"	1234	18631422	6.6
+	"70-74 years"	"70-74"	"2020"	"2020"	42776	14675731	291.5
+	"70-74 years"	"70-74"	"2021"	"2021"	54567	15271802	357.3
+	"70-74 years"	"70-74"	"2022"	"2022"	23280	15157017	153.6
+	"70-74 years"	"70-74"	"2023 (provisional)"	"2023"	5326	15157017	35.1
+	"70-74 years"	"70-74"	"2024 (provisional and partial)"	"2024"	1886	15157017	12.4
+	"75-79 years"	"75-79"	"2020"	"2020"	47201	9986833	472.6
+	"75-79 years"	"75-79"	"2021"	"2021"	51583	9904769	520.8
+	"75-79 years"	"75-79"	"2022"	"2022"	25710	10861000	236.7
+	"75-79 years"	"75-79"	"2023 (provisional)"	"2023"	7137	10861000	65.7
+	"75-79 years"	"75-79"	"2024 (provisional and partial)"	"2024"	2466	10861000	22.7
+	"80-84 years"	"80-84"	"2020"	"2020"	49829	6464714	770.8
+	"80-84 years"	"80-84"	"2021"	"2021"	47224	6301306	749.4
+	"80-84 years"	"80-84"	"2022"	"2022"	25478	6659545	382.6
+	"80-84 years"	"80-84"	"2023 (provisional)"	"2023"	8279	6659545	124.3
+	"80-84 years"	"80-84"	"2024 (provisional and partial)"	"2024"	3031	6659545	45.5
+	"85-89 years"	"85-89"	"2020"	"2020"	49790	Not Applicable	Not Applicable
+	"85-89 years"	"85-89"	"2021"	"2021"	39900	Not Applicable	Not Applicable
+	"85-89 years"	"85-89"	"2022"	"2022"	23995	Not Applicable	Not Applicable
+	"85-89 years"	"85-89"	"2023 (provisional)"	"2023"	8583	Not Applicable	Not Applicable
+	"85-89 years"	"85-89"	"2024 (provisional and partial)"	"2024"	2971	Not Applicable	Not Applicable
+	"90-94 years"	"90-94"	"2020"	"2020"	39141	Not Applicable	Not Applicable
+	"90-94 years"	"90-94"	"2021"	"2021"	27589	Not Applicable	Not Applicable
+	"90-94 years"	"90-94"	"2022"	"2022"	18545	Not Applicable	Not Applicable
+	"90-94 years"	"90-94"	"2023 (provisional)"	"2023"	6951	Not Applicable	Not Applicable
+	"90-94 years"	"90-94"	"2024 (provisional and partial)"	"2024"	2511	Not Applicable	Not Applicable
+	"95-99 years"	"95-99"	"2020"	"2020"	17154	Not Applicable	Not Applicable
+	"95-99 years"	"95-99"	"2021"	"2021"	11291	Not Applicable	Not Applicable
+	"95-99 years"	"95-99"	"2022"	"2022"	8598	Not Applicable	Not Applicable
+	"95-99 years"	"95-99"	"2023 (provisional)"	"2023"	3460	Not Applicable	Not Applicable
+	"95-99 years"	"95-99"	"2024 (provisional and partial)"	"2024"	1140	Not Applicable	Not Applicable
+	"100+ years"	"100+"	"2020"	"2020"	3444	Not Applicable	Not Applicable
+	"100+ years"	"100+"	"2021"	"2021"	2154	Not Applicable	Not Applicable
+	"100+ years"	"100+"	"2022"	"2022"	1932	Not Applicable	Not Applicable
+	"100+ years"	"100+"	"2023 (provisional)"	"2023"	792	Not Applicable	Not Applicable
+	"100+ years"	"100+"	"2024 (provisional and partial)"	"2024"	271	Not Applicable	Not Applicable
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"UCD - ICD-10 Codes: U07.1 (COVID-19)"
+"Group By: Five-Year Age Groups; Year"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Aug 2, 2024 4:07:30 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Aug 2, 2024 4:07:30 AM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Rows with zero Deaths are hidden. Use Quick Options above to show zero rows."
+"3. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. Population and rates are labeled 'Not Applicable' when they include a subset of ages 85-100+ because populations are not"
+"available for those ages. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Ages 85-100."
+"2. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Assurance of Confidentiality."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Unreliable."
+"4. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"5. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"6. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Age"
+"Group."
+"7. Connecticut population estimates for 2022 are reported for 9 planning regions as county equivalent areas, instead of the"
+"former 8 legacy counties in the Vintage 2022 postcensal series released by the Census Bureau on June 22, 2023. Populations"
+"estimates for the former counties are not available for 2022. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Connecticut-2022."
+"8. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#ICD-10 Changes."
+"9. Deaths occurring through July 20, 2024 as of July 28, 2024."

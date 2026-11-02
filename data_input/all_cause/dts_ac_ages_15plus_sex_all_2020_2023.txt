@@ -1,0 +1,759 @@
+"Notes"	"Residence State"	"Residence State Code"	"Gender"	"Gender Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate
+	"Alabama"	"01"	"Female"	"F"	"2018"	"2018"	26036	2081766	1250.7
+	"Alabama"	"01"	"Female"	"F"	"2019"	"2019"	25722	2090705	1230.3
+	"Alabama"	"01"	"Female"	"F"	"2020"	"2020"	30803	2102367	1465.2
+	"Alabama"	"01"	"Female"	"F"	"2021"	"2021"	32301	2138537	1510.4
+	"Alabama"	"01"	"Female"	"F"	"2022"	"2022"	29427	2159251	1362.8
+	"Alabama"	"01"	"Female"	"F"	"2023 (provisional)"	"2023"	27923	2159251	1293.2
+	"Alabama"	"01"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	14753	2159251	683.2
+	"Alabama"	"01"	"Male"	"M"	"2018"	"2018"	27716	1904507	1455.3
+	"Alabama"	"01"	"Male"	"M"	"2019"	"2019"	27698	1909657	1450.4
+	"Alabama"	"01"	"Male"	"M"	"2020"	"2020"	33378	1917631	1740.6
+	"Alabama"	"01"	"Male"	"M"	"2021"	"2021"	35909	1975310	1817.9
+	"Alabama"	"01"	"Male"	"M"	"2022"	"2022"	32248	2001026	1611.6
+	"Alabama"	"01"	"Male"	"M"	"2023 (provisional)"	"2023"	30656	2001026	1532.0
+	"Alabama"	"01"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	16045	2001026	801.8
+	"Alaska"	"02"	"Female"	"F"	"2018"	"2018"	1867	277455	672.9
+	"Alaska"	"02"	"Female"	"F"	"2019"	"2019"	1967	276342	711.8
+	"Alaska"	"02"	"Female"	"F"	"2020"	"2020"	2141	276557	774.2
+	"Alaska"	"02"	"Female"	"F"	"2021"	"2021"	2519	275410	914.6
+	"Alaska"	"02"	"Female"	"F"	"2022"	"2022"	2421	275551	878.6
+	"Alaska"	"02"	"Female"	"F"	"2023 (provisional)"	"2023"	2230	275551	809.3
+	"Alaska"	"02"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	1168	275551	423.9
+	"Alaska"	"02"	"Male"	"M"	"2018"	"2018"	2489	305053	815.9
+	"Alaska"	"02"	"Male"	"M"	"2019"	"2019"	2558	303461	842.9
+	"Alaska"	"02"	"Male"	"M"	"2020"	"2020"	2937	304179	965.5
+	"Alaska"	"02"	"Male"	"M"	"2021"	"2021"	3596	306787	1172.1
+	"Alaska"	"02"	"Male"	"M"	"2022"	"2022"	3201	310436	1031.1
+	"Alaska"	"02"	"Male"	"M"	"2023 (provisional)"	"2023"	3199	310436	1030.5
+	"Alaska"	"02"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	1544	310436	497.4
+	"Arizona"	"04"	"Female"	"F"	"2018"	"2018"	26884	2938273	915.0
+	"Arizona"	"04"	"Female"	"F"	"2019"	"2019"	27338	2994725	912.9
+	"Arizona"	"04"	"Female"	"F"	"2020"	"2020"	33999	3068263	1108.1
+	"Arizona"	"04"	"Female"	"F"	"2021"	"2021"	36037	2994659	1203.4
+	"Arizona"	"04"	"Female"	"F"	"2022"	"2022"	33222	3045721	1090.8
+	"Arizona"	"04"	"Female"	"F"	"2023 (provisional)"	"2023"	31256	3045721	1026.2
+	"Arizona"	"04"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	17487	3045721	574.1
+	"Arizona"	"04"	"Male"	"M"	"2018"	"2018"	31701	2869290	1104.8
+	"Arizona"	"04"	"Male"	"M"	"2019"	"2019"	32243	2923459	1102.9
+	"Arizona"	"04"	"Male"	"M"	"2020"	"2020"	41095	2991323	1373.8
+	"Arizona"	"04"	"Male"	"M"	"2021"	"2021"	44724	2957180	1512.4
+	"Arizona"	"04"	"Male"	"M"	"2022"	"2022"	40140	3016962	1330.5
+	"Arizona"	"04"	"Male"	"M"	"2023 (provisional)"	"2023"	37381	3016962	1239.0
+	"Arizona"	"04"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	20376	3016962	675.4
+	"Arkansas"	"05"	"Female"	"F"	"2018"	"2018"	15354	1248563	1229.7
+	"Arkansas"	"05"	"Female"	"F"	"2019"	"2019"	15471	1252447	1235.3
+	"Arkansas"	"05"	"Female"	"F"	"2020"	"2020"	18127	1260623	1437.9
+	"Arkansas"	"05"	"Female"	"F"	"2021"	"2021"	18484	1250380	1478.3
+	"Arkansas"	"05"	"Female"	"F"	"2022"	"2022"	17781	1261295	1409.7
+	"Arkansas"	"05"	"Female"	"F"	"2023 (provisional)"	"2023"	16770	1261295	1329.6
+	"Arkansas"	"05"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	9206	1261295	729.9
+	"Arkansas"	"05"	"Male"	"M"	"2018"	"2018"	16563	1180849	1402.6
+	"Arkansas"	"05"	"Male"	"M"	"2019"	"2019"	17041	1183680	1439.7
+	"Arkansas"	"05"	"Male"	"M"	"2020"	"2020"	19589	1189937	1646.2
+	"Arkansas"	"05"	"Male"	"M"	"2021"	"2021"	21142	1195756	1768.1
+	"Arkansas"	"05"	"Male"	"M"	"2022"	"2022"	19654	1211986	1621.6
+	"Arkansas"	"05"	"Male"	"M"	"2023 (provisional)"	"2023"	18556	1211986	1531.0
+	"Arkansas"	"05"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	9978	1211986	823.3
+	"California"	"06"	"Female"	"F"	"2018"	"2018"	127493	16238548	785.1
+	"California"	"06"	"Female"	"F"	"2019"	"2019"	126937	16255477	780.9
+	"California"	"06"	"Female"	"F"	"2020"	"2020"	146916	16231456	905.1
+	"California"	"06"	"Female"	"F"	"2021"	"2021"	150680	16099082	936.0
+	"California"	"06"	"Female"	"F"	"2022"	"2022"	144757	16097291	899.3
+	"California"	"06"	"Female"	"F"	"2023 (provisional)"	"2023"	136589	16097291	848.5
+	"California"	"06"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	72842	16097291	452.5
+	"California"	"06"	"Male"	"M"	"2018"	"2018"	138572	15840322	874.8
+	"California"	"06"	"Male"	"M"	"2019"	"2019"	140177	15865043	883.6
+	"California"	"06"	"Male"	"M"	"2020"	"2020"	170356	15852338	1074.6
+	"California"	"06"	"Male"	"M"	"2021"	"2021"	180004	15919452	1130.7
+	"California"	"06"	"Male"	"M"	"2022"	"2022"	165820	15969994	1038.3
+	"California"	"06"	"Male"	"M"	"2023 (provisional)"	"2023"	155657	15969994	974.7
+	"California"	"06"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	81195	15969994	508.4
+	"Colorado"	"08"	"Female"	"F"	"2018"	"2018"	18089	2314390	781.6
+	"Colorado"	"08"	"Female"	"F"	"2019"	"2019"	18573	2347471	791.2
+	"Colorado"	"08"	"Female"	"F"	"2020"	"2020"	21732	2377759	914.0
+	"Colorado"	"08"	"Female"	"F"	"2021"	"2021"	21692	2369752	915.4
+	"Colorado"	"08"	"Female"	"F"	"2022"	"2022"	21628	2390207	904.9
+	"Colorado"	"08"	"Female"	"F"	"2023 (provisional)"	"2023"	20700	2390207	866.0
+	"Colorado"	"08"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	11222	2390207	469.5
+	"Colorado"	"08"	"Male"	"M"	"2018"	"2018"	19963	2330989	856.4
+	"Colorado"	"08"	"Male"	"M"	"2019"	"2019"	20373	2368742	860.1
+	"Colorado"	"08"	"Male"	"M"	"2020"	"2020"	24763	2399101	1032.2
+	"Colorado"	"08"	"Male"	"M"	"2021"	"2021"	26114	2422670	1077.9
+	"Colorado"	"08"	"Male"	"M"	"2022"	"2022"	24694	2455586	1005.6
+	"Colorado"	"08"	"Male"	"M"	"2023 (provisional)"	"2023"	23839	2455586	970.8
+	"Colorado"	"08"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	12606	2455586	513.4
+	"Connecticut"	"09"	"Female"	"F"	"2018"	"2018"	15793	1536655	1027.8
+	"Connecticut"	"09"	"Female"	"F"	"2019"	"2019"	15826	1536485	1030.0
+	"Connecticut"	"09"	"Female"	"F"	"2020"	"2020"	18843	1535898	1226.8
+	"Connecticut"	"09"	"Female"	"F"	"2021"	"2021"	16505	1546700	1067.1
+	"Connecticut"	"09"	"Female"	"F"	"2022"	"2022"	17021	1560195	1091.0
+	"Connecticut"	"09"	"Female"	"F"	"2023 (provisional)"	"2023"	16084	1560195	1030.9
+	"Connecticut"	"09"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	8668	1560195	555.6
+	"Connecticut"	"09"	"Male"	"M"	"2018"	"2018"	15228	1438968	1058.3
+	"Connecticut"	"09"	"Male"	"M"	"2019"	"2019"	15712	1438092	1092.6
+	"Connecticut"	"09"	"Male"	"M"	"2020"	"2020"	18808	1437454	1308.4
+	"Connecticut"	"09"	"Male"	"M"	"2021"	"2021"	17594	1468406	1198.2
+	"Connecticut"	"09"	"Male"	"M"	"2022"	"2022"	17338	1474605	1175.8
+	"Connecticut"	"09"	"Male"	"M"	"2023 (provisional)"	"2023"	16225	1474605	1100.3
+	"Connecticut"	"09"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	8713	1474605	590.9
+	"Delaware"	"10"	"Female"	"F"	"2018"	"2018"	4469	415728	1075.0
+	"Delaware"	"10"	"Female"	"F"	"2019"	"2019"	4329	419544	1031.8
+	"Delaware"	"10"	"Female"	"F"	"2020"	"2020"	5342	426778	1251.7
+	"Delaware"	"10"	"Female"	"F"	"2021"	"2021"	5160	431977	1194.5
+	"Delaware"	"10"	"Female"	"F"	"2022"	"2022"	5321	440165	1208.9
+	"Delaware"	"10"	"Female"	"F"	"2023 (provisional)"	"2023"	5050	440165	1147.3
+	"Delaware"	"10"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	2764	440165	627.9
+	"Delaware"	"10"	"Male"	"M"	"2018"	"2018"	4869	382731	1272.2
+	"Delaware"	"10"	"Male"	"M"	"2019"	"2019"	4875	385526	1264.5
+	"Delaware"	"10"	"Male"	"M"	"2020"	"2020"	5655	390652	1447.6
+	"Delaware"	"10"	"Male"	"M"	"2021"	"2021"	6055	399979	1513.8
+	"Delaware"	"10"	"Male"	"M"	"2022"	"2022"	5920	407156	1454.0
+	"Delaware"	"10"	"Male"	"M"	"2023 (provisional)"	"2023"	5505	407156	1352.1
+	"Delaware"	"10"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	2884	407156	708.3
+	"District of Columbia"	"11"	"Female"	"F"	"2018"	"2018"	2419	313859	770.7
+	"District of Columbia"	"11"	"Female"	"F"	"2019"	"2019"	2364	315485	749.3
+	"District of Columbia"	"11"	"Female"	"F"	"2020"	"2020"	2919	318746	915.8
+	"District of Columbia"	"11"	"Female"	"F"	"2021"	"2021"	2719	297090	915.2
+	"District of Columbia"	"11"	"Female"	"F"	"2022"	"2022"	2553	299177	853.3
+	"District of Columbia"	"11"	"Female"	"F"	"2023 (provisional)"	"2023"	2346	299177	784.2
+	"District of Columbia"	"11"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	1232	299177	411.8
+	"District of Columbia"	"11"	"Male"	"M"	"2018"	"2018"	2509	276784	906.5
+	"District of Columbia"	"11"	"Male"	"M"	"2019"	"2019"	2499	277498	900.5
+	"District of Columbia"	"11"	"Male"	"M"	"2020"	"2020"	3214	280000	1147.9
+	"District of Columbia"	"11"	"Male"	"M"	"2021"	"2021"	3039	262913	1155.9
+	"District of Columbia"	"11"	"Male"	"M"	"2022"	"2022"	2770	264657	1046.6
+	"District of Columbia"	"11"	"Male"	"M"	"2023 (provisional)"	"2023"	2494	264657	942.4
+	"District of Columbia"	"11"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	1282	264657	484.4
+	"Florida"	"12"	"Female"	"F"	"2018"	"2018"	96306	9171344	1050.1
+	"Florida"	"12"	"Female"	"F"	"2019"	"2019"	96608	9262319	1043.0
+	"Florida"	"12"	"Female"	"F"	"2020"	"2020"	110904	9386327	1181.5
+	"Florida"	"12"	"Female"	"F"	"2021"	"2021"	119510	9344247	1279.0
+	"Florida"	"12"	"Female"	"F"	"2022"	"2022"	110987	9576923	1158.9
+	"Florida"	"12"	"Female"	"F"	"2023 (provisional)"	"2023"	106674	9576923	1113.9
+	"Florida"	"12"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	51851	9576923	541.4
+	"Florida"	"12"	"Male"	"M"	"2018"	"2018"	107233	8620964	1243.9
+	"Florida"	"12"	"Male"	"M"	"2019"	"2019"	108535	8703279	1247.1
+	"Florida"	"12"	"Male"	"M"	"2020"	"2020"	126975	8821412	1439.4
+	"Florida"	"12"	"Male"	"M"	"2021"	"2021"	139955	8905096	1571.6
+	"Florida"	"12"	"Male"	"M"	"2022"	"2022"	126157	9143272	1379.8
+	"Florida"	"12"	"Male"	"M"	"2023 (provisional)"	"2023"	120269	9143272	1315.4
+	"Florida"	"12"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	57987	9143272	634.2
+	"Georgia"	"13"	"Female"	"F"	"2018"	"2018"	41059	4388111	935.7
+	"Georgia"	"13"	"Female"	"F"	"2019"	"2019"	41141	4441588	926.3
+	"Georgia"	"13"	"Female"	"F"	"2020"	"2020"	48935	4496239	1088.4
+	"Georgia"	"13"	"Female"	"F"	"2021"	"2021"	53000	4515691	1173.7
+	"Georgia"	"13"	"Female"	"F"	"2022"	"2022"	48185	4578381	1052.4
+	"Georgia"	"13"	"Female"	"F"	"2023 (provisional)"	"2023"	45816	4578381	1000.7
+	"Georgia"	"13"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	23955	4578381	523.2
+	"Georgia"	"13"	"Male"	"M"	"2018"	"2018"	42902	4060288	1056.6
+	"Georgia"	"13"	"Male"	"M"	"2019"	"2019"	43397	4106266	1056.8
+	"Georgia"	"13"	"Male"	"M"	"2020"	"2020"	52975	4152053	1275.9
+	"Georgia"	"13"	"Male"	"M"	"2021"	"2021"	58074	4215313	1377.7
+	"Georgia"	"13"	"Male"	"M"	"2022"	"2022"	52872	4286190	1233.5
+	"Georgia"	"13"	"Male"	"M"	"2023 (provisional)"	"2023"	49427	4286190	1153.2
+	"Georgia"	"13"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	25416	4286190	593.0
+	"Hawaii"	"15"	"Female"	"F"	"2018"	"2018"	5271	584563	901.7
+	"Hawaii"	"15"	"Female"	"F"	"2019"	"2019"	5323	584858	910.1
+	"Hawaii"	"15"	"Female"	"F"	"2020"	"2020"	5481	581187	943.1
+	"Hawaii"	"15"	"Female"	"F"	"2021"	"2021"	5875	592014	992.4
+	"Hawaii"	"15"	"Female"	"F"	"2022"	"2022"	6087	594503	1023.9
+	"Hawaii"	"15"	"Female"	"F"	"2023 (provisional)"	"2023"	5731	594503	964.0
+	"Hawaii"	"15"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	3226	594503	542.6
+	"Hawaii"	"15"	"Male"	"M"	"2018"	"2018"	5997	579401	1035.0
+	"Hawaii"	"15"	"Male"	"M"	"2019"	"2019"	6107	578209	1056.2
+	"Hawaii"	"15"	"Male"	"M"	"2020"	"2020"	6446	575650	1119.8
+	"Hawaii"	"15"	"Male"	"M"	"2021"	"2021"	6848	593074	1154.7
+	"Hawaii"	"15"	"Male"	"M"	"2022"	"2022"	6998	595736	1174.7
+	"Hawaii"	"15"	"Male"	"M"	"2023 (provisional)"	"2023"	6809	595736	1143.0
+	"Hawaii"	"15"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	3654	595736	613.4
+	"Idaho"	"16"	"Female"	"F"	"2018"	"2018"	6655	693648	959.4
+	"Idaho"	"16"	"Female"	"F"	"2019"	"2019"	6807	709572	959.3
+	"Idaho"	"16"	"Female"	"F"	"2020"	"2020"	7575	729338	1038.6
+	"Idaho"	"16"	"Female"	"F"	"2021"	"2021"	8401	754868	1112.9
+	"Idaho"	"16"	"Female"	"F"	"2022"	"2022"	7952	777582	1022.7
+	"Idaho"	"16"	"Female"	"F"	"2023 (provisional)"	"2023"	7620	777582	980.0
+	"Idaho"	"16"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	4257	777582	547.5
+	"Idaho"	"16"	"Male"	"M"	"2018"	"2018"	7445	690220	1078.6
+	"Idaho"	"16"	"Male"	"M"	"2019"	"2019"	7446	706505	1053.9
+	"Idaho"	"16"	"Male"	"M"	"2020"	"2020"	8663	725900	1193.4
+	"Idaho"	"16"	"Male"	"M"	"2021"	"2021"	9762	761783	1281.5
+	"Idaho"	"16"	"Male"	"M"	"2022"	"2022"	9032	783433	1152.9
+	"Idaho"	"16"	"Male"	"M"	"2023 (provisional)"	"2023"	8687	783433	1108.8
+	"Idaho"	"16"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	4702	783433	600.2
+	"Illinois"	"17"	"Female"	"F"	"2018"	"2018"	54082	5326548	1015.3
+	"Illinois"	"17"	"Female"	"F"	"2019"	"2019"	53140	5308660	1001.0
+	"Illinois"	"17"	"Female"	"F"	"2020"	"2020"	63573	5282879	1203.4
+	"Illinois"	"17"	"Female"	"F"	"2021"	"2021"	59097	5284803	1118.2
+	"Illinois"	"17"	"Female"	"F"	"2022"	"2022"	58714	5268915	1114.3
+	"Illinois"	"17"	"Female"	"F"	"2023 (provisional)"	"2023"	54218	5268915	1029.0
+	"Illinois"	"17"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	29329	5268915	556.6
+	"Illinois"	"17"	"Male"	"M"	"2018"	"2018"	54646	5056663	1080.7
+	"Illinois"	"17"	"Male"	"M"	"2019"	"2019"	54860	5040482	1088.4
+	"Illinois"	"17"	"Male"	"M"	"2020"	"2020"	68014	5018851	1355.2
+	"Illinois"	"17"	"Male"	"M"	"2021"	"2021"	64840	5092757	1273.2
+	"Illinois"	"17"	"Male"	"M"	"2022"	"2022"	63154	5095056	1239.5
+	"Illinois"	"17"	"Male"	"M"	"2023 (provisional)"	"2023"	58432	5095056	1146.8
+	"Illinois"	"17"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	30914	5095056	606.7
+	"Indiana"	"18"	"Female"	"F"	"2018"	"2018"	32072	2758886	1162.5
+	"Indiana"	"18"	"Female"	"F"	"2019"	"2019"	31917	2778752	1148.6
+	"Indiana"	"18"	"Female"	"F"	"2020"	"2020"	37574	2790346	1346.6
+	"Indiana"	"18"	"Female"	"F"	"2021"	"2021"	36892	2791631	1321.5
+	"Indiana"	"18"	"Female"	"F"	"2022"	"2022"	35757	2809382	1272.8
+	"Indiana"	"18"	"Female"	"F"	"2023 (provisional)"	"2023"	33326	2809382	1186.2
+	"Indiana"	"18"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	17921	2809382	637.9
+	"Indiana"	"18"	"Male"	"M"	"2018"	"2018"	32841	2635752	1246.0
+	"Indiana"	"18"	"Male"	"M"	"2019"	"2019"	33331	2656146	1254.9
+	"Indiana"	"18"	"Male"	"M"	"2020"	"2020"	39846	2669133	1492.8
+	"Indiana"	"18"	"Male"	"M"	"2021"	"2021"	40625	2708260	1500.0
+	"Indiana"	"18"	"Male"	"M"	"2022"	"2022"	38763	2734853	1417.4
+	"Indiana"	"18"	"Male"	"M"	"2023 (provisional)"	"2023"	35850	2734853	1310.9
+	"Indiana"	"18"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	18669	2734853	682.6
+	"Iowa"	"19"	"Female"	"F"	"2018"	"2018"	14965	1288460	1161.5
+	"Iowa"	"19"	"Female"	"F"	"2019"	"2019"	15169	1288834	1177.0
+	"Iowa"	"19"	"Female"	"F"	"2020"	"2020"	17565	1293848	1357.6
+	"Iowa"	"19"	"Female"	"F"	"2021"	"2021"	16286	1295756	1256.9
+	"Iowa"	"19"	"Female"	"F"	"2022"	"2022"	16337	1303556	1253.3
+	"Iowa"	"19"	"Female"	"F"	"2023 (provisional)"	"2023"	15810	1303556	1212.8
+	"Iowa"	"19"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	8469	1303556	649.7
+	"Iowa"	"19"	"Male"	"M"	"2018"	"2018"	15118	1259788	1200.0
+	"Iowa"	"19"	"Male"	"M"	"2019"	"2019"	15417	1262105	1221.5
+	"Iowa"	"19"	"Male"	"M"	"2020"	"2020"	18155	1268129	1431.6
+	"Iowa"	"19"	"Male"	"M"	"2021"	"2021"	17687	1290843	1370.2
+	"Iowa"	"19"	"Male"	"M"	"2022"	"2022"	17330	1302689	1330.3
+	"Iowa"	"19"	"Male"	"M"	"2023 (provisional)"	"2023"	16466	1302689	1264.0
+	"Iowa"	"19"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	8896	1302689	682.9
+	"Kansas"	"20"	"Female"	"F"	"2018"	"2018"	13516	1173875	1151.4
+	"Kansas"	"20"	"Female"	"F"	"2019"	"2019"	13527	1177449	1148.8
+	"Kansas"	"20"	"Female"	"F"	"2020"	"2020"	15228	1180136	1290.4
+	"Kansas"	"20"	"Female"	"F"	"2021"	"2021"	15093	1181222	1277.7
+	"Kansas"	"20"	"Female"	"F"	"2022"	"2022"	15241	1184794	1286.4
+	"Kansas"	"20"	"Female"	"F"	"2023 (provisional)"	"2023"	13941	1184794	1176.7
+	"Kansas"	"20"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	7697	1184794	649.6
+	"Kansas"	"20"	"Male"	"M"	"2018"	"2018"	13693	1150228	1190.5
+	"Kansas"	"20"	"Male"	"M"	"2019"	"2019"	13859	1154268	1200.7
+	"Kansas"	"20"	"Male"	"M"	"2020"	"2020"	16509	1156250	1427.8
+	"Kansas"	"20"	"Male"	"M"	"2021"	"2021"	16642	1173937	1417.6
+	"Kansas"	"20"	"Male"	"M"	"2022"	"2022"	15993	1184863	1349.8
+	"Kansas"	"20"	"Male"	"M"	"2023 (provisional)"	"2023"	15016	1184863	1267.3
+	"Kansas"	"20"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	7956	1184863	671.5
+	"Kentucky"	"21"	"Female"	"F"	"2018"	"2018"	23441	1858003	1261.6
+	"Kentucky"	"21"	"Female"	"F"	"2019"	"2019"	23483	1860606	1262.1
+	"Kentucky"	"21"	"Female"	"F"	"2020"	"2020"	26459	1867153	1417.1
+	"Kentucky"	"21"	"Female"	"F"	"2021"	"2021"	28232	1867555	1511.7
+	"Kentucky"	"21"	"Female"	"F"	"2022"	"2022"	27231	1869459	1456.6
+	"Kentucky"	"21"	"Female"	"F"	"2023 (provisional)"	"2023"	25088	1869459	1342.0
+	"Kentucky"	"21"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	13264	1869459	709.5
+	"Kentucky"	"21"	"Male"	"M"	"2018"	"2018"	24809	1772473	1399.7
+	"Kentucky"	"21"	"Male"	"M"	"2019"	"2019"	25086	1774040	1414.1
+	"Kentucky"	"21"	"Male"	"M"	"2020"	"2020"	28931	1779485	1625.8
+	"Kentucky"	"21"	"Male"	"M"	"2021"	"2021"	31578	1803992	1750.5
+	"Kentucky"	"21"	"Male"	"M"	"2022"	"2022"	29326	1816388	1614.5
+	"Kentucky"	"21"	"Male"	"M"	"2023 (provisional)"	"2023"	27429	1816388	1510.1
+	"Kentucky"	"21"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	14116	1816388	777.1
+	"Louisiana"	"22"	"Female"	"F"	"2018"	"2018"	21822	1935776	1127.3
+	"Louisiana"	"22"	"Female"	"F"	"2019"	"2019"	21691	1935489	1120.7
+	"Louisiana"	"22"	"Female"	"F"	"2020"	"2020"	26573	1938390	1370.9
+	"Louisiana"	"22"	"Female"	"F"	"2021"	"2021"	26090	1918833	1359.7
+	"Louisiana"	"22"	"Female"	"F"	"2022"	"2022"	24285	1913815	1268.9
+	"Louisiana"	"22"	"Female"	"F"	"2023 (provisional)"	"2023"	22852	1913815	1194.1
+	"Louisiana"	"22"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	11792	1913815	616.2
+	"Louisiana"	"22"	"Male"	"M"	"2018"	"2018"	23569	1808258	1303.4
+	"Louisiana"	"22"	"Male"	"M"	"2019"	"2019"	23588	1803900	1307.6
+	"Louisiana"	"22"	"Male"	"M"	"2020"	"2020"	29544	1804484	1637.3
+	"Louisiana"	"22"	"Male"	"M"	"2021"	"2021"	30783	1806918	1703.6
+	"Louisiana"	"22"	"Male"	"M"	"2022"	"2022"	27415	1800157	1522.9
+	"Louisiana"	"22"	"Male"	"M"	"2023 (provisional)"	"2023"	25963	1800157	1442.3
+	"Louisiana"	"22"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	13102	1800157	727.8
+	"Maine"	"23"	"Female"	"F"	"2018"	"2018"	7141	583218	1224.4
+	"Maine"	"23"	"Female"	"F"	"2019"	"2019"	7242	586681	1234.4
+	"Maine"	"23"	"Female"	"F"	"2020"	"2020"	7505	590077	1271.9
+	"Maine"	"23"	"Female"	"F"	"2021"	"2021"	8044	596083	1349.5
+	"Maine"	"23"	"Female"	"F"	"2022"	"2022"	8125	604122	1344.9
+	"Maine"	"23"	"Female"	"F"	"2023 (provisional)"	"2023"	8084	604122	1338.1
+	"Maine"	"23"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	4383	604122	725.5
+	"Maine"	"23"	"Male"	"M"	"2018"	"2018"	7485	550073	1360.7
+	"Maine"	"23"	"Male"	"M"	"2019"	"2019"	7732	553894	1395.9
+	"Maine"	"23"	"Male"	"M"	"2020"	"2020"	8139	557491	1459.9
+	"Maine"	"23"	"Male"	"M"	"2021"	"2021"	9130	571560	1597.4
+	"Maine"	"23"	"Male"	"M"	"2022"	"2022"	9118	580001	1572.1
+	"Maine"	"23"	"Male"	"M"	"2023 (provisional)"	"2023"	8566	580001	1476.9
+	"Maine"	"23"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	4717	580001	813.3
+	"Maryland"	"24"	"Female"	"F"	"2018"	"2018"	24621	2568519	958.6
+	"Maryland"	"24"	"Female"	"F"	"2019"	"2019"	24684	2573138	959.3
+	"Maryland"	"24"	"Female"	"F"	"2020"	"2020"	28862	2580874	1118.3
+	"Maryland"	"24"	"Female"	"F"	"2021"	"2021"	27757	2612142	1062.6
+	"Maryland"	"24"	"Female"	"F"	"2022"	"2022"	27003	2620185	1030.6
+	"Maryland"	"24"	"Female"	"F"	"2023 (provisional)"	"2023"	25553	2620185	975.2
+	"Maryland"	"24"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	14085	2620185	537.6
+	"Maryland"	"24"	"Male"	"M"	"2018"	"2018"	25373	2360745	1074.8
+	"Maryland"	"24"	"Male"	"M"	"2019"	"2019"	25549	2362736	1081.3
+	"Maryland"	"24"	"Male"	"M"	"2020"	"2020"	30664	2366973	1295.5
+	"Maryland"	"24"	"Male"	"M"	"2021"	"2021"	29775	2426571	1227.0
+	"Maryland"	"24"	"Male"	"M"	"2022"	"2022"	28859	2435991	1184.7
+	"Maryland"	"24"	"Male"	"M"	"2023 (provisional)"	"2023"	27291	2435991	1120.3
+	"Maryland"	"24"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	14609	2435991	599.7
+	"Massachusetts"	"25"	"Female"	"F"	"2018"	"2018"	29700	3003921	988.7
+	"Massachusetts"	"25"	"Female"	"F"	"2019"	"2019"	29314	3004622	975.6
+	"Massachusetts"	"25"	"Female"	"F"	"2020"	"2020"	34152	3009237	1134.9
+	"Massachusetts"	"25"	"Female"	"F"	"2021"	"2021"	30598	3029652	1010.0
+	"Massachusetts"	"25"	"Female"	"F"	"2022"	"2022"	31429	3031331	1036.8
+	"Massachusetts"	"25"	"Female"	"F"	"2023 (provisional)"	"2023"	30272	3031331	998.6
+	"Massachusetts"	"25"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	16660	3031331	549.6
+	"Massachusetts"	"25"	"Male"	"M"	"2018"	"2018"	29051	2778915	1045.4
+	"Massachusetts"	"25"	"Male"	"M"	"2019"	"2019"	28956	2779484	1041.8
+	"Massachusetts"	"25"	"Male"	"M"	"2020"	"2020"	33740	2785288	1211.4
+	"Massachusetts"	"25"	"Male"	"M"	"2021"	"2021"	32181	2842559	1132.1
+	"Massachusetts"	"25"	"Male"	"M"	"2022"	"2022"	31597	2859847	1104.8
+	"Massachusetts"	"25"	"Male"	"M"	"2023 (provisional)"	"2023"	30573	2859847	1069.0
+	"Massachusetts"	"25"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	16235	2859847	567.7
+	"Michigan"	"26"	"Female"	"F"	"2018"	"2018"	48268	4205091	1147.8
+	"Michigan"	"26"	"Female"	"F"	"2019"	"2019"	48293	4207421	1147.8
+	"Michigan"	"26"	"Female"	"F"	"2020"	"2020"	56062	4204869	1333.3
+	"Michigan"	"26"	"Female"	"F"	"2021"	"2021"	55138	4210287	1309.6
+	"Michigan"	"26"	"Female"	"F"	"2022"	"2022"	52770	4210752	1253.2
+	"Michigan"	"26"	"Female"	"F"	"2023 (provisional)"	"2023"	49444	4210752	1174.2
+	"Michigan"	"26"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	26979	4210752	640.7
+	"Michigan"	"26"	"Male"	"M"	"2018"	"2018"	49611	4012591	1236.4
+	"Michigan"	"26"	"Male"	"M"	"2019"	"2019"	49795	4016305	1239.8
+	"Michigan"	"26"	"Male"	"M"	"2020"	"2020"	60064	4012698	1496.8
+	"Michigan"	"26"	"Male"	"M"	"2021"	"2021"	61698	4076879	1513.4
+	"Michigan"	"26"	"Male"	"M"	"2022"	"2022"	56750	4098463	1384.7
+	"Michigan"	"26"	"Male"	"M"	"2023 (provisional)"	"2023"	52958	4098463	1292.1
+	"Michigan"	"26"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	28388	4098463	692.6
+	"Minnesota"	"27"	"Female"	"F"	"2018"	"2018"	22028	2284777	964.1
+	"Minnesota"	"27"	"Female"	"F"	"2019"	"2019"	22139	2299424	962.8
+	"Minnesota"	"27"	"Female"	"F"	"2020"	"2020"	25461	2310970	1101.7
+	"Minnesota"	"27"	"Female"	"F"	"2021"	"2021"	24205	2316355	1045.0
+	"Minnesota"	"27"	"Female"	"F"	"2022"	"2022"	24389	2326885	1048.1
+	"Minnesota"	"27"	"Female"	"F"	"2023 (provisional)"	"2023"	23529	2326885	1011.2
+	"Minnesota"	"27"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	12851	2326885	552.3
+	"Minnesota"	"27"	"Male"	"M"	"2018"	"2018"	22230	2240025	992.4
+	"Minnesota"	"27"	"Male"	"M"	"2019"	"2019"	22924	2255993	1016.1
+	"Minnesota"	"27"	"Male"	"M"	"2020"	"2020"	26499	2267282	1168.8
+	"Minnesota"	"27"	"Male"	"M"	"2021"	"2021"	26966	2304516	1170.1
+	"Minnesota"	"27"	"Male"	"M"	"2022"	"2022"	26375	2326729	1133.6
+	"Minnesota"	"27"	"Male"	"M"	"2023 (provisional)"	"2023"	25221	2326729	1084.0
+	"Minnesota"	"27"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	13529	2326729	581.5
+	"Mississippi"	"28"	"Female"	"F"	"2018"	"2018"	15311	1251589	1223.3
+	"Mississippi"	"28"	"Female"	"F"	"2019"	"2019"	15439	1249514	1235.6
+	"Mississippi"	"28"	"Female"	"F"	"2020"	"2020"	18958	1249445	1517.3
+	"Mississippi"	"28"	"Female"	"F"	"2021"	"2021"	19147	1235811	1549.3
+	"Mississippi"	"28"	"Female"	"F"	"2022"	"2022"	17864	1239639	1441.1
+	"Mississippi"	"28"	"Female"	"F"	"2023 (provisional)"	"2023"	16611	1239639	1340.0
+	"Mississippi"	"28"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	9013	1239639	727.1
+	"Mississippi"	"28"	"Male"	"M"	"2018"	"2018"	16525	1149570	1437.5
+	"Mississippi"	"28"	"Male"	"M"	"2019"	"2019"	17043	1147498	1485.2
+	"Mississippi"	"28"	"Male"	"M"	"2020"	"2020"	20769	1144390	1814.9
+	"Mississippi"	"28"	"Male"	"M"	"2021"	"2021"	21434	1145823	1870.6
+	"Mississippi"	"28"	"Male"	"M"	"2022"	"2022"	19455	1147934	1694.8
+	"Mississippi"	"28"	"Male"	"M"	"2023 (provisional)"	"2023"	17992	1147934	1567.3
+	"Mississippi"	"28"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	9929	1147934	864.9
+	"Missouri"	"29"	"Female"	"F"	"2018"	"2018"	30469	2560776	1189.8
+	"Missouri"	"29"	"Female"	"F"	"2019"	"2019"	29774	2569222	1158.9
+	"Missouri"	"29"	"Female"	"F"	"2020"	"2020"	35108	2579066	1361.3
+	"Missouri"	"29"	"Female"	"F"	"2021"	"2021"	34605	2567776	1347.7
+	"Missouri"	"29"	"Female"	"F"	"2022"	"2022"	34044	2577757	1320.7
+	"Missouri"	"29"	"Female"	"F"	"2023 (provisional)"	"2023"	31257	2577757	1212.6
+	"Missouri"	"29"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	16937	2577757	657.0
+	"Missouri"	"29"	"Male"	"M"	"2018"	"2018"	31990	2423076	1320.2
+	"Missouri"	"29"	"Male"	"M"	"2019"	"2019"	31989	2430586	1316.1
+	"Missouri"	"29"	"Male"	"M"	"2020"	"2020"	38166	2435767	1566.9
+	"Missouri"	"29"	"Male"	"M"	"2021"	"2021"	38612	2459286	1570.0
+	"Missouri"	"29"	"Male"	"M"	"2022"	"2022"	37111	2479378	1496.8
+	"Missouri"	"29"	"Male"	"M"	"2023 (provisional)"	"2023"	34611	2479378	1396.0
+	"Missouri"	"29"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	17540	2479378	707.4
+	"Montana"	"30"	"Female"	"F"	"2018"	"2018"	4628	434308	1065.6
+	"Montana"	"30"	"Female"	"F"	"2019"	"2019"	4799	438059	1095.5
+	"Montana"	"30"	"Female"	"F"	"2020"	"2020"	5359	443738	1207.7
+	"Montana"	"30"	"Female"	"F"	"2021"	"2021"	5641	450900	1251.1
+	"Montana"	"30"	"Female"	"F"	"2022"	"2022"	5302	459857	1153.0
+	"Montana"	"30"	"Female"	"F"	"2023 (provisional)"	"2023"	5200	459857	1130.8
+	"Montana"	"30"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	2918	459857	634.5
+	"Montana"	"30"	"Male"	"M"	"2018"	"2018"	5271	436654	1207.1
+	"Montana"	"30"	"Male"	"M"	"2019"	"2019"	5512	440258	1252.0
+	"Montana"	"30"	"Male"	"M"	"2020"	"2020"	6571	446056	1473.1
+	"Montana"	"30"	"Male"	"M"	"2021"	"2021"	6963	459639	1514.9
+	"Montana"	"30"	"Male"	"M"	"2022"	"2022"	6287	471282	1334.0
+	"Montana"	"30"	"Male"	"M"	"2023 (provisional)"	"2023"	5888	471282	1249.4
+	"Montana"	"30"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	3366	471282	714.2
+	"Nebraska"	"31"	"Female"	"F"	"2018"	"2018"	8281	771541	1073.3
+	"Nebraska"	"31"	"Female"	"F"	"2019"	"2019"	8360	774477	1079.4
+	"Nebraska"	"31"	"Female"	"F"	"2020"	"2020"	9430	777081	1213.5
+	"Nebraska"	"31"	"Female"	"F"	"2021"	"2021"	8936	782494	1142.0
+	"Nebraska"	"31"	"Female"	"F"	"2022"	"2022"	8932	785778	1136.7
+	"Nebraska"	"31"	"Female"	"F"	"2023 (provisional)"	"2023"	8805	785778	1120.5
+	"Nebraska"	"31"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	4793	785778	610.0
+	"Nebraska"	"31"	"Male"	"M"	"2018"	"2018"	8405	758937	1107.5
+	"Nebraska"	"31"	"Male"	"M"	"2019"	"2019"	8423	762755	1104.3
+	"Nebraska"	"31"	"Male"	"M"	"2020"	"2020"	9917	765050	1296.3
+	"Nebraska"	"31"	"Male"	"M"	"2021"	"2021"	9785	781462	1252.1
+	"Nebraska"	"31"	"Male"	"M"	"2022"	"2022"	9484	788807	1202.3
+	"Nebraska"	"31"	"Male"	"M"	"2023 (provisional)"	"2023"	9286	788807	1177.2
+	"Nebraska"	"31"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	4861	788807	616.2
+	"Nevada"	"32"	"Female"	"F"	"2018"	"2018"	10794	1231713	876.3
+	"Nevada"	"32"	"Female"	"F"	"2019"	"2019"	11165	1252930	891.1
+	"Nevada"	"32"	"Female"	"F"	"2020"	"2020"	13313	1281709	1038.7
+	"Nevada"	"32"	"Female"	"F"	"2021"	"2021"	14099	1278054	1103.2
+	"Nevada"	"32"	"Female"	"F"	"2022"	"2022"	13576	1297540	1046.3
+	"Nevada"	"32"	"Female"	"F"	"2023 (provisional)"	"2023"	12523	1297540	965.1
+	"Nevada"	"32"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	6888	1297540	530.9
+	"Nevada"	"32"	"Male"	"M"	"2018"	"2018"	13614	1228055	1108.6
+	"Nevada"	"32"	"Male"	"M"	"2019"	"2019"	14134	1249585	1131.1
+	"Nevada"	"32"	"Male"	"M"	"2020"	"2020"	17067	1275976	1337.6
+	"Nevada"	"32"	"Male"	"M"	"2021"	"2021"	18533	1288542	1438.3
+	"Nevada"	"32"	"Male"	"M"	"2022"	"2022"	17127	1313933	1303.5
+	"Nevada"	"32"	"Male"	"M"	"2023 (provisional)"	"2023"	16182	1313933	1231.6
+	"Nevada"	"32"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	8662	1313933	659.2
+	"New Hampshire"	"33"	"Female"	"F"	"2018"	"2018"	6183	581996	1062.4
+	"New Hampshire"	"33"	"Female"	"F"	"2019"	"2019"	6128	584915	1047.7
+	"New Hampshire"	"33"	"Female"	"F"	"2020"	"2020"	6532	588988	1109.0
+	"New Hampshire"	"33"	"Female"	"F"	"2021"	"2021"	6687	594801	1124.2
+	"New Hampshire"	"33"	"Female"	"F"	"2022"	"2022"	6922	597530	1158.4
+	"New Hampshire"	"33"	"Female"	"F"	"2023 (provisional)"	"2023"	6755	597530	1130.5
+	"New Hampshire"	"33"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	3682	597530	616.2
+	"New Hampshire"	"33"	"Male"	"M"	"2018"	"2018"	6521	564968	1154.2
+	"New Hampshire"	"33"	"Male"	"M"	"2019"	"2019"	6549	567726	1153.5
+	"New Hampshire"	"33"	"Male"	"M"	"2020"	"2020"	7092	571924	1240.0
+	"New Hampshire"	"33"	"Male"	"M"	"2021"	"2021"	7431	586659	1266.7
+	"New Hampshire"	"33"	"Male"	"M"	"2022"	"2022"	7527	592922	1269.5
+	"New Hampshire"	"33"	"Male"	"M"	"2023 (provisional)"	"2023"	7331	592922	1236.4
+	"New Hampshire"	"33"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	3985	592922	672.1
+	"New Jersey"	"34"	"Female"	"F"	"2018"	"2018"	37941	3767512	1007.1
+	"New Jersey"	"34"	"Female"	"F"	"2019"	"2019"	37550	3759092	998.9
+	"New Jersey"	"34"	"Female"	"F"	"2020"	"2020"	46811	3758655	1245.4
+	"New Jersey"	"34"	"Female"	"F"	"2021"	"2021"	40871	3894302	1049.5
+	"New Jersey"	"34"	"Female"	"F"	"2022"	"2022"	40067	3898912	1027.6
+	"New Jersey"	"34"	"Female"	"F"	"2023 (provisional)"	"2023"	37219	3898912	954.6
+	"New Jersey"	"34"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	20505	3898912	525.9
+	"New Jersey"	"34"	"Male"	"M"	"2018"	"2018"	37230	3530204	1054.6
+	"New Jersey"	"34"	"Male"	"M"	"2019"	"2019"	36852	3524441	1045.6
+	"New Jersey"	"34"	"Male"	"M"	"2020"	"2020"	48652	3528581	1378.8
+	"New Jersey"	"34"	"Male"	"M"	"2021"	"2021"	42623	3711875	1148.3
+	"New Jersey"	"34"	"Male"	"M"	"2022"	"2022"	40890	3727635	1096.9
+	"New Jersey"	"34"	"Male"	"M"	"2023 (provisional)"	"2023"	37590	3727635	1008.4
+	"New Jersey"	"34"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	20391	3727635	547.0
+	"New Mexico"	"35"	"Female"	"F"	"2018"	"2018"	8544	862677	990.4
+	"New Mexico"	"35"	"Female"	"F"	"2019"	"2019"	8823	866454	1018.3
+	"New Mexico"	"35"	"Female"	"F"	"2020"	"2020"	10798	872753	1237.2
+	"New Mexico"	"35"	"Female"	"F"	"2021"	"2021"	11032	873470	1263.0
+	"New Mexico"	"35"	"Female"	"F"	"2022"	"2022"	10568	877387	1204.5
+	"New Mexico"	"35"	"Female"	"F"	"2023 (provisional)"	"2023"	9888	877387	1127.0
+	"New Mexico"	"35"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	5294	877387	603.4
+	"New Mexico"	"35"	"Male"	"M"	"2018"	"2018"	10249	833742	1229.3
+	"New Mexico"	"35"	"Male"	"M"	"2019"	"2019"	10488	837121	1252.9
+	"New Mexico"	"35"	"Male"	"M"	"2020"	"2020"	12822	844538	1518.2
+	"New Mexico"	"35"	"Male"	"M"	"2021"	"2021"	14067	855242	1644.8
+	"New Mexico"	"35"	"Male"	"M"	"2022"	"2022"	12906	862618	1496.1
+	"New Mexico"	"35"	"Male"	"M"	"2023 (provisional)"	"2023"	12222	862618	1416.8
+	"New Mexico"	"35"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	6228	862618	722.0
+	"New York"	"36"	"Female"	"F"	"2018"	"2018"	78981	8403346	939.9
+	"New York"	"36"	"Female"	"F"	"2019"	"2019"	77716	8371538	928.3
+	"New York"	"36"	"Female"	"F"	"2020"	"2020"	98304	8327281	1180.5
+	"New York"	"36"	"Female"	"F"	"2021"	"2021"	87959	8480258	1037.2
+	"New York"	"36"	"Female"	"F"	"2022"	"2022"	84475	8444058	1000.4
+	"New York"	"36"	"Female"	"F"	"2023 (provisional)"	"2023"	78881	8444058	934.2
+	"New York"	"36"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	43268	8444058	512.4
+	"New York"	"36"	"Male"	"M"	"2018"	"2018"	76754	7761225	988.9
+	"New York"	"36"	"Male"	"M"	"2019"	"2019"	77249	7736426	998.5
+	"New York"	"36"	"Male"	"M"	"2020"	"2020"	103809	7696508	1348.8
+	"New York"	"36"	"Male"	"M"	"2021"	"2021"	92136	7953185	1158.5
+	"New York"	"36"	"Male"	"M"	"2022"	"2022"	88119	7939794	1109.8
+	"New York"	"36"	"Male"	"M"	"2023 (provisional)"	"2023"	82013	7939794	1032.9
+	"New York"	"36"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	44308	7939794	558.0
+	"North Carolina"	"37"	"Female"	"F"	"2018"	"2018"	45287	4400628	1029.1
+	"North Carolina"	"37"	"Female"	"F"	"2019"	"2019"	46512	4454898	1044.1
+	"North Carolina"	"37"	"Female"	"F"	"2020"	"2020"	52589	4514519	1164.9
+	"North Carolina"	"37"	"Female"	"F"	"2021"	"2021"	55797	4469018	1248.5
+	"North Carolina"	"37"	"Female"	"F"	"2022"	"2022"	53475	4538703	1178.2
+	"North Carolina"	"37"	"Female"	"F"	"2023 (provisional)"	"2023"	51342	4538703	1131.2
+	"North Carolina"	"37"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	27893	4538703	614.6
+	"North Carolina"	"37"	"Male"	"M"	"2018"	"2018"	47492	4080562	1163.9
+	"North Carolina"	"37"	"Male"	"M"	"2019"	"2019"	48257	4128944	1168.7
+	"North Carolina"	"37"	"Male"	"M"	"2020"	"2020"	55765	4180614	1333.9
+	"North Carolina"	"37"	"Male"	"M"	"2021"	"2021"	61171	4190348	1459.8
+	"North Carolina"	"37"	"Male"	"M"	"2022"	"2022"	58184	4279681	1359.5
+	"North Carolina"	"37"	"Male"	"M"	"2023 (provisional)"	"2023"	55198	4279681	1289.8
+	"North Carolina"	"37"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	29301	4279681	684.7
+	"North Dakota"	"38"	"Female"	"F"	"2018"	"2018"	3030	296190	1023.0
+	"North Dakota"	"38"	"Female"	"F"	"2019"	"2019"	3143	297041	1058.1
+	"North Dakota"	"38"	"Female"	"F"	"2020"	"2020"	3764	298140	1262.5
+	"North Dakota"	"38"	"Female"	"F"	"2021"	"2021"	3327	300341	1107.7
+	"North Dakota"	"38"	"Female"	"F"	"2022"	"2022"	3255	303891	1071.1
+	"North Dakota"	"38"	"Female"	"F"	"2023 (provisional)"	"2023"	3108	303891	1022.7
+	"North Dakota"	"38"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	1759	303891	578.8
+	"North Dakota"	"38"	"Male"	"M"	"2018"	"2018"	3332	311338	1070.2
+	"North Dakota"	"38"	"Male"	"M"	"2019"	"2019"	3456	311425	1109.7
+	"North Dakota"	"38"	"Male"	"M"	"2020"	"2020"	4199	312928	1341.8
+	"North Dakota"	"38"	"Male"	"M"	"2021"	"2021"	3893	318368	1222.8
+	"North Dakota"	"38"	"Male"	"M"	"2022"	"2022"	3715	322287	1152.7
+	"North Dakota"	"38"	"Male"	"M"	"2023 (provisional)"	"2023"	3646	322287	1131.3
+	"North Dakota"	"38"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	1914	322287	593.9
+	"Ohio"	"39"	"Female"	"F"	"2018"	"2018"	60902	4912607	1239.7
+	"Ohio"	"39"	"Female"	"F"	"2019"	"2019"	60600	4916855	1232.5
+	"Ohio"	"39"	"Female"	"F"	"2020"	"2020"	69722	4922283	1416.5
+	"Ohio"	"39"	"Female"	"F"	"2021"	"2021"	70072	4921112	1423.9
+	"Ohio"	"39"	"Female"	"F"	"2022"	"2022"	66316	4919977	1347.9
+	"Ohio"	"39"	"Female"	"F"	"2023 (provisional)"	"2023"	61422	4919977	1248.4
+	"Ohio"	"39"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	33205	4919977	674.9
+	"Ohio"	"39"	"Male"	"M"	"2018"	"2018"	62063	4636111	1338.7
+	"Ohio"	"39"	"Male"	"M"	"2019"	"2019"	61834	4641138	1332.3
+	"Ohio"	"39"	"Male"	"M"	"2020"	"2020"	72765	4648093	1565.5
+	"Ohio"	"39"	"Male"	"M"	"2021"	"2021"	76266	4715199	1617.5
+	"Ohio"	"39"	"Male"	"M"	"2022"	"2022"	70552	4733149	1490.6
+	"Ohio"	"39"	"Male"	"M"	"2023 (provisional)"	"2023"	65069	4733149	1374.8
+	"Ohio"	"39"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	34047	4733149	719.3
+	"Oklahoma"	"40"	"Female"	"F"	"2018"	"2018"	19451	1599754	1215.9
+	"Oklahoma"	"40"	"Female"	"F"	"2019"	"2019"	19344	1608698	1202.5
+	"Oklahoma"	"40"	"Female"	"F"	"2020"	"2020"	22455	1621746	1384.6
+	"Oklahoma"	"40"	"Female"	"F"	"2021"	"2021"	23470	1613953	1454.2
+	"Oklahoma"	"40"	"Female"	"F"	"2022"	"2022"	22585	1631809	1384.0
+	"Oklahoma"	"40"	"Female"	"F"	"2023 (provisional)"	"2023"	20902	1631809	1280.9
+	"Oklahoma"	"40"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	11484	1631809	703.8
+	"Oklahoma"	"40"	"Male"	"M"	"2018"	"2018"	20975	1544989	1357.6
+	"Oklahoma"	"40"	"Male"	"M"	"2019"	"2019"	21078	1554692	1355.8
+	"Oklahoma"	"40"	"Male"	"M"	"2020"	"2020"	24905	1565463	1590.9
+	"Oklahoma"	"40"	"Male"	"M"	"2021"	"2021"	26976	1576575	1711.1
+	"Oklahoma"	"40"	"Male"	"M"	"2022"	"2022"	24872	1602087	1552.5
+	"Oklahoma"	"40"	"Male"	"M"	"2023 (provisional)"	"2023"	22755	1602087	1420.3
+	"Oklahoma"	"40"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	12268	1602087	765.8
+	"Oregon"	"41"	"Female"	"F"	"2018"	"2018"	17400	1759005	989.2
+	"Oregon"	"41"	"Female"	"F"	"2019"	"2019"	17915	1775957	1008.8
+	"Oregon"	"41"	"Female"	"F"	"2020"	"2020"	18979	1791424	1059.4
+	"Oregon"	"41"	"Female"	"F"	"2021"	"2021"	20723	1784179	1161.5
+	"Oregon"	"41"	"Female"	"F"	"2022"	"2022"	20743	1789189	1159.4
+	"Oregon"	"41"	"Female"	"F"	"2023 (provisional)"	"2023"	19652	1789189	1098.4
+	"Oregon"	"41"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	10513	1789189	587.6
+	"Oregon"	"41"	"Male"	"M"	"2018"	"2018"	18519	1705705	1085.7
+	"Oregon"	"41"	"Male"	"M"	"2019"	"2019"	19175	1722433	1113.3
+	"Oregon"	"41"	"Male"	"M"	"2020"	"2020"	20985	1737517	1207.8
+	"Oregon"	"41"	"Male"	"M"	"2021"	"2021"	24042	1753590	1371.0
+	"Oregon"	"41"	"Male"	"M"	"2022"	"2022"	23580	1766325	1335.0
+	"Oregon"	"41"	"Male"	"M"	"2023 (provisional)"	"2023"	22619	1766325	1280.6
+	"Oregon"	"41"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	11737	1766325	664.5
+	"Pennsylvania"	"42"	"Female"	"F"	"2018"	"2018"	66880	5465516	1223.7
+	"Pennsylvania"	"42"	"Female"	"F"	"2019"	"2019"	66497	5466033	1216.5
+	"Pennsylvania"	"42"	"Female"	"F"	"2020"	"2020"	76773	5461386	1405.7
+	"Pennsylvania"	"42"	"Female"	"F"	"2021"	"2021"	74180	5494071	1350.2
+	"Pennsylvania"	"42"	"Female"	"F"	"2022"	"2022"	71729	5517482	1300.0
+	"Pennsylvania"	"42"	"Female"	"F"	"2023 (provisional)"	"2023"	67437	5517482	1222.2
+	"Pennsylvania"	"42"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	36278	5517482	657.5
+	"Pennsylvania"	"42"	"Male"	"M"	"2018"	"2018"	66663	5157700	1292.5
+	"Pennsylvania"	"42"	"Male"	"M"	"2019"	"2019"	66346	5162392	1285.2
+	"Pennsylvania"	"42"	"Male"	"M"	"2020"	"2020"	77714	5161952	1505.5
+	"Pennsylvania"	"42"	"Male"	"M"	"2021"	"2021"	80113	5275505	1518.6
+	"Pennsylvania"	"42"	"Male"	"M"	"2022"	"2022"	74329	5304326	1401.3
+	"Pennsylvania"	"42"	"Male"	"M"	"2023 (provisional)"	"2023"	69574	5304326	1311.6
+	"Pennsylvania"	"42"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	37345	5304326	704.0
+	"Rhode Island"	"44"	"Female"	"F"	"2018"	"2018"	5125	460933	1111.9
+	"Rhode Island"	"44"	"Female"	"F"	"2019"	"2019"	5264	462029	1139.3
+	"Rhode Island"	"44"	"Female"	"F"	"2020"	"2020"	5931	461531	1285.1
+	"Rhode Island"	"44"	"Female"	"F"	"2021"	"2021"	5601	475335	1178.3
+	"Rhode Island"	"44"	"Female"	"F"	"2022"	"2022"	5278	475373	1110.3
+	"Rhode Island"	"44"	"Female"	"F"	"2023 (provisional)"	"2023"	5177	475373	1089.0
+	"Rhode Island"	"44"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	2774	475373	583.5
+	"Rhode Island"	"44"	"Male"	"M"	"2018"	"2018"	4885	428308	1140.5
+	"Rhode Island"	"44"	"Male"	"M"	"2019"	"2019"	4912	429943	1142.5
+	"Rhode Island"	"44"	"Male"	"M"	"2020"	"2020"	5822	430028	1353.9
+	"Rhode Island"	"44"	"Male"	"M"	"2021"	"2021"	5579	449719	1240.6
+	"Rhode Island"	"44"	"Male"	"M"	"2022"	"2022"	5370	451991	1188.1
+	"Rhode Island"	"44"	"Male"	"M"	"2023 (provisional)"	"2023"	5186	451991	1147.4
+	"Rhode Island"	"44"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	2775	451991	614.0
+	"South Carolina"	"45"	"Female"	"F"	"2018"	"2018"	24064	2169347	1109.3
+	"South Carolina"	"45"	"Female"	"F"	"2019"	"2019"	24102	2202217	1094.4
+	"South Carolina"	"45"	"Female"	"F"	"2020"	"2020"	28713	2239319	1282.2
+	"South Carolina"	"45"	"Female"	"F"	"2021"	"2021"	30218	2216002	1363.6
+	"South Carolina"	"45"	"Female"	"F"	"2022"	"2022"	28583	2261086	1264.1
+	"South Carolina"	"45"	"Female"	"F"	"2023 (provisional)"	"2023"	27173	2261086	1201.8
+	"South Carolina"	"45"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	14977	2261086	662.4
+	"South Carolina"	"45"	"Male"	"M"	"2018"	"2018"	26004	1996580	1302.4
+	"South Carolina"	"45"	"Male"	"M"	"2019"	"2019"	26293	2023317	1299.5
+	"South Carolina"	"45"	"Male"	"M"	"2020"	"2020"	31981	2051286	1559.1
+	"South Carolina"	"45"	"Male"	"M"	"2021"	"2021"	34586	2054538	1683.4
+	"South Carolina"	"45"	"Male"	"M"	"2022"	"2022"	31874	2105073	1514.2
+	"South Carolina"	"45"	"Male"	"M"	"2023 (provisional)"	"2023"	30213	2105073	1435.2
+	"South Carolina"	"45"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	16442	2105073	781.1
+	"South Dakota"	"46"	"Female"	"F"	"2018"	"2018"	3763	347105	1084.1
+	"South Dakota"	"46"	"Female"	"F"	"2019"	"2019"	3975	348869	1139.4
+	"South Dakota"	"46"	"Female"	"F"	"2020"	"2020"	4549	352606	1290.1
+	"South Dakota"	"46"	"Female"	"F"	"2021"	"2021"	4204	351140	1197.2
+	"South Dakota"	"46"	"Female"	"F"	"2022"	"2022"	4232	358224	1181.4
+	"South Dakota"	"46"	"Female"	"F"	"2023 (provisional)"	"2023"	3976	358224	1109.9
+	"South Dakota"	"46"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	2174	358224	606.9
+	"South Dakota"	"46"	"Male"	"M"	"2018"	"2018"	4101	351354	1167.2
+	"South Dakota"	"46"	"Male"	"M"	"2019"	"2019"	4183	352957	1185.1
+	"South Dakota"	"46"	"Male"	"M"	"2020"	"2020"	5196	356975	1455.6
+	"South Dakota"	"46"	"Male"	"M"	"2021"	"2021"	4867	360821	1348.9
+	"South Dakota"	"46"	"Male"	"M"	"2022"	"2022"	4661	369819	1260.3
+	"South Dakota"	"46"	"Male"	"M"	"2023 (provisional)"	"2023"	4458	369819	1205.5
+	"South Dakota"	"46"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	2344	369819	633.8
+	"Tennessee"	"47"	"Female"	"F"	"2018"	"2018"	34338	2855212	1202.6
+	"Tennessee"	"47"	"Female"	"F"	"2019"	"2019"	33875	2883667	1174.7
+	"Tennessee"	"47"	"Female"	"F"	"2020"	"2020"	39598	2914737	1358.5
+	"Tennessee"	"47"	"Female"	"F"	"2021"	"2021"	42702	2934318	1455.3
+	"Tennessee"	"47"	"Female"	"F"	"2022"	"2022"	39893	2970614	1342.9
+	"Tennessee"	"47"	"Female"	"F"	"2023 (provisional)"	"2023"	37771	2970614	1271.5
+	"Tennessee"	"47"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	20644	2970614	694.9
+	"Tennessee"	"47"	"Male"	"M"	"2018"	"2018"	35940	2665770	1348.2
+	"Tennessee"	"47"	"Male"	"M"	"2019"	"2019"	37268	2692221	1384.3
+	"Tennessee"	"47"	"Male"	"M"	"2020"	"2020"	43890	2717109	1615.3
+	"Tennessee"	"47"	"Male"	"M"	"2021"	"2021"	47676	2770046	1721.1
+	"Tennessee"	"47"	"Male"	"M"	"2022"	"2022"	44299	2815952	1573.1
+	"Tennessee"	"47"	"Male"	"M"	"2023 (provisional)"	"2023"	40973	2815952	1455.0
+	"Tennessee"	"47"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	21684	2815952	770.0
+	"Texas"	"48"	"Female"	"F"	"2018"	"2018"	94319	11422926	825.7
+	"Texas"	"48"	"Female"	"F"	"2019"	"2019"	94494	11577342	816.2
+	"Texas"	"48"	"Female"	"F"	"2020"	"2020"	114441	11753174	973.7
+	"Texas"	"48"	"Female"	"F"	"2021"	"2021"	121816	11769874	1035.0
+	"Texas"	"48"	"Female"	"F"	"2022"	"2022"	110884	12006572	923.5
+	"Texas"	"48"	"Female"	"F"	"2023 (provisional)"	"2023"	106169	12006572	884.3
+	"Texas"	"48"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	56648	12006572	471.8
+	"Texas"	"48"	"Male"	"M"	"2018"	"2018"	104808	11115627	942.9
+	"Texas"	"48"	"Male"	"M"	"2019"	"2019"	105792	11260946	939.5
+	"Texas"	"48"	"Male"	"M"	"2020"	"2020"	132937	11432285	1162.8
+	"Texas"	"48"	"Male"	"M"	"2021"	"2021"	142836	11582767	1233.2
+	"Texas"	"48"	"Male"	"M"	"2022"	"2022"	127194	11884197	1070.3
+	"Texas"	"48"	"Male"	"M"	"2023 (provisional)"	"2023"	119704	11884197	1007.3
+	"Texas"	"48"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	63540	11884197	534.7
+	"Utah"	"49"	"Female"	"F"	"2018"	"2018"	8603	1189967	723.0
+	"Utah"	"49"	"Female"	"F"	"2019"	"2019"	8778	1214145	723.0
+	"Utah"	"49"	"Female"	"F"	"2020"	"2020"	10012	1237639	809.0
+	"Utah"	"49"	"Female"	"F"	"2021"	"2021"	10392	1269129	818.8
+	"Utah"	"49"	"Female"	"F"	"2022"	"2022"	10303	1293727	796.4
+	"Utah"	"49"	"Female"	"F"	"2023 (provisional)"	"2023"	9790	1293727	756.7
+	"Utah"	"49"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	5483	1293727	423.8
+	"Utah"	"49"	"Male"	"M"	"2018"	"2018"	9390	1192257	787.6
+	"Utah"	"49"	"Male"	"M"	"2019"	"2019"	9589	1217049	787.9
+	"Utah"	"49"	"Male"	"M"	"2020"	"2020"	11135	1242635	896.1
+	"Utah"	"49"	"Male"	"M"	"2021"	"2021"	11851	1289863	918.8
+	"Utah"	"49"	"Male"	"M"	"2022"	"2022"	11233	1324871	847.9
+	"Utah"	"49"	"Male"	"M"	"2023 (provisional)"	"2023"	11125	1324871	839.7
+	"Utah"	"49"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	5941	1324871	448.4
+	"Vermont"	"50"	"Female"	"F"	"2018"	"2018"	2959	271181	1091.2
+	"Vermont"	"50"	"Female"	"F"	"2019"	"2019"	2857	270506	1056.2
+	"Vermont"	"50"	"Female"	"F"	"2020"	"2020"	3108	270608	1148.5
+	"Vermont"	"50"	"Female"	"F"	"2021"	"2021"	3203	278713	1149.2
+	"Vermont"	"50"	"Female"	"F"	"2022"	"2022"	3239	280022	1156.7
+	"Vermont"	"50"	"Female"	"F"	"2023 (provisional)"	"2023"	3265	280022	1166.0
+	"Vermont"	"50"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	1734	280022	619.2
+	"Vermont"	"50"	"Male"	"M"	"2018"	"2018"	3025	260404	1161.7
+	"Vermont"	"50"	"Male"	"M"	"2019"	"2019"	3069	260284	1179.1
+	"Vermont"	"50"	"Male"	"M"	"2020"	"2020"	3324	260416	1276.4
+	"Vermont"	"50"	"Male"	"M"	"2021"	"2021"	3648	271805	1342.1
+	"Vermont"	"50"	"Male"	"M"	"2022"	"2022"	3691	274067	1346.8
+	"Vermont"	"50"	"Male"	"M"	"2023 (provisional)"	"2023"	3477	274067	1268.7
+	"Vermont"	"50"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	1962	274067	715.9
+	"Virginia"	"51"	"Female"	"F"	"2018"	"2018"	33586	3568222	941.3
+	"Virginia"	"51"	"Female"	"F"	"2019"	"2019"	34140	3580495	953.5
+	"Virginia"	"51"	"Female"	"F"	"2020"	"2020"	38754	3606584	1074.5
+	"Virginia"	"51"	"Female"	"F"	"2021"	"2021"	40772	3606138	1130.6
+	"Virginia"	"51"	"Female"	"F"	"2022"	"2022"	39592	3635155	1089.1
+	"Virginia"	"51"	"Female"	"F"	"2023 (provisional)"	"2023"	37492	3635155	1031.4
+	"Virginia"	"51"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	20392	3635155	561.0
+	"Virginia"	"51"	"Male"	"M"	"2018"	"2018"	34999	3395720	1030.7
+	"Virginia"	"51"	"Male"	"M"	"2019"	"2019"	35415	3409426	1038.7
+	"Virginia"	"51"	"Male"	"M"	"2020"	"2020"	41067	3435291	1195.4
+	"Virginia"	"51"	"Male"	"M"	"2021"	"2021"	44370	3480567	1274.8
+	"Virginia"	"51"	"Male"	"M"	"2022"	"2022"	42503	3512031	1210.2
+	"Virginia"	"51"	"Male"	"M"	"2023 (provisional)"	"2023"	39890	3512031	1135.8
+	"Virginia"	"51"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	21172	3512031	602.8
+	"Washington"	"53"	"Female"	"F"	"2018"	"2018"	27233	3086196	882.4
+	"Washington"	"53"	"Female"	"F"	"2019"	"2019"	27833	3123985	890.9
+	"Washington"	"53"	"Female"	"F"	"2020"	"2020"	29704	3160427	939.9
+	"Washington"	"53"	"Female"	"F"	"2021"	"2021"	31725	3161663	1003.4
+	"Washington"	"53"	"Female"	"F"	"2022"	"2022"	32086	3193521	1004.7
+	"Washington"	"53"	"Female"	"F"	"2023 (provisional)"	"2023"	30399	3193521	951.9
+	"Washington"	"53"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	16416	3193521	514.0
+	"Washington"	"53"	"Male"	"M"	"2018"	"2018"	29072	3056976	951.0
+	"Washington"	"53"	"Male"	"M"	"2019"	"2019"	29895	3098661	964.8
+	"Washington"	"53"	"Male"	"M"	"2020"	"2020"	32892	3140785	1047.3
+	"Washington"	"53"	"Male"	"M"	"2021"	"2021"	36414	3184564	1143.5
+	"Washington"	"53"	"Male"	"M"	"2022"	"2022"	36539	3230890	1130.9
+	"Washington"	"53"	"Male"	"M"	"2023 (provisional)"	"2023"	34997	3230890	1083.2
+	"Washington"	"53"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	18307	3230890	566.6
+	"West Virginia"	"54"	"Female"	"F"	"2018"	"2018"	11268	764986	1473.0
+	"West Virginia"	"54"	"Female"	"F"	"2019"	"2019"	11172	760005	1470.0
+	"West Virginia"	"54"	"Female"	"F"	"2020"	"2020"	12148	757519	1603.7
+	"West Virginia"	"54"	"Female"	"F"	"2021"	"2021"	13776	750635	1835.2
+	"West Virginia"	"54"	"Female"	"F"	"2022"	"2022"	12990	748564	1735.3
+	"West Virginia"	"54"	"Female"	"F"	"2023 (provisional)"	"2023"	11640	748564	1555.0
+	"West Virginia"	"54"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	6469	748564	864.2
+	"West Virginia"	"54"	"Male"	"M"	"2018"	"2018"	12024	740158	1624.5
+	"West Virginia"	"54"	"Male"	"M"	"2019"	"2019"	12072	735645	1641.0
+	"West Virginia"	"54"	"Male"	"M"	"2020"	"2020"	13767	733738	1876.3
+	"West Virginia"	"54"	"Male"	"M"	"2021"	"2021"	15548	738001	2106.8
+	"West Virginia"	"54"	"Male"	"M"	"2022"	"2022"	14334	739096	1939.4
+	"West Virginia"	"54"	"Male"	"M"	"2023 (provisional)"	"2023"	12912	739096	1747.0
+	"West Virginia"	"54"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	6753	739096	913.7
+	"Wisconsin"	"55"	"Female"	"F"	"2018"	"2018"	26285	2406675	1092.2
+	"Wisconsin"	"55"	"Female"	"F"	"2019"	"2019"	26223	2414691	1086.0
+	"Wisconsin"	"55"	"Female"	"F"	"2020"	"2020"	30036	2422838	1239.7
+	"Wisconsin"	"55"	"Female"	"F"	"2021"	"2021"	28674	2433067	1178.5
+	"Wisconsin"	"55"	"Female"	"F"	"2022"	"2022"	28718	2441917	1176.0
+	"Wisconsin"	"55"	"Female"	"F"	"2023 (provisional)"	"2023"	27240	2441917	1115.5
+	"Wisconsin"	"55"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	14853	2441917	608.3
+	"Wisconsin"	"55"	"Male"	"M"	"2018"	"2018"	26854	2353364	1141.1
+	"Wisconsin"	"55"	"Male"	"M"	"2019"	"2019"	27428	2363216	1160.6
+	"Wisconsin"	"55"	"Male"	"M"	"2020"	"2020"	32160	2373629	1354.9
+	"Wisconsin"	"55"	"Male"	"M"	"2021"	"2021"	31819	2419221	1315.3
+	"Wisconsin"	"55"	"Male"	"M"	"2022"	"2022"	31328	2434795	1286.7
+	"Wisconsin"	"55"	"Male"	"M"	"2023 (provisional)"	"2023"	29751	2434795	1221.9
+	"Wisconsin"	"55"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	15815	2434795	649.5
+	"Wyoming"	"56"	"Female"	"F"	"2018"	"2018"	2370	228458	1037.4
+	"Wyoming"	"56"	"Female"	"F"	"2019"	"2019"	2295	229855	998.5
+	"Wyoming"	"56"	"Female"	"F"	"2020"	"2020"	2701	231860	1164.9
+	"Wyoming"	"56"	"Female"	"F"	"2021"	"2021"	2953	229786	1285.1
+	"Wyoming"	"56"	"Female"	"F"	"2022"	"2022"	2680	231789	1156.2
+	"Wyoming"	"56"	"Female"	"F"	"2023 (provisional)"	"2023"	2603	231789	1123.0
+	"Wyoming"	"56"	"Female"	"F"	"2024 (provisional and partial)"	"2024"	1379	231789	594.9
+	"Wyoming"	"56"	"Male"	"M"	"2018"	"2018"	2650	236416	1120.9
+	"Wyoming"	"56"	"Male"	"M"	"2019"	"2019"	2760	237239	1163.4
+	"Wyoming"	"56"	"Male"	"M"	"2020"	"2020"	3230	240096	1345.3
+	"Wyoming"	"56"	"Male"	"M"	"2021"	"2021"	3570	240288	1485.7
+	"Wyoming"	"56"	"Male"	"M"	"2022"	"2022"	3164	243643	1298.6
+	"Wyoming"	"56"	"Male"	"M"	"2023 (provisional)"	"2023"	2944	243643	1208.3
+	"Wyoming"	"56"	"Male"	"M"	"2024 (provisional and partial)"	"2024"	1663	243643	682.6
+"---"
+"Dataset: Provisional Mortality Statistics, 2018 through Last Week"
+"Query Parameters:"
+"Five-Year Age Groups: 15-19 years; 20-24 years; 25-29 years; 30-34 years; 35-39 years; 40-44 years; 45-49 years; 50-54 years;"
+"55-59 years; 60-64 years ; 65-69 years; 70-74 years; 75-79 years; 80-84 years; 85-89 years; 90-94 years; 95-99 years; 100+ years"
+"Group By: Residence State; Gender; Year"
+"Show Totals: False"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd-provisional.html for more information."
+"---"
+"Query Date: Jul 31, 2024 9:27:45 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics"
+"System, Provisional Mortality on CDC WONDER Online Database. Data are from the final Multiple Cause of Death Files, 2018-2022,"
+"and from provisional data for years 2023-2024, as compiled from data provided by the 57 vital statistics jurisdictions through"
+"the Vital Statistics Cooperative Program. Accessed at http://wonder.cdc.gov/mcd-icd10-provisional.html on Jul 31, 2024 9:27:45"
+"AM"
+"---"
+Caveats:
+"1. Deaths of persons with Age ""Not Stated"" are included in ""All"" counts and rates, but are not distributed among age groups,"
+"so are not included in age-specific counts, age-specific rates or in any age-adjusted rates. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Not Stated."
+"2. The population figures for years 2022 and later are single-race estimates of the July 1 resident population, from the Vintage"
+"2022 postcensal series released by the Census Bureau on June 22, 2023. The 2022 series is based on the Modified Blended Base"
+"produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count. The Modified Blended Base consists of"
+"the blend of Vintage 2020 postcensal population estimates for April 1, 2020, 2020 Demographic Analysis Estimates, and 2020"
+"Census data from the internal Census Edited File (CEF). The population figures for years 2021 are single-race estimates of the"
+"July 1 resident population, based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, from the Vintage 2021 postcensal series released by the Census Bureau on June 30, 2022. The population figures"
+"for year 2020 are single-race estimates of the July 1 resident population, from the Vintage 2020 postcensal series based on"
+"April 2010 Census, released by the Census Bureau on July 27, 2021. The population figures for year 2019 are single-race"
+"estimates of the July 1 resident population, from the Vintage 2019 postcensal series based on April 2010 Census, released by the"
+"Census Bureau on June 25, 2020. The population figures for year 2018 are single-race estimates of the July 1 resident"
+"population, from the Vintage 2018 postcensal series based on April 2010 Census, released by the Census Bureau on June 20, 2019."
+"More information: http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Population Data."
+"3. Connecticut population estimates for 2022 are reported for 9 planning regions as county equivalent areas, instead of the"
+"former 8 legacy counties in the Vintage 2022 postcensal series released by the Census Bureau on June 22, 2023. Populations"
+"estimates for the former counties are not available for 2022. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd-provisional.html#Connecticut-2022."
+"4. Deaths occurring through July 20, 2024 as of July 28, 2024."

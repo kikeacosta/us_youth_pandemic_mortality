@@ -1,0 +1,367 @@
+"Notes"	"Five-Year Age Groups"	"Five-Year Age Groups Code"	"Race"	"Race Code"	"Yearly July 1st Estimates"	"Yearly July 1st Estimates Code"	Population
+	"< 1 year"	"1"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	26730
+	"< 1 year"	"1"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	24452
+	"< 1 year"	"1"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	25196
+	"< 1 year"	"1"	"Asian"	"A"	"2020"	"2020"	200539
+	"< 1 year"	"1"	"Asian"	"A"	"2021"	"2021"	196078
+	"< 1 year"	"1"	"Asian"	"A"	"2022"	"2022"	203944
+	"< 1 year"	"1"	"Black or African American"	"2054-5"	"2020"	"2020"	518401
+	"< 1 year"	"1"	"Black or African American"	"2054-5"	"2021"	"2021"	526886
+	"< 1 year"	"1"	"Black or African American"	"2054-5"	"2022"	"2022"	543753
+	"< 1 year"	"1"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	8210
+	"< 1 year"	"1"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	7874
+	"< 1 year"	"1"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	8088
+	"< 1 year"	"1"	"White"	"2106-3"	"2020"	"2020"	1765948
+	"< 1 year"	"1"	"White"	"2106-3"	"2021"	"2021"	1660823
+	"< 1 year"	"1"	"White"	"2106-3"	"2022"	"2022"	1707800
+	"< 1 year"	"1"	"More than one race"	"M"	"2020"	"2020"	193242
+	"< 1 year"	"1"	"More than one race"	"M"	"2021"	"2021"	190603
+	"< 1 year"	"1"	"More than one race"	"M"	"2022"	"2022"	196280
+	"1-4 years"	"1-4"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	116198
+	"1-4 years"	"1-4"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	112057
+	"1-4 years"	"1-4"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	106731
+	"1-4 years"	"1-4"	"Asian"	"A"	"2020"	"2020"	882615
+	"1-4 years"	"1-4"	"Asian"	"A"	"2021"	"2021"	863514
+	"1-4 years"	"1-4"	"Asian"	"A"	"2022"	"2022"	848949
+	"1-4 years"	"1-4"	"Black or African American"	"2054-5"	"2020"	"2020"	2139828
+	"1-4 years"	"1-4"	"Black or African American"	"2054-5"	"2021"	"2021"	2117590
+	"1-4 years"	"1-4"	"Black or African American"	"2054-5"	"2022"	"2022"	2113785
+	"1-4 years"	"1-4"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	35580
+	"1-4 years"	"1-4"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	34890
+	"1-4 years"	"1-4"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	33904
+	"1-4 years"	"1-4"	"White"	"2106-3"	"2020"	"2020"	7452204
+	"1-4 years"	"1-4"	"White"	"2106-3"	"2021"	"2021"	7270031
+	"1-4 years"	"1-4"	"White"	"2106-3"	"2022"	"2022"	7061704
+	"1-4 years"	"1-4"	"More than one race"	"M"	"2020"	"2020"	788101
+	"1-4 years"	"1-4"	"More than one race"	"M"	"2021"	"2021"	781411
+	"1-4 years"	"1-4"	"More than one race"	"M"	"2022"	"2022"	775758
+	"5-9 years"	"5-9"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	161455
+	"5-9 years"	"5-9"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	159346
+	"5-9 years"	"5-9"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	156510
+	"5-9 years"	"5-9"	"Asian"	"A"	"2020"	"2020"	1133586
+	"5-9 years"	"5-9"	"Asian"	"A"	"2021"	"2021"	1149315
+	"5-9 years"	"5-9"	"Asian"	"A"	"2022"	"2022"	1174461
+	"5-9 years"	"5-9"	"Black or African American"	"2054-5"	"2020"	"2020"	2763198
+	"5-9 years"	"5-9"	"Black or African American"	"2054-5"	"2021"	"2021"	2752150
+	"5-9 years"	"5-9"	"Black or African American"	"2054-5"	"2022"	"2022"	2748687
+	"5-9 years"	"5-9"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	43667
+	"5-9 years"	"5-9"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	44479
+	"5-9 years"	"5-9"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	45585
+	"5-9 years"	"5-9"	"White"	"2106-3"	"2020"	"2020"	9880168
+	"5-9 years"	"5-9"	"White"	"2106-3"	"2021"	"2021"	9839724
+	"5-9 years"	"5-9"	"White"	"2106-3"	"2022"	"2022"	9751038
+	"5-9 years"	"5-9"	"More than one race"	"M"	"2020"	"2020"	977889
+	"5-9 years"	"5-9"	"More than one race"	"M"	"2021"	"2021"	987532
+	"5-9 years"	"5-9"	"More than one race"	"M"	"2022"	"2022"	994881
+	"10-14 years"	"10-14"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	176601
+	"10-14 years"	"10-14"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	173874
+	"10-14 years"	"10-14"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	170252
+	"10-14 years"	"10-14"	"Asian"	"A"	"2020"	"2020"	1098142
+	"10-14 years"	"10-14"	"Asian"	"A"	"2021"	"2021"	1103078
+	"10-14 years"	"10-14"	"Asian"	"A"	"2022"	"2022"	1119771
+	"10-14 years"	"10-14"	"Black or African American"	"2054-5"	"2020"	"2020"	2959188
+	"10-14 years"	"10-14"	"Black or African American"	"2054-5"	"2021"	"2021"	2932503
+	"10-14 years"	"10-14"	"Black or African American"	"2054-5"	"2022"	"2022"	2887521
+	"10-14 years"	"10-14"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	43362
+	"10-14 years"	"10-14"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	43282
+	"10-14 years"	"10-14"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	43315
+	"10-14 years"	"10-14"	"White"	"2106-3"	"2020"	"2020"	10681616
+	"10-14 years"	"10-14"	"White"	"2106-3"	"2021"	"2021"	10495479
+	"10-14 years"	"10-14"	"White"	"2106-3"	"2022"	"2022"	10285750
+	"10-14 years"	"10-14"	"More than one race"	"M"	"2020"	"2020"	932970
+	"10-14 years"	"10-14"	"More than one race"	"M"	"2021"	"2021"	949280
+	"10-14 years"	"10-14"	"More than one race"	"M"	"2022"	"2022"	957918
+	"15-19 years"	"15-19"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	179427
+	"15-19 years"	"15-19"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	176485
+	"15-19 years"	"15-19"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	176542
+	"15-19 years"	"15-19"	"Asian"	"A"	"2020"	"2020"	1167689
+	"15-19 years"	"15-19"	"Asian"	"A"	"2021"	"2021"	1141347
+	"15-19 years"	"15-19"	"Asian"	"A"	"2022"	"2022"	1158864
+	"15-19 years"	"15-19"	"Black or African American"	"2054-5"	"2020"	"2020"	2981266
+	"15-19 years"	"15-19"	"Black or African American"	"2054-5"	"2021"	"2021"	2917542
+	"15-19 years"	"15-19"	"Black or African American"	"2054-5"	"2022"	"2022"	2930236
+	"15-19 years"	"15-19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	43315
+	"15-19 years"	"15-19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	43237
+	"15-19 years"	"15-19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	44194
+	"15-19 years"	"15-19"	"White"	"2106-3"	"2020"	"2020"	11409706
+	"15-19 years"	"15-19"	"White"	"2106-3"	"2021"	"2021"	11132693
+	"15-19 years"	"15-19"	"White"	"2106-3"	"2022"	"2022"	11027468
+	"15-19 years"	"15-19"	"More than one race"	"M"	"2020"	"2020"	806875
+	"15-19 years"	"15-19"	"More than one race"	"M"	"2021"	"2021"	820612
+	"15-19 years"	"15-19"	"More than one race"	"M"	"2022"	"2022"	850210
+	"20-24 years"	"20-24"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	182551
+	"20-24 years"	"20-24"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	185752
+	"20-24 years"	"20-24"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	186474
+	"20-24 years"	"20-24"	"Asian"	"A"	"2020"	"2020"	1268533
+	"20-24 years"	"20-24"	"Asian"	"A"	"2021"	"2021"	1277274
+	"20-24 years"	"20-24"	"Asian"	"A"	"2022"	"2022"	1308563
+	"20-24 years"	"20-24"	"Black or African American"	"2054-5"	"2020"	"2020"	3105744
+	"20-24 years"	"20-24"	"Black or African American"	"2054-5"	"2021"	"2021"	3154093
+	"20-24 years"	"20-24"	"Black or African American"	"2054-5"	"2022"	"2022"	3160578
+	"20-24 years"	"20-24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	43520
+	"20-24 years"	"20-24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	44027
+	"20-24 years"	"20-24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	44988
+	"20-24 years"	"20-24"	"White"	"2106-3"	"2020"	"2020"	11738728
+	"20-24 years"	"20-24"	"White"	"2106-3"	"2021"	"2021"	11879578
+	"20-24 years"	"20-24"	"White"	"2106-3"	"2022"	"2022"	11892505
+	"20-24 years"	"20-24"	"More than one race"	"M"	"2020"	"2020"	708157
+	"20-24 years"	"20-24"	"More than one race"	"M"	"2021"	"2021"	740021
+	"20-24 years"	"20-24"	"More than one race"	"M"	"2022"	"2022"	763829
+	"25-29 years"	"25-29"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	190900
+	"25-29 years"	"25-29"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	186322
+	"25-29 years"	"25-29"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	181475
+	"25-29 years"	"25-29"	"Asian"	"A"	"2020"	"2020"	1508807
+	"25-29 years"	"25-29"	"Asian"	"A"	"2021"	"2021"	1471811
+	"25-29 years"	"25-29"	"Asian"	"A"	"2022"	"2022"	1480440
+	"25-29 years"	"25-29"	"Black or African American"	"2054-5"	"2020"	"2020"	3368343
+	"25-29 years"	"25-29"	"Black or African American"	"2054-5"	"2021"	"2021"	3270153
+	"25-29 years"	"25-29"	"Black or African American"	"2054-5"	"2022"	"2022"	3191592
+	"25-29 years"	"25-29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	48755
+	"25-29 years"	"25-29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	47083
+	"25-29 years"	"25-29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	46477
+	"25-29 years"	"25-29"	"White"	"2106-3"	"2020"	"2020"	12184817
+	"25-29 years"	"25-29"	"White"	"2106-3"	"2021"	"2021"	11939113
+	"25-29 years"	"25-29"	"White"	"2106-3"	"2022"	"2022"	11764358
+	"25-29 years"	"25-29"	"More than one race"	"M"	"2020"	"2020"	600572
+	"25-29 years"	"25-29"	"More than one race"	"M"	"2021"	"2021"	619123
+	"25-29 years"	"25-29"	"More than one race"	"M"	"2022"	"2022"	638302
+	"30-34 years"	"30-34"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	178135
+	"30-34 years"	"30-34"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	183724
+	"30-34 years"	"30-34"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	188952
+	"30-34 years"	"30-34"	"Asian"	"A"	"2020"	"2020"	1689683
+	"30-34 years"	"30-34"	"Asian"	"A"	"2021"	"2021"	1701266
+	"30-34 years"	"30-34"	"Asian"	"A"	"2022"	"2022"	1730538
+	"30-34 years"	"30-34"	"Black or African American"	"2054-5"	"2020"	"2020"	3155015
+	"30-34 years"	"30-34"	"Black or African American"	"2054-5"	"2021"	"2021"	3266101
+	"30-34 years"	"30-34"	"Black or African American"	"2054-5"	"2022"	"2022"	3369433
+	"30-34 years"	"30-34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	53195
+	"30-34 years"	"30-34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	53484
+	"30-34 years"	"30-34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	53541
+	"30-34 years"	"30-34"	"White"	"2106-3"	"2020"	"2020"	12589258
+	"30-34 years"	"30-34"	"White"	"2106-3"	"2021"	"2021"	12620697
+	"30-34 years"	"30-34"	"White"	"2106-3"	"2022"	"2022"	12622234
+	"30-34 years"	"30-34"	"More than one race"	"M"	"2020"	"2020"	468411
+	"30-34 years"	"30-34"	"More than one race"	"M"	"2021"	"2021"	495672
+	"30-34 years"	"30-34"	"More than one race"	"M"	"2022"	"2022"	526308
+	"35-39 years"	"35-39"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	159711
+	"35-39 years"	"35-39"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	161304
+	"35-39 years"	"35-39"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	163408
+	"35-39 years"	"35-39"	"Asian"	"A"	"2020"	"2020"	1659831
+	"35-39 years"	"35-39"	"Asian"	"A"	"2021"	"2021"	1687270
+	"35-39 years"	"35-39"	"Asian"	"A"	"2022"	"2022"	1719043
+	"35-39 years"	"35-39"	"Black or African American"	"2054-5"	"2020"	"2020"	2831961
+	"35-39 years"	"35-39"	"Black or African American"	"2054-5"	"2021"	"2021"	2852685
+	"35-39 years"	"35-39"	"Black or African American"	"2054-5"	"2022"	"2022"	2887606
+	"35-39 years"	"35-39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	50519
+	"35-39 years"	"35-39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	51604
+	"35-39 years"	"35-39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	52129
+	"35-39 years"	"35-39"	"White"	"2106-3"	"2020"	"2020"	12463909
+	"35-39 years"	"35-39"	"White"	"2106-3"	"2021"	"2021"	12461491
+	"35-39 years"	"35-39"	"White"	"2106-3"	"2022"	"2022"	12427017
+	"35-39 years"	"35-39"	"More than one race"	"M"	"2020"	"2020"	390120
+	"35-39 years"	"35-39"	"More than one race"	"M"	"2021"	"2021"	399218
+	"35-39 years"	"35-39"	"More than one race"	"M"	"2022"	"2022"	410869
+	"40-44 years"	"40-44"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	144964
+	"40-44 years"	"40-44"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	148010
+	"40-44 years"	"40-44"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	149913
+	"40-44 years"	"40-44"	"Asian"	"A"	"2020"	"2020"	1492869
+	"40-44 years"	"40-44"	"Asian"	"A"	"2021"	"2021"	1524255
+	"40-44 years"	"40-44"	"Asian"	"A"	"2022"	"2022"	1582521
+	"40-44 years"	"40-44"	"Black or African American"	"2054-5"	"2020"	"2020"	2640696
+	"40-44 years"	"40-44"	"Black or African American"	"2054-5"	"2021"	"2021"	2698423
+	"40-44 years"	"40-44"	"Black or African American"	"2054-5"	"2022"	"2022"	2743559
+	"40-44 years"	"40-44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	43194
+	"40-44 years"	"40-44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	45018
+	"40-44 years"	"40-44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	47053
+	"40-44 years"	"40-44"	"White"	"2106-3"	"2020"	"2020"	11662380
+	"40-44 years"	"40-44"	"White"	"2106-3"	"2021"	"2021"	11906882
+	"40-44 years"	"40-44"	"White"	"2106-3"	"2022"	"2022"	12088581
+	"40-44 years"	"40-44"	"More than one race"	"M"	"2020"	"2020"	328240
+	"40-44 years"	"40-44"	"More than one race"	"M"	"2021"	"2021"	343191
+	"40-44 years"	"40-44"	"More than one race"	"M"	"2022"	"2022"	356766
+	"45-49 years"	"45-49"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	139667
+	"45-49 years"	"45-49"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	136549
+	"45-49 years"	"45-49"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	136358
+	"45-49 years"	"45-49"	"Asian"	"A"	"2020"	"2020"	1450864
+	"45-49 years"	"45-49"	"Asian"	"A"	"2021"	"2021"	1459948
+	"45-49 years"	"45-49"	"Asian"	"A"	"2022"	"2022"	1471886
+	"45-49 years"	"45-49"	"Black or African American"	"2054-5"	"2020"	"2020"	2561071
+	"45-49 years"	"45-49"	"Black or African American"	"2054-5"	"2021"	"2021"	2491719
+	"45-49 years"	"45-49"	"Black or African American"	"2054-5"	"2022"	"2022"	2471784
+	"45-49 years"	"45-49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	38068
+	"45-49 years"	"45-49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	38332
+	"45-49 years"	"45-49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	39300
+	"45-49 years"	"45-49"	"White"	"2106-3"	"2020"	"2020"	11887768
+	"45-49 years"	"45-49"	"White"	"2106-3"	"2021"	"2021"	11375358
+	"45-49 years"	"45-49"	"White"	"2106-3"	"2022"	"2022"	11183313
+	"45-49 years"	"45-49"	"More than one race"	"M"	"2020"	"2020"	280651
+	"45-49 years"	"45-49"	"More than one race"	"M"	"2021"	"2021"	281470
+	"45-49 years"	"45-49"	"More than one race"	"M"	"2022"	"2022"	288070
+	"50-54 years"	"50-54"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	142177
+	"50-54 years"	"50-54"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	141811
+	"50-54 years"	"50-54"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	140876
+	"50-54 years"	"50-54"	"Asian"	"A"	"2020"	"2020"	1263657
+	"50-54 years"	"50-54"	"Asian"	"A"	"2021"	"2021"	1311383
+	"50-54 years"	"50-54"	"Asian"	"A"	"2022"	"2022"	1373321
+	"50-54 years"	"50-54"	"Black or African American"	"2054-5"	"2020"	"2020"	2562546
+	"50-54 years"	"50-54"	"Black or African American"	"2054-5"	"2021"	"2021"	2568301
+	"50-54 years"	"50-54"	"Black or African American"	"2054-5"	"2022"	"2022"	2568807
+	"50-54 years"	"50-54"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	36113
+	"50-54 years"	"50-54"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	36641
+	"50-54 years"	"50-54"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	37172
+	"50-54 years"	"50-54"	"White"	"2106-3"	"2020"	"2020"	13026262
+	"50-54 years"	"50-54"	"White"	"2106-3"	"2021"	"2021"	12990786
+	"50-54 years"	"50-54"	"White"	"2106-3"	"2022"	"2022"	12781822
+	"50-54 years"	"50-54"	"More than one race"	"M"	"2020"	"2020"	247890
+	"50-54 years"	"50-54"	"More than one race"	"M"	"2021"	"2021"	257772
+	"50-54 years"	"50-54"	"More than one race"	"M"	"2022"	"2022"	265339
+	"55-59 years"	"55-59"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	154349
+	"55-59 years"	"55-59"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	150822
+	"55-59 years"	"55-59"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	146519
+	"55-59 years"	"55-59"	"Asian"	"A"	"2020"	"2020"	1145755
+	"55-59 years"	"55-59"	"Asian"	"A"	"2021"	"2021"	1166829
+	"55-59 years"	"55-59"	"Asian"	"A"	"2022"	"2022"	1184527
+	"55-59 years"	"55-59"	"Black or African American"	"2054-5"	"2020"	"2020"	2637399
+	"55-59 years"	"55-59"	"Black or African American"	"2054-5"	"2021"	"2021"	2606729
+	"55-59 years"	"55-59"	"Black or African American"	"2054-5"	"2022"	"2022"	2557040
+	"55-59 years"	"55-59"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	35200
+	"55-59 years"	"55-59"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	35424
+	"55-59 years"	"55-59"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	35371
+	"55-59 years"	"55-59"	"White"	"2106-3"	"2020"	"2020"	14733927
+	"55-59 years"	"55-59"	"White"	"2106-3"	"2021"	"2021"	14212241
+	"55-59 years"	"55-59"	"White"	"2106-3"	"2022"	"2022"	13688221
+	"55-59 years"	"55-59"	"More than one race"	"M"	"2020"	"2020"	237790
+	"55-59 years"	"55-59"	"More than one race"	"M"	"2021"	"2021"	236061
+	"55-59 years"	"55-59"	"More than one race"	"M"	"2022"	"2022"	234161
+	"60-64 years "	"60-64"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	142597
+	"60-64 years "	"60-64"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	145049
+	"60-64 years "	"60-64"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	146327
+	"60-64 years "	"60-64"	"Asian"	"A"	"2020"	"2020"	1029796
+	"60-64 years "	"60-64"	"Asian"	"A"	"2021"	"2021"	1042877
+	"60-64 years "	"60-64"	"Asian"	"A"	"2022"	"2022"	1064341
+	"60-64 years "	"60-64"	"Black or African American"	"2054-5"	"2020"	"2020"	2404717
+	"60-64 years "	"60-64"	"Black or African American"	"2054-5"	"2021"	"2021"	2430997
+	"60-64 years "	"60-64"	"Black or African American"	"2054-5"	"2022"	"2022"	2440524
+	"60-64 years "	"60-64"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	30271
+	"60-64 years "	"60-64"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	31380
+	"60-64 years "	"60-64"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	32492
+	"60-64 years "	"60-64"	"White"	"2106-3"	"2020"	"2020"	14730521
+	"60-64 years "	"60-64"	"White"	"2106-3"	"2021"	"2021"	14781635
+	"60-64 years "	"60-64"	"White"	"2106-3"	"2022"	"2022"	14675149
+	"60-64 years "	"60-64"	"More than one race"	"M"	"2020"	"2020"	212272
+	"60-64 years "	"60-64"	"More than one race"	"M"	"2021"	"2021"	218085
+	"60-64 years "	"60-64"	"More than one race"	"M"	"2022"	"2022"	222661
+	"65-69 years"	"65-69"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	112958
+	"65-69 years"	"65-69"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	117364
+	"65-69 years"	"65-69"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	121996
+	"65-69 years"	"65-69"	"Asian"	"A"	"2020"	"2020"	872414
+	"65-69 years"	"65-69"	"Asian"	"A"	"2021"	"2021"	905757
+	"65-69 years"	"65-69"	"Asian"	"A"	"2022"	"2022"	937009
+	"65-69 years"	"65-69"	"Black or African American"	"2054-5"	"2020"	"2020"	1875168
+	"65-69 years"	"65-69"	"Black or African American"	"2054-5"	"2021"	"2021"	1928398
+	"65-69 years"	"65-69"	"Black or African American"	"2054-5"	"2022"	"2022"	1995366
+	"65-69 years"	"65-69"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	23421
+	"65-69 years"	"65-69"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	24640
+	"65-69 years"	"65-69"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	25874
+	"65-69 years"	"65-69"	"White"	"2106-3"	"2020"	"2020"	13098541
+	"65-69 years"	"65-69"	"White"	"2106-3"	"2021"	"2021"	13278530
+	"65-69 years"	"65-69"	"White"	"2106-3"	"2022"	"2022"	13461676
+	"65-69 years"	"65-69"	"More than one race"	"M"	"2020"	"2020"	163946
+	"65-69 years"	"65-69"	"More than one race"	"M"	"2021"	"2021"	172242
+	"65-69 years"	"65-69"	"More than one race"	"M"	"2022"	"2022"	181026
+	"70-74 years"	"70-74"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	84731
+	"70-74 years"	"70-74"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	90329
+	"70-74 years"	"70-74"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	92365
+	"70-74 years"	"70-74"	"Asian"	"A"	"2020"	"2020"	686548
+	"70-74 years"	"70-74"	"Asian"	"A"	"2021"	"2021"	726559
+	"70-74 years"	"70-74"	"Asian"	"A"	"2022"	"2022"	755804
+	"70-74 years"	"70-74"	"Black or African American"	"2054-5"	"2020"	"2020"	1355340
+	"70-74 years"	"70-74"	"Black or African American"	"2054-5"	"2021"	"2021"	1440057
+	"70-74 years"	"70-74"	"Black or African American"	"2054-5"	"2022"	"2022"	1474542
+	"70-74 years"	"70-74"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	17645
+	"70-74 years"	"70-74"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	18591
+	"70-74 years"	"70-74"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	19635
+	"70-74 years"	"70-74"	"White"	"2106-3"	"2020"	"2020"	10997754
+	"70-74 years"	"70-74"	"White"	"2106-3"	"2021"	"2021"	11468032
+	"70-74 years"	"70-74"	"White"	"2106-3"	"2022"	"2022"	11320516
+	"70-74 years"	"70-74"	"More than one race"	"M"	"2020"	"2020"	121601
+	"70-74 years"	"70-74"	"More than one race"	"M"	"2021"	"2021"	129901
+	"70-74 years"	"70-74"	"More than one race"	"M"	"2022"	"2022"	133560
+	"75-79 years"	"75-79"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	52359
+	"75-79 years"	"75-79"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	54917
+	"75-79 years"	"75-79"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	61210
+	"75-79 years"	"75-79"	"Asian"	"A"	"2020"	"2020"	436984
+	"75-79 years"	"75-79"	"Asian"	"A"	"2021"	"2021"	460911
+	"75-79 years"	"75-79"	"Asian"	"A"	"2022"	"2022"	502180
+	"75-79 years"	"75-79"	"Black or African American"	"2054-5"	"2020"	"2020"	836516
+	"75-79 years"	"75-79"	"Black or African American"	"2054-5"	"2021"	"2021"	855107
+	"75-79 years"	"75-79"	"Black or African American"	"2054-5"	"2022"	"2022"	920305
+	"75-79 years"	"75-79"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	10540
+	"75-79 years"	"75-79"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	11506
+	"75-79 years"	"75-79"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	12708
+	"75-79 years"	"75-79"	"White"	"2106-3"	"2020"	"2020"	7473464
+	"75-79 years"	"75-79"	"White"	"2106-3"	"2021"	"2021"	7615062
+	"75-79 years"	"75-79"	"White"	"2106-3"	"2022"	"2022"	8366001
+	"75-79 years"	"75-79"	"More than one race"	"M"	"2020"	"2020"	77116
+	"75-79 years"	"75-79"	"More than one race"	"M"	"2021"	"2021"	81338
+	"75-79 years"	"75-79"	"More than one race"	"M"	"2022"	"2022"	90596
+	"80-84 years"	"80-84"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	32368
+	"80-84 years"	"80-84"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	34420
+	"80-84 years"	"80-84"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	36815
+	"80-84 years"	"80-84"	"Asian"	"A"	"2020"	"2020"	292708
+	"80-84 years"	"80-84"	"Asian"	"A"	"2021"	"2021"	307035
+	"80-84 years"	"80-84"	"Asian"	"A"	"2022"	"2022"	325064
+	"80-84 years"	"80-84"	"Black or African American"	"2054-5"	"2020"	"2020"	535542
+	"80-84 years"	"80-84"	"Black or African American"	"2054-5"	"2021"	"2021"	542843
+	"80-84 years"	"80-84"	"Black or African American"	"2054-5"	"2022"	"2022"	556510
+	"80-84 years"	"80-84"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	6447
+	"80-84 years"	"80-84"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	6837
+	"80-84 years"	"80-84"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	7251
+	"80-84 years"	"80-84"	"White"	"2106-3"	"2020"	"2020"	4840551
+	"80-84 years"	"80-84"	"White"	"2106-3"	"2021"	"2021"	4932106
+	"80-84 years"	"80-84"	"White"	"2106-3"	"2022"	"2022"	5111684
+	"80-84 years"	"80-84"	"More than one race"	"M"	"2020"	"2020"	47967
+	"80-84 years"	"80-84"	"More than one race"	"M"	"2021"	"2021"	50939
+	"80-84 years"	"80-84"	"More than one race"	"M"	"2022"	"2022"	54478
+	"85+ years"	"85+"	"American Indian or Alaska Native"	"1002-5"	"2020"	"2020"	27911
+	"85+ years"	"85+"	"American Indian or Alaska Native"	"1002-5"	"2021"	"2021"	30404
+	"85+ years"	"85+"	"American Indian or Alaska Native"	"1002-5"	"2022"	"2022"	33053
+	"85+ years"	"85+"	"Asian"	"A"	"2020"	"2020"	298096
+	"85+ years"	"85+"	"Asian"	"A"	"2021"	"2021"	315090
+	"85+ years"	"85+"	"Asian"	"A"	"2022"	"2022"	334799
+	"85+ years"	"85+"	"Black or African American"	"2054-5"	"2020"	"2020"	505552
+	"85+ years"	"85+"	"Black or African American"	"2054-5"	"2021"	"2021"	507001
+	"85+ years"	"85+"	"Black or African American"	"2054-5"	"2022"	"2022"	508843
+	"85+ years"	"85+"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2020"	"2020"	5945
+	"85+ years"	"85+"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2021"	"2021"	6348
+	"85+ years"	"85+"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2022"	"2022"	6851
+	"85+ years"	"85+"	"White"	"2106-3"	"2020"	"2020"	5086646
+	"85+ years"	"85+"	"White"	"2106-3"	"2021"	"2021"	5034123
+	"85+ years"	"85+"	"White"	"2106-3"	"2022"	"2022"	5009129
+	"85+ years"	"85+"	"More than one race"	"M"	"2020"	"2020"	45621
+	"85+ years"	"85+"	"More than one race"	"M"	"2021"	"2021"	48984
+	"85+ years"	"85+"	"More than one race"	"M"	"2022"	"2022"	52837
+"---"
+"Dataset: Single-Race Population Estimates 2020-2022 by State and Single-Year Age"
+"Query Parameters:"
+"Ethnicity: Not Hispanic or Latino"
+"Group By: Five-Year Age Groups; Race; Yearly July 1st Estimates"
+"Show Totals: False"
+"Show Zero Values: True"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/single-race.html for more information."
+"---"
+"Query Date: Aug 5, 2024 8:58:26 AM"
+"---"
+"Suggested Citation: Single-race Population Estimates, United States, 2020-2022. July 1st resident population by state, age, sex,"
+"single-race, and Hispanic origin, on CDC WONDER Online Database. The 2020-2022 postcensal series of estimates of the July 1"
+"resident population are based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, released by the Census Bureau on June 22, 2023. Accessed at"
+"http://wonder.cdc.gov/single-race-single-year-v2022.html on Aug 5, 2024 8:58:26 AM"
+"---"
+Footnotes:
+"1. Estimates for 2020-2022 are single-race Vintage 2022 postcensal estimates of the July 1 resident population, based on the"
+"modified Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count, and released by"
+"the Census Bureau on June 22, 2023."
+"---"
+Caveats:

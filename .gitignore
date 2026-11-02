@@ -1,4 +1,16 @@
+# R / RStudio
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+.Rprofile.local
+
+# renv project library (restored with renv::restore())
+renv/library/
+renv/local/
+renv/staging/
+renv/sandbox/
+
+# Windows
+desktop.ini
+Thumbs.db

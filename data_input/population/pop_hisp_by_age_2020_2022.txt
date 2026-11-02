@@ -1,0 +1,82 @@
+"Notes"	"Five-Year Age Groups"	"Five-Year Age Groups Code"	"Yearly July 1st Estimates"	"Yearly July 1st Estimates Code"	Population
+	"< 1 year"	"1"	"2020"	"2020"	956793
+	"< 1 year"	"1"	"2021"	"2021"	963415
+	"< 1 year"	"1"	"2022"	"2022"	998052
+	"1-4 years"	"1-4"	"2020"	"2020"	3985641
+	"1-4 years"	"1-4"	"2021"	"2021"	3926605
+	"1-4 years"	"1-4"	"2022"	"2022"	3914409
+	"5-9 years"	"5-9"	"2020"	"2020"	5131707
+	"5-9 years"	"5-9"	"2021"	"2021"	5123154
+	"5-9 years"	"5-9"	"2022"	"2022"	5138033
+	"10-14 years"	"10-14"	"2020"	"2020"	5536744
+	"10-14 years"	"10-14"	"2021"	"2021"	5499012
+	"10-14 years"	"10-14"	"2022"	"2022"	5425312
+	"15-19 years"	"15-19"	"2020"	"2020"	5344515
+	"15-19 years"	"15-19"	"2021"	"2021"	5339381
+	"15-19 years"	"15-19"	"2022"	"2022"	5448278
+	"20-24 years"	"20-24"	"2020"	"2020"	5035718
+	"20-24 years"	"20-24"	"2021"	"2021"	5209123
+	"20-24 years"	"20-24"	"2022"	"2022"	5348842
+	"25-29 years"	"25-29"	"2020"	"2020"	4861972
+	"25-29 years"	"25-29"	"2021"	"2021"	4860587
+	"25-29 years"	"25-29"	"2022"	"2022"	4890520
+	"30-34 years"	"30-34"	"2020"	"2020"	4654833
+	"30-34 years"	"30-34"	"2021"	"2021"	4714045
+	"30-34 years"	"30-34"	"2022"	"2022"	4817130
+	"35-39 years"	"35-39"	"2020"	"2020"	4577198
+	"35-39 years"	"35-39"	"2021"	"2021"	4593431
+	"35-39 years"	"35-39"	"2022"	"2022"	4607877
+	"40-44 years"	"40-44"	"2020"	"2020"	4292489
+	"40-44 years"	"40-44"	"2021"	"2021"	4372463
+	"40-44 years"	"40-44"	"2022"	"2022"	4459023
+	"45-49 years"	"45-49"	"2020"	"2020"	3918162
+	"45-49 years"	"45-49"	"2021"	"2021"	3964514
+	"45-49 years"	"45-49"	"2022"	"2022"	4033387
+	"50-54 years"	"50-54"	"2020"	"2020"	3437839
+	"50-54 years"	"50-54"	"2021"	"2021"	3540787
+	"50-54 years"	"50-54"	"2022"	"2022"	3640210
+	"55-59 years"	"55-59"	"2020"	"2020"	2964336
+	"55-59 years"	"55-59"	"2021"	"2021"	3051767
+	"55-59 years"	"55-59"	"2022"	"2022"	3121175
+	"60-64 years "	"60-64"	"2020"	"2020"	2336480
+	"60-64 years "	"60-64"	"2021"	"2021"	2433133
+	"60-64 years "	"60-64"	"2022"	"2022"	2536929
+	"65-69 years"	"65-69"	"2020"	"2020"	1723195
+	"65-69 years"	"65-69"	"2021"	"2021"	1811998
+	"65-69 years"	"65-69"	"2022"	"2022"	1908475
+	"70-74 years"	"70-74"	"2020"	"2020"	1238346
+	"70-74 years"	"70-74"	"2021"	"2021"	1310275
+	"70-74 years"	"70-74"	"2022"	"2022"	1360595
+	"75-79 years"	"75-79"	"2020"	"2020"	795970
+	"75-79 years"	"75-79"	"2021"	"2021"	838223
+	"75-79 years"	"75-79"	"2022"	"2022"	908000
+	"80-84 years"	"80-84"	"2020"	"2020"	533201
+	"80-84 years"	"80-84"	"2021"	"2021"	548072
+	"80-84 years"	"80-84"	"2022"	"2022"	567743
+	"85+ years"	"85+"	"2020"	"2020"	513411
+	"85+ years"	"85+"	"2021"	"2021"	525187
+	"85+ years"	"85+"	"2022"	"2022"	540356
+"---"
+"Dataset: Single-Race Population Estimates 2020-2022 by State and Single-Year Age"
+"Query Parameters:"
+"Ethnicity: Hispanic or Latino"
+"Group By: Five-Year Age Groups; Yearly July 1st Estimates"
+"Show Totals: False"
+"Show Zero Values: False"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/single-race.html for more information."
+"---"
+"Query Date: Aug 5, 2024 8:59:34 AM"
+"---"
+"Suggested Citation: Single-race Population Estimates, United States, 2020-2022. July 1st resident population by state, age, sex,"
+"single-race, and Hispanic origin, on CDC WONDER Online Database. The 2020-2022 postcensal series of estimates of the July 1"
+"resident population are based on the Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial"
+"population count, released by the Census Bureau on June 22, 2023. Accessed at"
+"http://wonder.cdc.gov/single-race-single-year-v2022.html on Aug 5, 2024 8:59:34 AM"
+"---"
+Footnotes:
+"1. Estimates for 2020-2022 are single-race Vintage 2022 postcensal estimates of the July 1 resident population, based on the"
+"modified Blended Base produced by the US Census Bureau in lieu of the April 1, 2020 decennial population count, and released by"
+"the Census Bureau on June 22, 2023."
+"---"
+Caveats:
