@@ -4,7 +4,8 @@
 #   Rscript run_all.R
 #
 # Scripts 01-04 rebuild data_inter/; 05-08 draw figures/ and tables/;
-# 09 prints the numbers quoted in the text to output/.
+# 09 prints the numbers quoted in the text to output/; 10 runs the sensitivity
+# analyses (appendix figure S1 and output/sensitivity_summary.txt).
 # Each script runs in its own environment and only needs code/00_functions.R.
 
 scripts <- c(
@@ -16,7 +17,8 @@ scripts <- c(
   "code/06_fig2_fig3_tables_state_region.R",
   "code/07_fig4_rr_by_race.R",
   "code/08_fig5_change_by_age_race.R",
-  "code/09_numbers_in_text.R"
+  "code/09_numbers_in_text.R",
+  "code/10_sensitivity.R"
 )
 
 t0 <- Sys.time()

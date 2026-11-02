@@ -3,7 +3,7 @@
 # deaths as a percentage of excess deaths, ages 0-24, 2020-2023.
 #
 # Input : data_inter/c19_deaths_by_state_and_age.rds (script 01)
-#         data_inter/excess_states_age_u25.rds (script 04)
+#         data_inter/excess_states_age_u25.rds, excess_regions_u25.rds (script 04)
 #         data_input/population/pop_state_age_0_24_2020_2023.txt
 #         US state boundaries (tigris cartographic 1:5m, 2022), cached in
 #         data_inter/us_states_cb_2022.rds after the first download
@@ -20,27 +20,7 @@ suppressPackageStartupMessages({
   library(flextable)
 })
 
-# Regions (US Bureau of Economic Analysis) ====
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bea <- list(
-  "New England"    = c("CT","ME","MA","NH","RI","VT"),
-  "Mideast"        = c("DE","DC","MD","NJ","NY","PA"),
-  "Great Lakes"    = c("IL","IN","MI","OH","WI"),
-  "Plains"         = c("IA","KS","MN","MO","NE","ND","SD"),
-  "Southeast"      = c("AL","AR","FL","GA","KY","LA","MS","NC","SC","TN","VA","WV"),
-  "Southwest"      = c("AZ","NM","OK","TX"),
-  "Rocky Mountain" = c("CO","ID","MT","UT","WY"),
-  "Far West"       = c("AK","CA","HI","NV","OR","WA")
-)
-west_to_east <- c("Far West", "Rocky Mountain", "Southwest", "Plains",
-                  "Great Lakes", "Southeast", "Mideast", "New England")
-
-bea_lookup <-
-  tibble(abb        = unlist(bea),
-         bea_region = factor(rep(names(bea), lengths(bea)), levels = names(bea))) %>%
-  left_join(tibble(abb = c(state.abb, "DC"),
-                   state = c(state.name, "District of Columbia")),
-            by = "abb")
+# Regions (bea, west_to_east, bea_lookup) are defined in code/00_functions.R
 
 # COVID-19 deaths, ages 0-24 ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,29 +51,27 @@ cov3region <-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 exc <- read_rds("data_inter/excess_states_age_u25.rds")
 
+# intervals: 95% prediction interval of the baseline (lp, up) carried to the excess
 exc2 <-
   exc %>%
   mutate(dx = exc,
-         dx_unc1 = dts - lc,
-         dx_unc2 = dts - uc,
+         dx_unc1 = dts - lp,
+         dx_unc2 = dts - up,
          dx_lb = pmin(dx_unc1, dx_unc2),
          dx_ub = pmax(dx_unc1, dx_unc2)) %>%
   select(state, year, dx_lb, dx, dx_ub) %>%
   mutate(cause = "excess")
 
-# Regional excess: sum of state excess; interval = sum of the state bounds
-# (NOTE: this adds state-level bounds linearly, see README, Methodological notes)
+# Regional excess: baseline fitted on the regional totals (script 04), so the
+# interval is that of the regional baseline, not a sum of state bounds
 exc2region <-
-  exc %>%
-  filter(state != "us") %>%
-  left_join(bea_lookup, by = "state") %>%
-  group_by(bea_region, year) %>%
-  summarise(dx = sum(exc),
-            dx_unc1 = sum(dts - lc),
-            dx_unc2 = sum(dts - uc),
-            .groups = "drop") %>%
-  mutate(dx_lb = pmin(dx_unc1, dx_unc2),
+  read_rds("data_inter/excess_regions_u25.rds") %>%
+  mutate(dx = exc,
+         dx_unc1 = dts - lp,
+         dx_unc2 = dts - up,
+         dx_lb = pmin(dx_unc1, dx_unc2),
          dx_ub = pmax(dx_unc1, dx_unc2)) %>%
+  select(bea_region, year, dx_lb, dx, dx_ub) %>%
   mutate(cause = "excess")
 
 stopifnot(all(exc2region$dx_lb <= exc2region$dx),
@@ -346,7 +324,7 @@ bar_data %>%
   arrange(year, cause, bea_region) %>%
   write_csv("figures/fig3_bars_by_region.csv")
 
-# Table A2: c19, excess (95% CI), ratio by state ====
+# Table A2: c19, excess (95% PI), ratio by state ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dtWide_ci <-
   dt %>%
@@ -383,7 +361,7 @@ yr_labs <- setNames(as.list(sub(".*_", "", names(ft_df)[-1])), names(ft_df)[-1])
 tab <- flextable(ft_df) %>%
   set_header_labels(state = "State", values = yr_labs) %>%
   add_header_row(
-    values    = c("State", "COVID-19 death rate", "Excess death rate\n(95% CI)",
+    values    = c("State", "COVID-19 death rate", "Excess death rate\n(95% PI)",
                   "COVID-19 as a percentage of excess death rate"),
     colwidths = c(1, 4, 4, 4)
   ) %>%
@@ -401,7 +379,7 @@ tab <- flextable(ft_df) %>%
   padding(padding = 2, part = "all") %>%
   autofit()
 
-# smaller font for the CIs
+# smaller font for the intervals
 for (yr in 2020:2023) {
   col <- paste0("excessci_", yr)
   parts <- strsplit(ft_df[[col]], "\n", fixed = TRUE)

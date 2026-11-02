@@ -18,8 +18,9 @@ dtregion <- st_dat$dtregion
 dtWide   <- st_dat$dtWide
 
 out_file <- "output/numbers_in_text.txt"
+# (no on.exit(sink()) here: at the top level of a sourced file it would run at
+# once and close the sink before anything is written)
 sink(out_file)
-on.exit(sink(), add = TRUE)
 
 section <- function(title) cat("\n\n==== ", title, " ====\n", sep = "")
 show <- function(x, n = Inf) print(as.data.frame(x), row.names = FALSE, digits = 4)
@@ -43,7 +44,7 @@ all %>% filter(age < 15, cause == "c19") %>%
 section("Age: COVID-19 deaths, 10-14 by year")
 all %>% filter(age == 10, cause == "c19") %>% select(year, dx) %>% show()
 
-section("Age: excess deaths with CI, by age and year")
+section("Age: excess deaths with 95% PI, by age and year")
 all %>% filter(age <= 20, cause == "excess") %>%
   select(year, age, dx_lb, dx, dx_ub) %>% arrange(age, year) %>% show()
 
@@ -134,7 +135,7 @@ section("Region: COVID-19 death rates by region and year")
 dtregion %>% filter(cause == "c19") %>% select(year, bea_region, mx) %>%
   pivot_wider(names_from = year, values_from = mx) %>% show()
 
-section("Region: excess death rates with CI by region and year")
+section("Region: excess death rates with 95% PI by region and year")
 dtregion %>% filter(cause == "excess") %>%
   select(year, bea_region, mx, mx_lb, mx_ub) %>% arrange(year, -mx) %>% show()
 

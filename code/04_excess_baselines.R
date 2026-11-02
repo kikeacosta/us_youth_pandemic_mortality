@@ -2,10 +2,11 @@
 #
 # Baseline: quasi-Poisson GLM, log-linear in year with log(population) offset,
 # fitted to 2010-2019 and projected to 2020-2023 (est_baseline_pi, script 00).
-# Three series are estimated:
+# Four series are estimated:
 #   (a) each state, ages 0-24 combined          -> excess_states_age_u25.rds
 #   (b) each state x age group (0-1 ... 20-24)   -> baselines_states_sex_age.rds
 #   (c) the US by age group                      -> excess_age.rds
+#   (d) each BEA region, ages 0-24 combined      -> excess_regions_u25.rds
 # Columns: dts observed, bsn baseline, lc/uc 95% CI of the baseline,
 #          lp/up 95% bootstrapped prediction interval, exc = dts - bsn, psc = dts/bsn
 #
@@ -76,6 +77,31 @@ yth_exc <-
   add_excess()
 
 write_rds(yth_exc, "data_inter/excess_states_age_u25.rds")
+
+# (d) BEA regions, ages 0-24 combined ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# deaths and population summed over the states of each region, then the same
+# baseline model as for states (so the regional interval is coherent with the
+# regional estimate rather than a sum of state-level bounds)
+reg <-
+  yth %>%
+  filter(state != "us") %>%
+  inner_join(bea_lookup %>% select(state, bea_region), by = "state") %>%
+  reframe(dts = sum(dts),
+          exposure = sum(exposure),
+          .by = c(bea_region, year))
+
+stopifnot(n_distinct(reg$bea_region) == 8,
+          all(count(reg, year)$n == 8))
+
+reg_exc <-
+  reg %>%
+  group_by(bea_region) %>%
+  do(est_baseline_pi(chunk = .data)) %>%
+  ungroup() %>%
+  add_excess()
+
+write_rds(reg_exc, "data_inter/excess_regions_u25.rds")
 
 # (c) US by age ====
 # ~~~~~~~~~~~~~~~~~~
