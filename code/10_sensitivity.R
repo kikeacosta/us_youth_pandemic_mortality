@@ -14,8 +14,9 @@
 # (3) Significance of state excess with CI vs. PI.
 # (4) Regional intervals: sum of state bounds (Figure 3) vs. baseline fitted on
 #     regional totals (script 04, series d).
-# (5) Out-of-sample check: 2018-2019 predicted from windows ending in 2017.
-#     -> output/sensitivity_cv_2018_2019.csv
+# (5) Rolling-origin validation of the fitting window: baselines fitted up to
+#     2015/2016/2017 and projected to 2019 (horizons 1-4 years).
+#     -> output/sensitivity_cv_rolling_origin.csv, figures/figS3_cv_rolling_origin.png
 # A text summary of (1)-(5) is written to output/sensitivity_summary.txt.
 #
 # Input : data_inter/ac_deaths_by_sex_age.rds (script 03)
@@ -270,47 +271,96 @@ reg_cmp <-
          sig_sum = ifelse(lb_sum > 0, "pos", ifelse(ub_sum < 0, "neg", "n.s.")),
          sig_fit = ifelse(lb_fit > 0, "pos", ifelse(ub_fit < 0, "neg", "n.s.")))
 
-# (5) Out-of-sample check: predict 2018-2019 from windows ending in 2017 ====
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# The same three window lengths as in (1), shifted back so that 2018-2019 are
-# held out: 2010-2017 (8 years, the longest available), 2012-2017 (6 years, as
-# 2014-2019) and 2013-2017 (5 years, as 2015-2019). The horizon is 1-2 years,
-# shorter than the 1-4 years projected in the paper.
-cv_windows <- tibble(start_year = c(2010, 2012, 2013), end_year = 2017) %>%
-  mutate(window = paste0(start_year, "-", end_year))
+# (5) Rolling-origin validation of the fitting window ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Three fitting strategies, matching the windows in (1):
+#   "all years since 2010"  (2010-2019 in the paper)
+#   "last 6 years"          (2014-2019)
+#   "last 5 years"          (2015-2019)
+# For each forecast origin O in 2015, 2016, 2017 the baseline is fitted to
+# pre-pandemic years up to O and projected to O+1 ... 2019, giving horizons of
+# 1-4 years (as in the paper, which projects 2019 -> 2020-2023). Errors are
+# pooled over origins; 7 age groups x (4 + 3 + 2) held-out years = 63 cells
+# per strategy.
+cv_strategies <- tibble(
+  strategy = c("all years since 2010", "last 6 years", "last 5 years"),
+  length   = c(NA, 6, 5)
+)
+cv_origins <- 2015:2017
 
 cv <-
-  cv_windows %>%
-  mutate(res = map2(start_year, end_year, function(s, e){
+  expand_grid(cv_strategies, origin = cv_origins) %>%
+  mutate(start_year = ifelse(is.na(length), 2010, origin - length + 1),
+         fit_years  = paste0(start_year, "-", origin)) %>%
+  mutate(res = map2(start_year, origin, function(s, o){
     us_all %>%
       filter(year <= 2019) %>%
       group_by(age) %>%
-      do(est_baseline_spec(chunk = .data, start_year = s, end_year = e)) %>%
+      do(est_baseline_spec(chunk = .data, start_year = s, end_year = o)) %>%
       ungroup()
   })) %>%
-  select(window, res) %>%
+  select(strategy, origin, fit_years, res) %>%
   unnest(res) %>%
-  filter(year %in% 2018:2019) %>%
-  mutate(age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s),
+  filter(year > origin) %>%
+  mutate(horizon = year - origin,
+         age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s),
+         strategy = factor(strategy, levels = cv_strategies$strategy),
          err = dts - bsn,
          pct_err = 100 * err / dts,
          in_ci = dts >= lc & dts <= uc,
          in_pi = dts >= lp & dts <= up)
 
-cv_summary <-
+stopifnot(nrow(cv) == 3 * 7 * 9)
+
+cv_by_age <-
   cv %>%
-  group_by(age_group, window) %>%
-  summarise(mape = mean(abs(pct_err)),
-            bias_pct = mean(pct_err),
-            ci_cover = mean(in_ci),
-            pi_cover = mean(in_pi),
-            .groups = "drop")
+  group_by(age_group, strategy) %>%
+  summarise(mape = mean(abs(pct_err)), bias_pct = mean(pct_err),
+            ci_cover = mean(in_ci), pi_cover = mean(in_pi), .groups = "drop")
+
+cv_by_horizon <-
+  cv %>%
+  group_by(strategy, horizon) %>%
+  summarise(mape = mean(abs(pct_err)), bias_pct = mean(pct_err), n = n(), .groups = "drop")
+
+cv_overall <-
+  cv %>%
+  group_by(strategy) %>%
+  summarise(mape = mean(abs(pct_err)), bias_pct = mean(pct_err),
+            rmse_pct = sqrt(mean(pct_err^2)),
+            ci_cover = mean(in_ci), pi_cover = mean(in_pi), .groups = "drop")
 
 cv %>%
-  select(age_group, window, year, deaths = dts, predicted = bsn, ci_lower = lc, ci_upper = uc,
-         pi_lower = lp, pi_upper = up, error = err, pct_error = pct_err) %>%
-  arrange(age_group, window, year) %>%
-  write_csv("output/sensitivity_cv_2018_2019.csv")
+  select(age_group, strategy, origin, fit_years, year, horizon, deaths = dts, predicted = bsn,
+         ci_lower = lc, ci_upper = uc, pi_lower = lp, pi_upper = up,
+         error = err, pct_error = pct_err) %>%
+  arrange(age_group, strategy, origin, year) %>%
+  write_csv("output/sensitivity_cv_rolling_origin.csv")
+
+# Figure S3: out-of-sample % error by horizon, strategy and age group
+strategy_cols <- setNames(unname(window_cols), cv_strategies$strategy)
+
+p_cv <-
+  ggplot(cv, aes(x = horizon, y = pct_err, colour = strategy)) +
+  geom_hline(yintercept = 0, linewidth = 0.3, colour = "grey40") +
+  geom_point(aes(shape = factor(origin)), size = 1.6, alpha = 0.8,
+             position = position_dodge(width = 0.5)) +
+  stat_summary(fun = mean, geom = "line", linewidth = 0.7) +
+  scale_colour_manual(values = strategy_cols, name = "Fitting window") +
+  scale_shape_manual(values = c(`2015` = 15, `2016` = 17, `2017` = 16), name = "Forecast origin") +
+  scale_x_continuous(breaks = 1:4) +
+  facet_wrap(~ age_group, nrow = 2, scales = "free_y") +
+  labs(x = "Years ahead", y = "% error (observed − predicted) / observed",
+       caption = "Points: one held-out year each (origin 2015: 2016-2019; 2016: 2017-2019; 2017: 2018-2019). Lines: mean by horizon.") +
+  theme_bw() +
+  theme(legend.position = "bottom", legend.box = "horizontal",
+        legend.title = element_text(size = 8), legend.text = element_text(size = 8),
+        strip.background = element_blank(), strip.text = element_text(face = "bold", hjust = 0),
+        panel.grid.minor = element_blank(),
+        plot.caption = element_text(size = 7, hjust = 0),
+        axis.text = element_text(size = 7))
+
+ggsave("figures/figS3_cv_rolling_origin.png", p_cv, width = 10, height = 5.5, dpi = 300)
 
 # Summary ====
 # ~~~~~~~~~~~~
@@ -383,35 +433,50 @@ reg_cmp %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
-cat("\n== (5) Out-of-sample check: 2018-2019 predicted from log-linear baselines fitted to windows ending in 2017 ==\n")
-cat("   pct_error = 100 * (observed - predicted) / observed; positive = under-prediction\n\n")
-cv %>%
-  mutate(predicted = round(bsn), pct_error = round(pct_err, 1)) %>%
-  select(age_group, window, year, observed = dts, predicted, pct_error) %>%
-  pivot_wider(names_from = year, values_from = c(observed, predicted, pct_error)) %>%
-  select(age_group, window, observed_2018, predicted_2018, pct_error_2018,
-         observed_2019, predicted_2019, pct_error_2019) %>%
-  arrange(age_group, window) %>%
+cat("\n== (5) Rolling-origin validation: baselines fitted up to 2015, 2016 and 2017, projected to 2019 (horizons 1-4) ==\n")
+cat("   pct_error = 100 * (observed - predicted) / observed; positive = under-prediction (excess would be overstated)\n")
+cat("   mape = mean absolute % error; cover = share of held-out years inside the 95% CI / PI\n")
+
+cat("\n   (5a) overall, 63 held-out cells per strategy (best marked *):\n\n")
+cv_overall %>%
+  mutate(best = ifelse(mape == min(mape), "*", ""),
+         across(where(is.numeric), ~ round(.x, 2))) %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
-cat("\n   mean absolute % error over 2018-2019 by age group and window (best window marked *):\n\n")
-cv_summary %>%
+cat("\n   (5b) mean absolute % error by age group (best strategy marked *):\n\n")
+cv_by_age %>%
   group_by(age_group) %>%
   mutate(best = ifelse(mape == min(mape), "*", "")) %>%
   ungroup() %>%
   mutate(mape = sprintf("%.1f%s", mape, best)) %>%
-  select(age_group, window, mape) %>%
-  pivot_wider(names_from = window, values_from = mape) %>%
+  select(age_group, strategy, mape) %>%
+  pivot_wider(names_from = strategy, values_from = mape) %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
-cat("\n   all ages combined (7 groups x 2 years): \n\n")
+cat("\n   (5c) mean % error (bias) by age group:\n\n")
+cv_by_age %>%
+  mutate(bias_pct = sprintf("%+.1f", bias_pct)) %>%
+  select(age_group, strategy, bias_pct) %>%
+  pivot_wider(names_from = strategy, values_from = bias_pct) %>%
+  as.data.frame() %>%
+  print(row.names = FALSE)
+
+cat("\n   (5d) mean absolute % error by horizon (all age groups):\n\n")
+cv_by_horizon %>%
+  mutate(mape = sprintf("%.1f", mape)) %>%
+  select(strategy, horizon, mape) %>%
+  pivot_wider(names_from = horizon, values_from = mape, names_prefix = "h") %>%
+  as.data.frame() %>%
+  print(row.names = FALSE)
+
+cat("\n   (5e) ages 15-19 and 20-24: % error by origin and held-out year, 'all years since 2010' strategy:\n\n")
 cv %>%
-  group_by(window) %>%
-  summarise(mape = mean(abs(pct_err)), bias_pct = mean(pct_err),
-            ci_cover = mean(in_ci), pi_cover = mean(in_pi), .groups = "drop") %>%
-  mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
+  filter(age %in% c(15, 20), strategy == "all years since 2010") %>%
+  mutate(pct_err = sprintf("%+.1f", pct_err)) %>%
+  select(age_group, fit_years, year, pct_err) %>%
+  pivot_wider(names_from = year, values_from = pct_err) %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
