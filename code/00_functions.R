@@ -18,6 +18,28 @@ dir.create("output",     showWarnings = FALSE)
 age_labs <- c(`0` = "0-1", `1` = "1-4", `5` = "5-9", `10` = "10-14",
               `15` = "15-19", `20` = "20-24")
 
+# Regions (US Bureau of Economic Analysis); bea_lookup maps state abbreviation
+# and name to region. Used by scripts 04 (regional baselines) and 06 (figures).
+bea <- list(
+  "New England"    = c("CT","ME","MA","NH","RI","VT"),
+  "Mideast"        = c("DE","DC","MD","NJ","NY","PA"),
+  "Great Lakes"    = c("IL","IN","MI","OH","WI"),
+  "Plains"         = c("IA","KS","MN","MO","NE","ND","SD"),
+  "Southeast"      = c("AL","AR","FL","GA","KY","LA","MS","NC","SC","TN","VA","WV"),
+  "Southwest"      = c("AZ","NM","OK","TX"),
+  "Rocky Mountain" = c("CO","ID","MT","UT","WY"),
+  "Far West"       = c("AK","CA","HI","NV","OR","WA")
+)
+west_to_east <- c("Far West", "Rocky Mountain", "Southwest", "Plains",
+                  "Great Lakes", "Southeast", "Mideast", "New England")
+
+bea_lookup <-
+  tibble(abb        = unlist(bea),
+         bea_region = factor(rep(names(bea), lengths(bea)), levels = names(bea))) %>%
+  left_join(tibble(abb = c(state.abb, "DC"),
+                   state = c(state.name, "District of Columbia")),
+            by = "abb")
+
 # Standardise CDC WONDER exports: WONDER appends a "---" footer with query
 # metadata; those rows have NA in the grouping columns and are dropped by the
 # drop_na() calls in each script.

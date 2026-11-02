@@ -1,0 +1,382 @@
+Numbers quoted in the Results section (generated 2026-11-02)
+
+
+==== Age: total COVID-19 deaths (0-24) by year ====
+ year   dx
+ 2020  604
+ 2021 1688
+ 2022  820
+ 2023  244
+
+
+==== Age: COVID-19 deaths, 20-24 by year ====
+ year   dx
+ 2020  383
+ 2021 1050
+ 2022  286
+ 2023   60
+
+
+==== Age: COVID-19 deaths under 15 (all cells), summary ====
+   avg  med  q25  q75    sd max
+ 57.25 56.5 30.5 71.5 33.88 141
+
+
+==== Age: COVID-19 deaths, 10-14 by year ====
+ year dx
+ 2020 32
+ 2021 79
+ 2022 69
+ 2023 24
+
+
+==== Age: excess deaths with 95% PI, by age and year ====
+ year age     dx_lb       dx   dx_ub
+ 2020   0 -2435.025 -1500.05 -641.90
+ 2021   0 -1820.975  -828.10  250.75
+ 2022   0  -835.250   131.94 1082.60
+ 2023   0  -940.250    39.86  980.88
+ 2020   1  -349.075  -117.81   75.00
+ 2021   1     0.925   235.58  468.32
+ 2022   1   404.525   640.09  879.20
+ 2023   1   355.775   605.86  814.08
+ 2020   5  -289.050  -147.78    3.25
+ 2021   5   -93.000    58.36  200.15
+ 2022   5    72.875   230.86  389.03
+ 2023   5    17.925   178.20  339.22
+ 2020  10    39.975   235.74  417.53
+ 2021  10   167.725   360.37  545.25
+ 2022  10   219.450   432.60  648.38
+ 2023  10   -18.200   234.56  452.17
+ 2020  15   220.800  1494.85 2536.33
+ 2021  15  1341.725  2534.10 3737.50
+ 2022  15   363.075  1762.34 3108.67
+ 2023  15   -70.600  1675.22 2914.40
+ 2020  20   706.150  2835.77 4936.70
+ 2021  20  1617.150  3694.67 5885.67
+ 2022  20 -1806.800   682.85 2705.60
+ 2023  20 -4334.175 -1532.64  932.20
+
+
+==== Age: COVID-19 / excess (%) by age and year ====
+ age    2020   2021    2022    2023
+   0  -2.333 -10.99 106.870 148.030
+   1 -16.128  22.92  15.779   7.262
+   5 -11.504 107.95  26.856  14.590
+  10  13.574  21.92  15.950  10.232
+  15   7.894  13.85   9.136   1.851
+  20  13.506  28.42  41.883  -3.915
+
+
+==== Age: ratio summary in cells with significant positive excess (lower bound > 0) ====
+  n   min   q25   q50  mean   q75   max
+ 13 7.262 13.51 14.59 16.28 21.92 28.42
+
+
+==== Age: ratio summary in cells with negative excess ====
+ n    min   q25    q50   mean    q75    max
+ 5 -16.13 -11.5 -10.99 -8.974 -3.915 -2.333
+
+
+==== State: US rates by year ====
+ year  cause     mx   mx_lb mx_ub
+ 2020    c19 0.5509      NA    NA
+ 2021    c19 1.5289      NA    NA
+ 2022    c19 0.7369      NA    NA
+ 2023    c19 0.2174      NA    NA
+ 2020 excess 2.5600 -0.6762 6.036
+ 2021 excess 5.6756  1.9127 9.897
+ 2022 excess 3.9201  0.1877 8.349
+ 2023 excess 1.7934 -2.2747 5.174
+
+
+==== State: highest COVID-19 death rates, 2020 ====
+ rank        state    mx mx_lb mx_ub
+    1  Mississippi 1.394    NA    NA
+    2     Delaware 1.376    NA    NA
+    3   New Mexico 1.241    NA    NA
+    4 South Dakota 1.144    NA    NA
+    5 North Dakota 1.026    NA    NA
+    6     New York 1.020    NA    NA
+
+
+==== State: highest COVID-19 death rates, 2021 ====
+ rank          state    mx mx_lb mx_ub
+    1     New Mexico 3.574    NA    NA
+    2 South Carolina 3.218    NA    NA
+    3       Oklahoma 3.114    NA    NA
+    4      Louisiana 2.755    NA    NA
+    5    Mississippi 2.494    NA    NA
+    6        Florida 2.469    NA    NA
+
+
+==== State: highest COVID-19 death rates, 2022 ====
+ rank        state    mx mx_lb mx_ub
+    1 South Dakota 1.527    NA    NA
+    2       Alaska 1.341    NA    NA
+    3      Indiana 1.280    NA    NA
+    4     Kentucky 1.278    NA    NA
+    5    Wisconsin 1.183    NA    NA
+    6     Missouri 1.144    NA    NA
+
+
+==== State: highest COVID-19 death rates, 2023 ====
+ rank      state     mx mx_lb mx_ub
+    1     Kansas 0.8197    NA    NA
+    2   Delaware 0.6798    NA    NA
+    3  Louisiana 0.5622    NA    NA
+    4   Oklahoma 0.5385    NA    NA
+    5      Idaho 0.4930    NA    NA
+    6 New Mexico 0.4674    NA    NA
+
+
+==== State: COVID-19 rank of NM, SC, OK in 2022 ====
+ rank          state     mx
+    7 South Carolina 1.1097
+    8     New Mexico 1.0890
+   27       Oklahoma 0.7738
+
+
+==== State: number of states with positive / negative excess, by year ====
+ year     sign  n
+ 2020 negative 16
+ 2020 positive 35
+ 2021 negative  8
+ 2021 positive 43
+ 2022 negative  7
+ 2022 positive 44
+ 2023 negative 19
+ 2023 positive 32
+
+
+==== State: highest excess death rates, 2020 ====
+ rank          state     mx   mx_lb mx_ub
+    1       Kentucky 12.011 -1.0016 22.53
+    2        Montana  9.582 -1.3893 20.15
+    3    Mississippi  8.528  1.8890 15.04
+    4         Kansas  8.233  2.7762 13.98
+    5        Arizona  8.118  4.1161 12.01
+    6      Louisiana  7.864  0.7329 14.11
+    7 South Carolina  6.438 -0.5414 12.54
+
+
+==== State: highest excess death rates, 2021 ====
+ rank          state    mx  mx_lb mx_ub
+    1    Mississippi 26.29 19.649 34.02
+    2        Montana 23.93 10.425 36.84
+    3        Wyoming 20.37  4.692 36.87
+    4      Louisiana 17.20 10.200 24.36
+    5 South Carolina 15.57  8.333 22.40
+    6       Kentucky 15.37  2.820 26.34
+    7     New Mexico 14.46  6.053 22.08
+
+
+==== State: highest excess death rates, 2022 ====
+ rank       state     mx  mx_lb mx_ub
+    1     Wyoming 19.296 -4.723 39.17
+    2       Maine 15.233  6.749 22.78
+    3    Delaware 11.803 -1.049 22.18
+    4     Montana 11.484 -1.790 23.98
+    5 Mississippi 10.358  1.194 17.09
+    6      Kansas 10.106  4.803 16.31
+    7   Louisiana  9.822  3.123 16.01
+
+
+==== State: highest excess death rates, 2023 ====
+ rank                state     mx   mx_lb mx_ub
+    1          Mississippi 16.027  9.1017 22.62
+    2 District of Columbia 12.732 -9.3993 40.60
+    3           New Mexico 11.349  2.0214 20.26
+    4             Kentucky 10.042 -3.8993 21.85
+    5               Kansas  8.886  2.1516 15.18
+    6            Tennessee  8.571 -0.7442 15.92
+    7            Louisiana  8.214  0.6793 15.74
+
+
+==== State: lowest excess death rates, 2021 ====
+         state     mx   mx_lb  mx_ub
+        Hawaii -8.239 -20.820  2.167
+          Iowa -7.349 -18.409  2.140
+ New Hampshire -6.448 -16.305  2.270
+  North Dakota -3.240 -19.088 10.846
+ Massachusetts -2.648  -9.487  2.710
+          Utah -2.542  -9.811  3.009
+        Oregon -1.126  -9.033  6.061
+
+
+==== State: change in excess deaths between consecutive years (counts of states) ====
+ inc_20_21 dec_20_21 inc_21_22 dec_21_22 inc_22_23 dec_22_23
+        41        10        16        35        13        38
+
+
+==== State: year of each state's highest excess death rate (counts of states) ====
+ year  n
+ 2020  2
+ 2021 33
+ 2022 14
+ 2023  2
+
+
+==== State: District of Columbia ====
+ year  cause      mx   mx_lb mx_ub
+ 2020    c19  0.6177      NA    NA
+ 2021    c19  0.0000      NA    NA
+ 2022    c19  0.6244      NA    NA
+ 2023    c19  0.0000      NA    NA
+ 2020 excess  5.1454 -16.678 22.86
+ 2021 excess  1.2121 -20.569 18.06
+ 2022 excess -7.5458 -28.114 10.63
+ 2023 excess 12.7324  -9.399 40.60
+
+
+==== State: 2021 ratio ranking (New Mexico, Missouri, Montana) ====
+      state   c19  excess    prop rank_c19 rank_excess rank_prop
+   Missouri 1.297  0.2589 501.186       26          42         1
+ New Mexico 3.574 14.4575  24.721        1           7        17
+    Montana 1.390 23.9318   5.808       23           2        39
+
+
+==== Region: COVID-19 death rates by region and year ====
+     bea_region   2020   2021   2022   2023
+      Southeast 0.5171 2.1039 0.8471 0.2155
+       Far West 0.5008 1.0076 0.6052 0.1128
+      Southwest 0.8109 2.5302 0.6917 0.2165
+ Rocky Mountain 0.3634 1.2461 0.3554 0.3982
+    New England 0.2845 0.5906 0.6337 0.1309
+        Mideast 0.7229 0.8854 0.7671 0.2530
+    Great Lakes 0.4221 1.3053 0.8379 0.2621
+         Plains 0.4480 1.1534 0.7764 0.3011
+
+
+==== Region: excess death rates with 95% PI by region and year ====
+ year     bea_region      mx   mx_lb  mx_ub
+ 2020       Far West  3.9996  1.8844  6.543
+ 2020      Southeast  3.5432 -0.7397  7.779
+ 2020      Southwest  3.0917  0.7902  5.518
+ 2020 Rocky Mountain  2.4831 -1.4099  6.401
+ 2020    Great Lakes  2.0736 -3.9350  7.977
+ 2020         Plains  1.4516 -2.4717  5.035
+ 2020        Mideast  0.5161 -3.8822  4.238
+ 2020    New England -1.4544 -5.5426  2.784
+ 2021      Southeast  9.1442  4.4991 14.178
+ 2021      Southwest  8.0592  5.4180 10.505
+ 2021 Rocky Mountain  6.8458  2.1028 10.942
+ 2021       Far West  5.2944  2.7635  7.953
+ 2021    Great Lakes  3.8252 -2.9639 10.627
+ 2021         Plains  2.5990 -1.9190  7.370
+ 2021        Mideast  1.8547 -2.3373  5.615
+ 2021    New England  0.2170 -4.5834  4.577
+ 2022      Southwest  7.1613  4.4306  9.597
+ 2022      Southeast  5.6787  0.9633 10.930
+ 2022         Plains  4.2987 -0.4464  8.988
+ 2022 Rocky Mountain  4.1426 -1.8849  8.989
+ 2022       Far West  2.9631  0.5883  5.469
+ 2022        Mideast  1.7685 -2.5710  5.886
+ 2022    Great Lakes  1.4912 -5.4326  8.486
+ 2022    New England  0.2585 -4.5770  6.104
+ 2023      Southwest  5.1401  2.3479  7.580
+ 2023      Southeast  4.2006 -0.5362  9.336
+ 2023       Far West  2.3098  0.1102  5.365
+ 2023 Rocky Mountain  0.2434 -5.2971  4.624
+ 2023         Plains -0.7101 -5.2816  4.117
+ 2023        Mideast -0.7228 -6.0410  3.798
+ 2023    Great Lakes -1.4916 -9.2089  5.303
+ 2023    New England -2.9281 -8.9293  1.903
+
+
+==== Region: COVID-19 / excess (%) by region and year ====
+     bea_region   2020   2021    2022    2023
+      Southeast  14.59  23.01  14.917   5.129
+       Far West  12.52  19.03  20.423   4.883
+      Southwest  26.23  31.39   9.659   4.213
+ Rocky Mountain  14.63  18.20   8.580 163.622
+    New England -19.56 272.12 245.109  -4.471
+        Mideast 140.07  47.74  43.373 -35.002
+    Great Lakes  20.36  34.12  56.189 -17.574
+         Plains  30.86  44.38  18.060 -42.406
+
+
+==== Region: ratio in region-years with significant positive excess (lower bound > 0) ====
+     bea_region year c19 excess  ratio
+      Southwest 2023  35  830.8  4.213
+       Far West 2023  23  471.1  4.883
+      Southwest 2022 110 1138.8  9.659
+       Far West 2020  99  790.6 12.522
+      Southeast 2022 241 1615.6 14.917
+ Rocky Mountain 2021  52  285.7 18.202
+       Far West 2021 201 1056.2 19.031
+       Far West 2022 122  597.4 20.423
+      Southeast 2021 592 2573.0 23.008
+      Southwest 2020 125  476.6 26.229
+      Southwest 2021 396 1261.4 31.395
+
+
+==== Region: mean |ratio| by year, excluding region-years with ratio >= 100% (as quoted) ====
+ year n mean_abs_ratio
+ 2020 7          19.82
+ 2021 7          31.13
+ 2022 7          24.46
+ 2023 7          16.24
+
+
+==== Region: mean |ratio| by year, excluding |excess rate| < 0.2 per 100,000 (as described) ====
+ year n mean_abs_ratio
+ 2020 8          34.85
+ 2021 8          61.25
+ 2022 8          52.04
+ 2023 8          34.66
+
+
+==== Race: relative risk range by race and year (ages 0-24) ====
+ year               race min_rr max_rr
+ 2020           Hispanic 1.0168 1.8892
+ 2020 Non-Hispanic Asian 0.0000 1.0457
+ 2020 Non-Hispanic Black 1.1364 3.4217
+ 2020 Non-Hispanic White 0.1196 0.9789
+ 2021           Hispanic 0.9773 1.3322
+ 2021 Non-Hispanic Asian 0.2001 0.9719
+ 2021 Non-Hispanic Black 1.5554 2.0433
+ 2021 Non-Hispanic White 0.5772 0.8268
+ 2022           Hispanic 0.7139 1.1306
+ 2022 Non-Hispanic Asian 0.3842 1.0992
+ 2022 Non-Hispanic Black 1.1533 2.1137
+ 2022 Non-Hispanic White 0.7801 0.9581
+ 2023           Hispanic 0.5175 1.1983
+ 2023 Non-Hispanic Asian 0.0000 1.9885
+ 2023 Non-Hispanic Black 0.7145 2.3958
+ 2023 Non-Hispanic White 0.6214 1.1049
+
+
+==== Race: % change in COVID-19 death rates by period, race and age ====
+    period                      race    0-1     1-4      5-9   10-14  15-19
+ 2020-2021 All races and ethnicities 167.26 189.743  271.253  149.58 202.44
+ 2020-2021                  Hispanic  70.25 265.413  112.855  171.85  76.17
+ 2020-2021        Non-Hispanic Asian -48.86     Inf      Inf     Inf 565.00
+ 2020-2021        Non-Hispanic Black 219.77 337.884  100.803   90.61 230.40
+ 2020-2021        Non-Hispanic White 365.19  70.843 2309.865  149.81 366.16
+ 2021-2022 All races and ethnicities  50.19  90.196   -1.359  -11.38 -54.27
+ 2021-2022                  Hispanic  36.75   5.884    5.576  -28.67 -58.79
+ 2021-2022        Non-Hispanic Asian 188.43 103.431   30.479  195.53 -54.54
+ 2021-2022        Non-Hispanic Black  63.98  61.829  -31.163  -34.29 -65.10
+ 2021-2022        Non-Hispanic White  41.71 215.714    5.114   20.94 -44.15
+ 2022-2023 All races and ethnicities -58.16 -56.436  -58.065  -65.22 -80.75
+ 2022-2023                  Hispanic -58.82 -68.421  -55.556  -63.16 -78.38
+ 2022-2023        Non-Hispanic Asian -66.67 -16.667 -100.000 -100.00 -83.33
+ 2022-2023        Non-Hispanic Black -65.91 -28.571  -72.727  -36.36 -91.18
+ 2022-2023        Non-Hispanic White -66.67 -65.217  -44.000  -65.62 -82.05
+  20-24
+ 169.19
+  89.83
+ 169.57
+ 124.66
+ 384.31
+ -73.02
+ -79.56
+ -82.02
+ -70.27
+ -67.79
+ -79.02
+ -80.88
+ -57.14
+ -81.43
+ -75.00
