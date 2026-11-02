@@ -153,14 +153,13 @@ sig_reg <- dtregion %>% filter(cause == "excess", mx_lb > 0) %>% select(bea_regi
 region_ratio %>% inner_join(sig_reg, by = c("bea_region", "year")) %>%
   arrange(ratio) %>% show()
 
-# The draft quotes 20 / 32 / 25 / 15 %. Those values come from excluding
-# region-years with ratio >= 100 % (one region per year), NOT from the
-# "|excess rate| < 0.2 per 100,000" rule stated in the text; both are shown.
-section("Region: mean |ratio| by year, excluding region-years with ratio >= 100% (as quoted)")
+# Two exclusion rules for the mean ratio: region-years with ratio >= 100 %
+# (one region per year), or region-years with |excess rate| < 0.2 per 100,000.
+section("Region: mean |ratio| by year, excluding region-years with ratio >= 100%")
 region_ratio %>% filter(ratio < 100) %>%
   group_by(year) %>% summarise(n = n(), mean_abs_ratio = mean(abs(ratio))) %>% show()
 
-section("Region: mean |ratio| by year, excluding |excess rate| < 0.2 per 100,000 (as described)")
+section("Region: mean |ratio| by year, excluding |excess rate| < 0.2 per 100,000")
 dtregion %>% select(bea_region, year, cause, mx) %>%
   pivot_wider(values_from = mx, names_from = cause) %>%
   filter(abs(excess) >= 0.2) %>%

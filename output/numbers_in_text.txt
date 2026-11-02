@@ -311,7 +311,7 @@ Numbers quoted in the Results section (generated 2026-11-02)
       Southwest 2021 396 1261.4 31.395
 
 
-==== Region: mean |ratio| by year, excluding region-years with ratio >= 100% (as quoted) ====
+==== Region: mean |ratio| by year, excluding region-years with ratio >= 100% ====
  year n mean_abs_ratio
  2020 7          19.82
  2021 7          31.13
@@ -319,7 +319,7 @@ Numbers quoted in the Results section (generated 2026-11-02)
  2023 7          16.24
 
 
-==== Region: mean |ratio| by year, excluding |excess rate| < 0.2 per 100,000 (as described) ====
+==== Region: mean |ratio| by year, excluding |excess rate| < 0.2 per 100,000 ====
  year n mean_abs_ratio
  2020 8          34.85
  2021 8          61.25

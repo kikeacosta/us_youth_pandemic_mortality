@@ -35,7 +35,7 @@ chg_u25 <-
 
 # NOTE: cells with zero deaths in the previous year give an infinite change and
 # are dropped by ggplot (with a warning); values outside the 10%-1600% range of
-# the axis are also dropped (coord_cartesian is not used, as in the draft).
+# the axis are also dropped (coord_cartesian is not used).
 p_chg <-
   chg_u25 %>%
   ggplot(aes(year, chg, col = age_group, group = age_group)) +

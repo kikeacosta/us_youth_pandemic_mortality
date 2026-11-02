@@ -1,8 +1,6 @@
 # COVID-19 and excess mortality among children and young people in the US, 2020–2023
 
-Reproducible code and data for
-
-> Eilerts-Spinelli H, Acosta E, Liu L. *COVID-19 deaths and excess mortality among children and young people (ages 0–24) in the United States, 2020–2023: variation by age, state, region and race/ethnicity.* (working paper)
+Reproducible code and data for the manuscript *COVID-19 deaths and excess mortality among children and young people (ages 0–24) in the United States, 2020–2023: variation by age, state, region and race/ethnicity* (under review).
 
 Everything in the paper — five figures, two appendix tables, the numbers quoted in the Results and the sensitivity analyses — is produced from the CDC WONDER exports in `data_input/` by ten R scripts run in sequence.
 
@@ -55,7 +53,7 @@ WONDER suppresses counts below 10. Age-specific counts for states and race/ethni
 
 ## Methodological notes and known data issues
 
-These are documented here so that they are not silently carried into the paper; see also `output/draft_check_2026-10-07.md`.
+Known limitations of the input data and of the estimation, in the order they affect the pipeline.
 
 1. **Provisional 2023 data.** All 2023 death counts come from the provisional file as of July–August 2024; final 2023 data are now available on WONDER and would change counts slightly.
 2. **Query drift.** The open-ended age queries for states were run on different days against the still-changing provisional file. For Arkansas, Nevada and Washington in 2023 the "1+" count exceeds the "known age" count by 1–2, which yields −1/−2 infant deaths (script 01 warns about this). Effect on 0–24 totals: ≤ 2 deaths.
@@ -72,12 +70,12 @@ data_input/        CDC WONDER exports (inputs) + README and query index
 data_inter/        intermediate .rds produced by scripts 01–04 (+ cached state boundaries)
 figures/           fig1 … fig5 and figS1 (.png) with their data (.csv)
 tables/            Tables A1 and A2 (.docx and .csv)
-output/            numbers quoted in the text; sensitivity summary; draft-check notes
+output/            numbers quoted in the text; sensitivity summary
 renv.lock          pinned package versions
 ```
 
 The repository's earlier content (a 2023 analysis of ICD-coded mortality microdata by race, 1999–2021) is preserved under the git tag `legacy-2023-microdata`.
 
-## Authors
+## Acknowledgement
 
-Figure and table code: Hallie Eilerts-Spinelli. Data preparation and excess-mortality estimation: Enrique Acosta. Baseline prediction intervals adapted from Jonas Schöley's [rbx2020](https://github.com/jschoeley/rbx2020).
+The simulation of baseline prediction intervals (`simul_intvals()` in `code/00_functions.R`) is adapted from [rbx2020](https://github.com/jschoeley/rbx2020).
