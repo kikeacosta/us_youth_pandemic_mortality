@@ -42,7 +42,8 @@ Two datasets, overlapping in 2020 (the overlap is checked for agreement in scrip
 |---|---|---|
 | `dts_ac_ages_all_sex_all_us_{2010_2020,2020_2023}.txt` | sex × five-year age group × year, US | script 03 (US by age) |
 | `dts_ac_ages_{kwn,01plus,05plus,10plus,15plus,20plus,25plus}_sex_all_{period}.txt` (14) | state × sex × year, age ≥ cut | script 03 (states, ages 0–24) |
-| `dts_ac_ages_all_sex_all_{period}.txt` | state × sex × year, all ages | not used by the pipeline (kept for reference) |
+| `dts_ac_ages_all_sex_all_2020_2023.txt` | state × sex × year, all ages | not used (the all-age series uses the `kwn` files) |
+| `dts_ac_ages_all_sex_all_2010_2020.txt` | state × sex × year — **ages 25+ despite the name** (see its footer); duplicate of the `25plus` file | not used |
 
 ## `population/`
 

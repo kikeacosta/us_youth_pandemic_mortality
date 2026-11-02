@@ -2,11 +2,12 @@
 #
 # Baseline: quasi-Poisson GLM, log-linear in year with log(population) offset,
 # fitted to 2010-2019 and projected to 2020-2023 (est_baseline_pi, script 00).
-# Four series are estimated:
+# Five series are estimated:
 #   (a) each state, ages 0-24 combined          -> excess_states_age_u25.rds
 #   (b) each state x age group (0-1 ... 20-24)   -> baselines_states_sex_age.rds
 #   (c) the US by age group                      -> excess_age.rds
 #   (d) each BEA region, ages 0-24 combined      -> excess_regions_u25.rds
+#   (e) each state, ages 25+ and all ages        -> excess_states_broad_age.rds
 # Columns: dts observed, bsn baseline, lc/uc 95% CI of the baseline,
 #          lp/up 95% bootstrapped prediction interval, exc = dts - bsn, psc = dts/bsn
 #
@@ -129,3 +130,20 @@ us_exc %>%
   mutate(exc = round(exc)) %>%
   spread(year, exc) %>%
   print()
+
+# (e) states, ages 25+ and all ages ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# same model, for the comparison of CYP with adult and all-age excess (script 11)
+broad <-
+  read_rds("data_inter/ac_deaths_by_state_sex_broad.rds") %>%
+  filter(sex == "t") %>%
+  rename(exposure = pop, dts = dx)
+
+broad_exc <-
+  broad %>%
+  group_by(state, age_grp) %>%
+  do(est_baseline_pi(chunk = .data)) %>%
+  ungroup() %>%
+  add_excess()
+
+write_rds(broad_exc, "data_inter/excess_states_broad_age.rds")

@@ -4,7 +4,7 @@
 # Input : data_input/c19/dts_c19_by_age_2020_2023.txt (WONDER, UCD U07.1 by 5-year age)
 #         data_inter/excess_age.rds (script 04)
 # Output: figures/fig1_c19_excess_by_age.png (+ .csv with the plotted values)
-#         data_inter/fig1_age_data.rds (used by script 09)
+#         data_inter/fig1_age_data.rds (used by scripts 09 and alt_fig1_*)
 
 source("code/00_functions.R")
 

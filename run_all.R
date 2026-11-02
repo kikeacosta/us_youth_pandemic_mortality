@@ -5,7 +5,9 @@
 #
 # Scripts 01-04 rebuild data_inter/; 05-08 draw figures/ and tables/;
 # 09 prints the numbers quoted in the text to output/; 10 runs the sensitivity
-# analyses (appendix figure S1 and output/sensitivity_summary.txt).
+# analyses (figures S1-S3 and output/sensitivity_summary.txt); 11 compares the CYP
+# excess with the adult and all-age excess by state (Table S1); the alt_fig*
+# scripts draw the alternative versions of figures 1 and 2 (figures/alternatives/).
 # Each script runs in its own environment and only needs code/00_functions.R.
 
 scripts <- c(
@@ -18,7 +20,10 @@ scripts <- c(
   "code/07_fig4_rr_by_race.R",
   "code/08_fig5_change_by_age_race.R",
   "code/09_numbers_in_text.R",
-  "code/10_sensitivity.R"
+  "code/10_sensitivity.R",
+  "code/11_cyp_vs_all_ages_by_state.R",
+  "code/alt_fig1_by_age.R",
+  "code/alt_fig2_maps_by_state.R"
 )
 
 t0 <- Sys.time()

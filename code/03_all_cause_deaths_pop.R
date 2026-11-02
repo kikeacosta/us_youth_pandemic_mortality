@@ -13,7 +13,7 @@
 #         data_input/population/pop_state_sex_age_0_24_2010_2023.txt
 # Output: data_inter/pop_us_by_sex_age_2010_2023.rds
 #         data_inter/ac_deaths_by_sex_age.rds
-#         data_inter/ac_deaths_by_state_sex_age.rds
+#         data_inter/ac_deaths_by_state_sex_age.rds, ac_deaths_by_state_sex_broad.rds
 
 source("code/00_functions.R")
 
@@ -217,3 +217,79 @@ stopifnot(!anyNA(dt4$dx), !anyNA(dt4$pop), all(dt4$dx >= 0),
           n_distinct(dt4$state) == 52)   # 50 states + DC + "us"
 
 write_rds(dt4, "data_inter/ac_deaths_by_state_sex_age.rds")
+
+# by US state, ages 25+ and all ages, by sex (deaths and WONDER population) ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Used for the comparison of CYP with adult and all-age excess (script 11).
+# These exports carry WONDER's Population column (postcensal estimates for the
+# age range queried): the final file is used for 2010-2020 and the provisional
+# one for 2021-2023 (the latter also holds a partial 2024, dropped here).
+# All ages = the "known age" query (deaths of unknown age excluded, a handful
+# per state-year; its population is the full resident population). Note that
+# dts_ac_ages_all_sex_all_2010_2020.txt, despite its name, is a 25+ query
+# (see its footer) and is therefore not used.
+std_by_sex_pop <-
+  function(dt){
+    dt %>%
+      select(state = 2,
+             sex = 5,
+             year = 7,
+             dx = 8,
+             pop = 9) %>%
+      drop_na(year) %>%
+      mutate(sex = str_to_lower(sex),
+             dx = as.double(dx),
+             pop = as.double(pop))
+  }
+
+read_state_broad <- function(ages, lab){
+  bind_rows(
+    read_tsv(paste0("data_input/all_cause/dts_ac_ages_", ages, "_sex_all_2010_2020.txt"),
+             show_col_types = FALSE) %>%
+      std_by_sex_pop() %>%
+      filter(year <= 2020),
+    read_tsv(paste0("data_input/all_cause/dts_ac_ages_", ages, "_sex_all_2020_2023.txt"),
+             show_col_types = FALSE) %>%
+      std_by_sex_pop() %>%
+      filter(year %in% 2021:2023)
+  ) %>%
+    mutate(age_grp = lab)
+}
+
+broad <-
+  bind_rows(read_state_broad("25plus", "25+"),
+            read_state_broad("kwn",    "all"))
+
+broad2 <-
+  broad %>%
+  bind_rows(broad %>%
+              reframe(dx = sum(dx), pop = sum(pop), .by = c(sex, year, age_grp)) %>%
+              mutate(state = "us"))
+
+broad3 <-
+  broad2 %>%
+  bind_rows(broad2 %>%
+              reframe(dx = sum(dx), pop = sum(pop), .by = c(state, year, age_grp)) %>%
+              mutate(sex = "t")) %>%
+  arrange(age_grp, state, sex, year)
+
+stopifnot(!anyNA(broad3$dx), !anyNA(broad3$pop),
+          n_distinct(broad3$state) == 52,
+          all(count(broad3, age_grp, state, sex)$n == 14))   # 2010-2023
+
+# the 25+ population must be below the all-age one. The CYP population implied
+# by their difference (postcensal estimates) is compared with the projections
+# used for the CYP series: they agree within 5% for most state-years but differ
+# by up to -25% (Arizona, Nevada) and +42% (North Dakota) by 2023, which is the
+# reason for note 4 in the README; the check only guards against gross errors
+chk <-
+  broad3 %>%
+  filter(sex == "t") %>%
+  select(state, year, age_grp, pop) %>%
+  spread(age_grp, pop) %>%
+  inner_join(dt4 %>% filter(sex == "t") %>% reframe(pop_cyp = sum(pop), .by = c(state, year)),
+             by = c("state", "year")) %>%
+  mutate(ratio = (all - `25+`) / pop_cyp)
+stopifnot(all(chk$all > chk$`25+`), all(chk$ratio > 0.7 & chk$ratio < 1.5))
+
+write_rds(broad3, "data_inter/ac_deaths_by_state_sex_broad.rds")
