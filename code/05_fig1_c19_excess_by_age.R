@@ -1,4 +1,4 @@
-# Figure 1: COVID-19 deaths, excess deaths (with 95% PI) and COVID-19 deaths as a
+# Figure 1: COVID-19 deaths, excess deaths (with 95% CI) and COVID-19 deaths as a
 # percentage of excess deaths, by age group and year, US, 2020-2023.
 #
 # Input : data_input/c19/dts_c19_by_age_2020_2023.txt (WONDER, UCD U07.1 by 5-year age)
@@ -38,13 +38,14 @@ pops <-
   exc %>%
   select(age, year, pop = exposure)
 
-# excess with the 95% prediction interval of the baseline carried over to the
-# excess: exc = dts - bsn, bounds = dts - up and dts - lp
+# excess with the 95% CI of the baseline carried over to the excess:
+# exc = dts - bsn, bounds = dts - uc and dts - lc
+# (the prediction interval lp/up is available in exc; see script 10 for the comparison)
 exc2 <-
   exc %>%
   mutate(dx = exc,
-         dx_unc1 = dts - lp,
-         dx_unc2 = dts - up,
+         dx_unc1 = dts - lc,
+         dx_unc2 = dts - uc,
          dx_lb = pmin(dx_unc1, dx_unc2),
          dx_ub = pmax(dx_unc1, dx_unc2)) %>%
   select(year, age, dx_lb, dx, dx_ub)

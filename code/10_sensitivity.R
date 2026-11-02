@@ -5,14 +5,20 @@
 #     year, none (constant rate)}; each with the 95% CI of the baseline (as in the
 #     main figures) and the 95% bootstrapped prediction interval.
 #     -> figures/figS1_sensitivity_excess_by_age.png (+ .csv)
+#     Figure S2 shows the observed death rates 2010-2023 with the six fitted
+#     baselines, i.e. where the specifications diverge (ages 20-24 and 0-1).
+#     -> figures/figS2_baselines_by_specification.png (+ .csv)
 # (2) State excess 0-24: baseline fitted on the 0-24 aggregate (main analysis)
 #     vs. sum of the age-specific state baselines (script 04, series b).
 #     -> output/sensitivity_state_baseline_aggregation.csv
 # (3) Significance of state excess with CI vs. PI.
-# A text summary of (1)-(3) is written to output/sensitivity_summary.txt.
+# (4) Regional intervals: sum of state bounds (Figure 3) vs. baseline fitted on
+#     regional totals (script 04, series d).
+# A text summary of (1)-(4) is written to output/sensitivity_summary.txt.
 #
 # Input : data_inter/ac_deaths_by_sex_age.rds (script 03)
-#         data_inter/excess_states_age_u25.rds, baselines_states_sex_age.rds (script 04)
+#         data_inter/excess_states_age_u25.rds, baselines_states_sex_age.rds,
+#         excess_regions_u25.rds (script 04)
 
 source("code/00_functions.R")
 
@@ -69,7 +75,8 @@ us_all <-
 
 age_labs_s <- c(`-1` = "0-24", age_labs)
 
-sens <-
+# all years (observed and fitted), used for Figure S2
+fits <-
   specs %>%
   mutate(res = map2(start_year, trend, function(s, tr){
     us_all %>%
@@ -79,14 +86,17 @@ sens <-
   })) %>%
   select(spec, window, trend_lab, main, res) %>%
   unnest(res) %>%
+  mutate(age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s))
+
+sens <-
+  fits %>%
   filter(year >= 2020) %>%
   mutate(lp = pmax(lp, 0), up = pmax(up, 0),
          exc    = dts - bsn,
          exc_ci_lb = pmin(dts - lc, dts - uc), exc_ci_ub = pmax(dts - lc, dts - uc),
          exc_pi_lb = pmin(dts - lp, dts - up), exc_pi_ub = pmax(dts - lp, dts - up),
          across(c(exc, exc_ci_lb, exc_ci_ub, exc_pi_lb, exc_pi_ub),
-                ~ 1e5 * .x / exposure, .names = "r_{.col}"),
-         age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s))
+                ~ 1e5 * .x / exposure, .names = "r_{.col}"))
 
 stopifnot(!anyNA(sens$exc))
 
@@ -142,6 +152,70 @@ sens %>%
   arrange(year, age_group, window, trend) %>%
   write_csv("figures/figS1_sensitivity_excess_by_age.csv")
 
+# Figure S2: observed rates and fitted baselines, 2010-2023 ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+obs <-
+  us_all %>%
+  mutate(mx = 1e5 * dts / exposure,
+         period = ifelse(year >= 2020, "pandemic (not fitted)", "pre-pandemic"),
+         age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s))
+
+fit_lines <-
+  fits %>%
+  mutate(mx_bsn = 1e5 * bsn / exposure,
+         mx_lc  = 1e5 * lc / exposure,
+         mx_uc  = 1e5 * uc / exposure,
+         window = factor(window, levels = unique(specs$window)),
+         trend_lab = factor(trend_lab, levels = c("log-linear trend", "no trend")))
+
+p_fits <-
+  ggplot() +
+  annotate("rect", xmin = 2019.5, xmax = 2023.5, ymin = -Inf, ymax = Inf,
+           fill = "grey92", alpha = 0.6) +
+  geom_ribbon(data = fit_lines %>% filter(main),
+              aes(x = year, ymin = mx_lc, ymax = mx_uc), fill = window_cols[1], alpha = 0.15) +
+  geom_line(data = fit_lines,
+            aes(x = year, y = mx_bsn, colour = window, linetype = trend_lab), linewidth = 0.6) +
+  geom_point(data = obs, aes(x = year, y = mx, shape = period), size = 1.6, fill = "white") +
+  scale_colour_manual(values = window_cols, name = "Fitting window") +
+  scale_linetype_manual(values = c(`log-linear trend` = "solid", `no trend` = "22"), name = "Trend") +
+  scale_shape_manual(values = c(`pre-pandemic` = 16, `pandemic (not fitted)` = 21), name = "Observed") +
+  scale_x_continuous(breaks = seq(2010, 2023, 2)) +
+  facet_wrap(~ age_group, scales = "free_y", nrow = 2) +
+  labs(x = NULL, y = "Deaths per 100,000",
+       caption = "Lines: fitted baselines projected to 2020-2023. Shaded band: 95% CI of the main specification (2010-2019, log-linear trend).") +
+  theme_bw() +
+  theme(legend.position = "bottom", legend.box = "horizontal",
+        legend.title = element_text(size = 8), legend.text = element_text(size = 8),
+        strip.background = element_blank(), strip.text = element_text(face = "bold", hjust = 0),
+        panel.grid.minor = element_blank(),
+        plot.caption = element_text(size = 7, hjust = 0),
+        axis.text = element_text(size = 7))
+
+ggsave("figures/figS2_baselines_by_specification.png", p_fits, width = 10, height = 5.5, dpi = 300)
+
+fit_lines %>%
+  select(age_group, year, window, trend = trend_lab, main_specification = main,
+         deaths = dts, population = exposure, baseline = bsn,
+         baseline_ci_lower = lc, baseline_ci_upper = uc, rate_baseline = mx_bsn) %>%
+  left_join(obs %>% select(age_group, year, rate_observed = mx), by = c("age_group", "year")) %>%
+  arrange(age_group, window, trend, year) %>%
+  write_csv("figures/figS2_baselines_by_specification.csv")
+
+# pre-pandemic trend by fitting window: annual % change implied by the log-linear fit
+slopes <-
+  expand_grid(age = unique(us_all$age), start_year = c(2010, 2014, 2015)) %>%
+  mutate(pct_per_year = map2_dbl(age, start_year, function(a, s){
+    d <- us_all %>% filter(age == a, year >= s, year <= 2019)
+    m <- glm(dts ~ year + offset(log(exposure)), family = "quasipoisson", data = d)
+    100 * (exp(coef(m)[["year"]]) - 1)
+  })) %>%
+  mutate(age_group = factor(age_labs_s[as.character(age)], levels = age_labs_s),
+         window = paste0(start_year, "-2019")) %>%
+  select(age_group, window, pct_per_year) %>%
+  pivot_wider(names_from = window, values_from = pct_per_year) %>%
+  arrange(age_group)
+
 # (2) State 0-24: aggregate baseline vs sum of age-specific baselines ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 st_agg <-
@@ -180,6 +254,31 @@ st_sig <-
          sig_pi = ifelse(dts > up, "positive", ifelse(dts < lp, "negative", "n.s."))) %>%
   count(year, sig_ci, sig_pi)
 
+# (4) Regional intervals: sum of state bounds vs regional fit ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reg_sum <-
+  read_rds("data_inter/excess_states_age_u25.rds") %>%
+  filter(state != "us") %>%
+  inner_join(bea_lookup %>% select(state, bea_region), by = "state") %>%
+  group_by(bea_region, year) %>%
+  summarise(exc_sum = sum(exc),
+            lb_sum = sum(dts - uc), ub_sum = sum(dts - lc),
+            exposure = sum(exposure), .groups = "drop")
+
+reg_fit <-
+  read_rds("data_inter/excess_regions_u25.rds") %>%
+  mutate(lb_fit = dts - uc, ub_fit = dts - lc) %>%
+  select(bea_region, year, exc_fit = exc, lb_fit, ub_fit)
+
+reg_cmp <-
+  reg_sum %>%
+  inner_join(reg_fit, by = c("bea_region", "year")) %>%
+  mutate(across(c(exc_sum, lb_sum, ub_sum, exc_fit, lb_fit, ub_fit), ~ 1e5 * .x / exposure)) %>%
+  select(-exposure) %>%
+  mutate(width_ratio = (ub_fit - lb_fit) / (ub_sum - lb_sum),
+         sig_sum = ifelse(lb_sum > 0, "pos", ifelse(ub_sum < 0, "neg", "n.s.")),
+         sig_fit = ifelse(lb_fit > 0, "pos", ifelse(ub_fit < 0, "neg", "n.s.")))
+
 # Summary ====
 # ~~~~~~~~~~~~
 sink("output/sensitivity_summary.txt")
@@ -199,15 +298,33 @@ sens %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
-cat("\n== (1b) US excess deaths (counts), ages 15-19 and 20-24, by specification ==\n\n")
+cat("\n== (1b) US excess deaths (counts) with 95% CI, ages 15-19 and 20-24, by specification ==\n\n")
 sens %>%
   filter(age %in% c(15, 20)) %>%
-  mutate(exc = round(exc)) %>%
-  select(age_group, spec, year, exc) %>%
-  pivot_wider(names_from = year, values_from = exc) %>%
+  mutate(cell = sprintf("%6.0f (%6.0f, %6.0f)", exc, exc_ci_lb, exc_ci_ub)) %>%
+  select(age_group, spec, year, cell) %>%
+  pivot_wider(names_from = year, values_from = cell) %>%
   arrange(age_group, spec) %>%
   as.data.frame() %>%
   print(row.names = FALSE)
+
+cat("\n== (1c) Pre-pandemic trend: annual % change in the death rate implied by the log-linear fit, by window ==\n\n")
+slopes %>%
+  mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
+  as.data.frame() %>%
+  print(row.names = FALSE)
+
+cat("\n== (1d) Ages 20-24: observed deaths and the six baselines, 2020-2023 ==\n\n")
+fits %>%
+  filter(age == 20, year >= 2020) %>%
+  mutate(bsn = round(bsn)) %>%
+  select(spec, year, dts, bsn) %>%
+  pivot_wider(names_from = year, values_from = c(dts, bsn)) %>%
+  select(spec, observed_2020 = dts_2020, starts_with("bsn")) %>%
+  rename_with(~ sub("bsn_", "baseline_", .x)) %>%
+  as.data.frame() %>%
+  print(row.names = FALSE)
+cat("   observed deaths 20-24:", paste(fits %>% filter(age == 20, year >= 2020, main) %>% pull(dts), collapse = " / "), "(2020-2023)\n")
 
 cat("\n== (2) State excess rate 0-24: baseline on the aggregate vs sum of age-specific baselines ==\n\n")
 st_cmp %>%
@@ -223,6 +340,13 @@ st_cmp %>%
 
 cat("\n== (3) States (51) by significance of excess 0-24: CI of the baseline vs prediction interval ==\n\n")
 st_sig %>%
+  as.data.frame() %>%
+  print(row.names = FALSE)
+
+cat("\n== (4) Regional excess rate 0-24 with 95% CI: sum of state bounds (Figure 3) vs baseline fitted on regional totals ==\n\n")
+reg_cmp %>%
+  mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
+  arrange(year, bea_region) %>%
   as.data.frame() %>%
   print(row.names = FALSE)
 
