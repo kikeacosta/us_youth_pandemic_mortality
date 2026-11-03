@@ -8,11 +8,14 @@
 #   B. total, direct and indirect p-scores by age (three columns of points on a
 #      log ratio axis) plus a fourth column of stacked bars with the direct and
 #      indirect excess rates per 100,000
+#   C. as B, with one common x scale in the first three columns and panel widths
+#      proportional to each column's range (the direct column becomes narrow)
 #
 # Input : data_inter/excess_age.rds (script 04)
 #         data_inter/fig1_age_data.rds (script 05; COVID-19 deaths by age)
 # Output: figures/alternatives/fig1_altA_pscore_by_age.png (+ .csv)
 #         figures/alternatives/fig1_altB_total_direct_indirect_by_age.png (+ .csv)
+#         figures/alternatives/fig1_altC_total_direct_indirect_common_scale.png (same data as B)
 
 source("code/00_functions.R")
 library(patchwork)
@@ -178,9 +181,7 @@ comp_pts <-
   mutate(comp = factor(comp, levels = c("total", "direct", "indirect")))
 
 comp_cols   <- c(total = "grey50", direct = unname(cause_cols["c19"]), indirect = "black")   # same colours in every column
-comp_titles <- c(total    = "Total: observed / expected",
-                 direct   = "Direct: 1 + COVID-19 deaths / expected",
-                 indirect = "Indirect: (observed - COVID-19) / expected")
+comp_titles <- c(total = "Total", direct = "Direct", indirect = "Indirect")   # definitions in the caption
 comp_breaks <- list(total = c(0.8, 0.9, 1, 1.1, 1.2, 1.3), direct = c(1, 1.01, 1.02, 1.03, 1.04, 1.05),
                     indirect = c(0.8, 0.9, 1, 1.1, 1.2, 1.3))
 
@@ -206,17 +207,19 @@ comp_panel <- function(k, first = FALSE){
 # both parts are positive. (A pseudo-log axis was tried and set aside: stacked
 # segments do not add up on a transformed axis.)
 rate_bars <-
-  bind_rows(alt %>% transmute(year, age_group, comp = "direct",   v = 1e5 * c19 / pop),
+  bind_rows(alt %>% transmute(year, age_group, comp = "total",    v = 0),   # zero-width bars: legend key only
+            alt %>% transmute(year, age_group, comp = "direct",   v = 1e5 * c19 / pop),
             alt %>% transmute(year, age_group, comp = "indirect", v = 1e5 * (exc - c19) / pop)) %>%
-  mutate(comp = factor(comp, levels = c("direct", "indirect")))
+  mutate(comp = factor(comp, levels = c("total", "direct", "indirect")))
 
 p_bars <-
   ggplot(rate_bars, aes(x = v, y = age_group, fill = comp)) +
   geom_vline(xintercept = 0, linewidth = 0.3, colour = "grey40") +
   geom_col(position = "stack", width = 0.7, orientation = "y") +
   facet_grid(year ~ ., switch = "y") +
-  scale_fill_manual(values = comp_cols[c("direct", "indirect")], name = NULL,
-                    labels = c(direct = "Direct: COVID-19 deaths", indirect = "Indirect: excess - COVID-19 deaths")) +
+  scale_fill_manual(values = comp_cols, name = NULL,
+                    labels = c(total = "Total: excess deaths", direct = "Direct: COVID-19 deaths",
+                               indirect = "Indirect: excess - COVID-19 deaths")) +
   scale_x_continuous(breaks = seq(-40, 40, 10), minor_breaks = seq(-40, 40, 5), expand = expansion(mult = 0.1)) +
   theme(panel.grid.minor.x = element_line(colour = "grey92", linewidth = 0.25)) +
   labs(x = NULL, y = NULL, title = "Deaths per 100,000") +
@@ -225,7 +228,8 @@ p_bars <-
 
 p_altB <- comp_panel("total", first = TRUE) + comp_panel("direct") + comp_panel("indirect") + p_bars +
   plot_layout(nrow = 1, guides = "collect") +
-  plot_annotation(caption = "p-scores on a log ratio scale (observed / expected - 1), 95% CI of the baseline; each column has its own range",
+  plot_annotation(caption = paste0("Total = observed / expected, direct = 1 + COVID-19 deaths / expected, indirect = (observed - COVID-19) / expected;\n",
+                                   "p-scores on a log ratio scale, 95% CI of the baseline; each column has its own range"),
                   theme = theme(plot.caption = element_text(size = 7, hjust = 0))) &
   theme(legend.position = "bottom")
 
@@ -235,8 +239,48 @@ ggsave("figures/alternatives/fig1_altB_total_direct_indirect_by_age.png", p_altB
 bind_rows(comp_pts %>%
             mutate(panel = "ratio_to_expected",
                    pscore_pct = 100 * (v - 1), pscore_lb = 100 * (v_lb - 1), pscore_ub = 100 * (v_ub - 1)),
-          rate_bars %>% mutate(panel = "rate_per_100k")) %>%
+          rate_bars %>% filter(comp != "total") %>% mutate(panel = "rate_per_100k")) %>%
   select(panel, component = comp, year, age_group, value = v, lower = v_lb, upper = v_ub,
          pscore_pct, pscore_lb, pscore_ub) %>%
   arrange(panel, component, year, age_group) %>%
   write_csv("figures/alternatives/fig1_altB_total_direct_indirect_by_age.csv")
+
+# C: as B, one common x scale in the first three columns ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# The three p-score columns share one log ratio scale: each panel's limits are
+# its own data range (plus a fixed margin) and its width is proportional to
+# that range, so a given distance means the same ratio everywhere and the
+# direct column, never above +5%, is drawn narrow. Same data as B.
+rng_c <-
+  comp_pts %>%
+  reframe(lo = min(log10(v_lb)), hi = max(log10(v_ub)), .by = comp) %>%
+  mutate(lo = pmin(lo, 0) - 0.012, hi = hi + 0.012, w = hi - lo)   # include the 1 line; margin ~ 3%
+w_c <- setNames(rng_c$w, as.character(rng_c$comp))
+comp_breaks_c <- list(total = c(0.8, 0.9, 1, 1.1, 1.2, 1.3), direct = c(1, 1.05),
+                      indirect = c(0.8, 0.9, 1, 1.1, 1.2, 1.3))
+
+comp_panel_c <- function(k, first = FALSE){
+  d <- comp_pts %>% filter(comp == k)
+  r <- rng_c %>% filter(comp == k)
+  ggplot(d, aes(x = v, y = age_group)) +
+    geom_vline(xintercept = 1, linewidth = 0.3, colour = "grey40") +
+    geom_errorbar(aes(xmin = v_lb, xmax = v_ub), width = 0.3, orientation = "y",
+                  linewidth = 0.4, colour = comp_cols[k]) +
+    geom_point(size = 2.2, colour = comp_cols[k], shape = pt_shapes[c(total = "excess", direct = "c19", indirect = "excess")[k]]) +
+    facet_grid(year ~ ., switch = "y") +
+    scale_x_continuous(transform = "log10", breaks = comp_breaks_c[[k]], labels = pscore_lab,
+                       minor_breaks = NULL, limits = 10^c(r$lo, r$hi), expand = expansion(0)) +
+    labs(x = NULL, y = NULL, title = comp_titles[k]) +
+    alt_theme(first) +
+    theme(legend.position = "none")
+}
+
+p_altC <- comp_panel_c("total", first = TRUE) + comp_panel_c("direct") + comp_panel_c("indirect") + p_bars +
+  plot_layout(nrow = 1, guides = "collect", widths = unname(c(w_c["total"], w_c["direct"], w_c["indirect"], w_c["total"]))) +
+  plot_annotation(caption = paste0("Total = observed / expected, direct = 1 + COVID-19 deaths / expected, indirect = (observed - COVID-19) / expected;\n",
+                                   "p-scores on one common log ratio scale (panel width proportional to range), 95% CI of the baseline"),
+                  theme = theme(plot.caption = element_text(size = 7, hjust = 0))) &
+  theme(legend.position = "bottom")
+
+ggsave("figures/alternatives/fig1_altC_total_direct_indirect_common_scale.png", p_altC,
+       width = 10.5, height = 1.3 * n_distinct(alt$year) + 1.2, dpi = 300)
