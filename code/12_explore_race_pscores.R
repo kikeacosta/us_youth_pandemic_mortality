@@ -31,9 +31,9 @@
 #
 # Input : data_input/all_cause_race/*.csv, data_inter/excess_age.rds,
 #         data_inter/c19_deaths_rates_by_race_and_age.rds, data_inter/pop_us_by_sex_age_2010_2023.rds
-# Output: figures/alternatives/figR1_pscore_excess_by_race.png (+ .csv)
-#         figures/alternatives/figR2_pscore_by_race_age.png (+ .csv)
-#         figures/alternatives/figR3_direct_indirect_by_race.png
+# Output: figures/exploratory/figR1_pscore_excess_by_race.png (+ .csv)
+#         figures/exploratory/figR2_pscore_by_race_age.png (+ .csv)
+#         figures/exploratory/figR3_direct_indirect_by_race.png
 
 source("code/00_functions.R")
 library(patchwork)
@@ -244,7 +244,8 @@ p_r1 <-
 p_r1 <- p_r1 + plot_annotation(caption = "Age-standardised to the 2020 US population aged 0-24; 95% CI of the baseline.",
                                theme = theme(plot.caption = element_text(size = 7, hjust = 0)))
 
-ggsave("figures/alternatives/figR1_pscore_excess_by_race.png", p_r1, width = 8, height = 4.2, dpi = 300)
+dir.create("figures/exploratory", showWarnings = FALSE)
+ggsave("figures/exploratory/figR1_pscore_excess_by_race.png", p_r1, width = 8, height = 4.2, dpi = 300)
 
 # Figure R2: p-score by race, age group and year ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -270,7 +271,7 @@ p_r2 <-
   race_theme() +
   guides(colour = guide_legend(nrow = 2), shape = guide_legend(nrow = 2))
 
-ggsave("figures/alternatives/figR2_pscore_by_race_age.png", p_r2, width = 10, height = 4, dpi = 300)
+ggsave("figures/exploratory/figR2_pscore_by_race_age.png", p_r2, width = 10, height = 4, dpi = 300)
 
 # Figure R3: total, direct (COVID-19) and indirect p-scores by race ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -289,13 +290,13 @@ p_r3 <-
 p_r3 <- p_r3 + plot_annotation(caption = "Age-standardised to the 2020 US population aged 0-24, common y axis. Bars are the 95% CI of the baseline.",
                                theme = theme(plot.caption = element_text(size = 7, hjust = 0)))
 
-ggsave("figures/alternatives/figR3_direct_indirect_by_race.png", p_r3, width = 9.5, height = 4.2, dpi = 300)
+ggsave("figures/exploratory/figR3_direct_indirect_by_race.png", p_r3, width = 9.5, height = 4.2, dpi = 300)
 
 std %>%
   mutate(race = race_labs[as.character(race)], race_concept = "single race, baseline calibrated from bridged race") %>%
   mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
   arrange(year, race) %>%
-  write_csv("figures/alternatives/figR1_pscore_excess_by_race.csv")
+  write_csv("figures/exploratory/figR1_pscore_excess_by_race.csv")
 
 dat %>%
   mutate(race = race_labs[as.character(race)]) %>%
@@ -303,4 +304,4 @@ dat %>%
          c19, excess = exc, pscore = psc, pscore_lb = psc_lb, pscore_ub = psc_ub) %>%
   mutate(across(where(is.numeric), ~ round(.x, 2))) %>%
   arrange(year, race, age_group) %>%
-  write_csv("figures/alternatives/figR2_pscore_by_race_age.csv")
+  write_csv("figures/exploratory/figR2_pscore_by_race_age.csv")
