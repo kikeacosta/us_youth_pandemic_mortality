@@ -78,6 +78,6 @@ renv.lock          pinned package versions
 
 The repository's earlier content (a 2023 analysis of ICD-coded mortality microdata by race, 1999–2021) is preserved under the git tag `legacy-2023-microdata`.
 
-## Authors
+## Acknowledgement
 
-Code, data curation and analyses: Enrique Acosta, who also wrote the Data and Methods sections of the manuscript. Hallie Eilerts-Spinelli adapted the map code and wrote the rest of the manuscript. Baseline prediction intervals adapted from Jonas Schöley's [rbx2020](https://github.com/jschoeley/rbx2020).
+The simulation of baseline prediction intervals (`simul_intvals()` in `code/00_functions.R`) is adapted from [rbx2020](https://github.com/jschoeley/rbx2020).
