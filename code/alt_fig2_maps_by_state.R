@@ -8,11 +8,10 @@
 #      difference (CYP minus adults), common colour scale
 #   B. CYP p-score minus the US CYP p-score, and minus the state's adult (25+) p-score
 #   C. age-standardised CYP share of the state's excess deaths, of its COVID-19
-#      deaths and of its indirect excess (excess - COVID-19 deaths)
+#      deaths and of its indirect excess (excess - COVID-19 deaths), one colour scale
 #   D. age-standardised CYP p-score split into total (excess / expected), direct
 #      (COVID-19 deaths / expected) and indirect ((excess - COVID-19) /
 #      expected), each panel with its own scale and colours
-#   E. as C, but the three maps on one common colour scale (0-10%)
 #
 # Input : data_inter/cyp_vs_all_ages_by_state.rds (script 11)
 #         data_inter/us_states_cb_2022.rds (script 06)
@@ -20,7 +19,6 @@
 #         figures/alternatives/fig2_altB_cyp_pscore_diff_by_state.png
 #         figures/alternatives/fig2_altC_cyp_share_by_state.png
 #         figures/alternatives/fig2_altD_cyp_pscore_direct_indirect_by_state.png
-#         figures/alternatives/fig2_altE_cyp_share_by_state_common_scale.png
 
 source("code/00_functions.R")
 source("code/alt_00_map_helpers.R")
@@ -86,18 +84,20 @@ res %>%
 # COVID-19 deaths). The shares of excess and of indirect excess are shown only
 # where the all-age denominator is positive and its CI excludes zero (grey
 # otherwise); a negative CYP numerator counts as a share of 0. Reference: CYP
-# are 32% of the standard population; the US shares are printed below.
+# are 32% of the standard population; the US shares are printed below. One
+# 0-10% colour scale for the three maps.
 lims_c <- c(0, 10)
 p_c <-
   draw_share_map(map_dat, "cyp_share_excess_map",
                  "CYP share of excess deaths (%)\ngrey: all-age excess \u2264 0 or CI includes zero",
-                 lims_c, "CYP % of excess deaths (0 if CYP excess < 0; clipped at 10)") +
+                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)") +
   draw_share_map(map_dat, "cyp_share_c19_std",
                  "CYP share of COVID-19 deaths (%)\n ",
-                 c(0, 2), "CYP % of COVID-19 deaths", show_years = FALSE) +
+                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)", show_years = FALSE) +
   draw_share_map(map_dat, "cyp_share_indirect_map",
                  "CYP share of indirect excess deaths (%)\ngrey: all-age indirect excess \u2264 0 or CI includes zero",
-                 lims_c, "CYP % of indirect excess (0 if CYP indirect < 0; clipped at 10)", show_years = FALSE)
+                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)", show_years = FALSE) +
+  plot_layout(guides = "collect") & theme(legend.position = "bottom")
 
 ggsave("figures/alternatives/fig2_altC_cyp_share_by_state.png", p_c,
        width = 9, height = fig_h(3, 9) + 0.3, dpi = 300)
@@ -120,25 +120,6 @@ res %>%
           share_c19_std_max = round(max(cyp_share_c19_std), 2),
           .by = year) %>%
   print(width = Inf)
-
-# E: the three shares of C on one common colour scale ====
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Same quantities and masks as C; one 0-10% scale for all three maps, so the
-# share of COVID-19 deaths (never above 2%) reads as the faintest column.
-p_e <-
-  draw_share_map(map_dat, "cyp_share_excess_map",
-                 "CYP share of excess deaths (%)\ngrey: all-age excess \u2264 0 or CI includes zero",
-                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)") +
-  draw_share_map(map_dat, "cyp_share_c19_std",
-                 "CYP share of COVID-19 deaths (%)\n ",
-                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)", show_years = FALSE) +
-  draw_share_map(map_dat, "cyp_share_indirect_map",
-                 "CYP share of indirect excess deaths (%)\ngrey: all-age indirect excess \u2264 0 or CI includes zero",
-                 lims_c, "CYP % of the state's total (0 if CYP value < 0; clipped at 10)", show_years = FALSE) +
-  plot_layout(guides = "collect") & theme(legend.position = "bottom")
-
-ggsave("figures/alternatives/fig2_altE_cyp_share_by_state_common_scale.png", p_e,
-       width = 9, height = fig_h(3, 9) + 0.3, dpi = 300)
 
 # D: total, direct and indirect ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
