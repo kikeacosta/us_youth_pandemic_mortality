@@ -5,7 +5,7 @@
 # code/alt_00_map_helpers.R.
 #
 #   A. age-standardised p-scores of CYP and adults (25+, one group) and their
-#      difference (adults minus CYP), common colour scale
+#      difference (CYP minus adults), common colour scale
 #   B. CYP p-score minus the US CYP p-score, and minus the state's all-age p-score
 #   C. age-standardised CYP share of the state's excess deaths, of its COVID-19
 #      deaths and of its indirect excess (excess - COVID-19 deaths)
@@ -39,8 +39,8 @@ map_dat <-
                                          pmax(cyp_share_indirect_std, 0), NA_real_)) %>%
   # D: fill on a log ratio scale (observed / expected), labelled as p-scores, so
   # that +10% and -10% are the same distance from white
-  # A: adult minus CYP p-score, in percentage points
-  mutate(adult_minus_cyp_pp = adult_pscore - cyp_pscore) %>%
+  # A: CYP minus adult p-score, in percentage points
+  mutate(cyp_minus_adult_pp = cyp_pscore - adult_pscore) %>%
   mutate(across(c(cyp_pscore, cyp_psc_direct, cyp_psc_indirect),
                 ~ log10(1 + .x / 100), .names = "{.col}_log"))
 
@@ -50,10 +50,10 @@ stopifnot(nrow(map_dat) == 51 * 4)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 lim_a <- 40
 p_a <-
-  draw_pscore_map(map_dat, "cyp_pscore",   "CYP, ages 0–24 (age-standardised)", lim_a, "p-score (%)") +
-  draw_pscore_map(map_dat, "adult_pscore", "Adults, ages 25+", lim_a, "p-score (%)", show_years = FALSE) +
-  draw_pscore_map(map_dat, "adult_minus_cyp_pp", "Difference: adults minus CYP", lim_a,
-                  "difference (percentage points)", show_years = FALSE) +
+  draw_pscore_map(map_dat, "cyp_pscore",   "p-score, CYP 0–24 (age-standardised)", lim_a, "%") +
+  draw_pscore_map(map_dat, "adult_pscore", "p-score, adults ages 25+", lim_a, "%", show_years = FALSE) +
+  draw_pscore_map(map_dat, "cyp_minus_adult_pp", "p-score difference, CYP minus adults", lim_a,
+                  "%", show_years = FALSE) +
   plot_layout(guides = "collect") & theme(legend.position = "bottom")
 
 ggsave("figures/alternatives/fig2_altA_pscores_by_state.png", p_a,
@@ -73,8 +73,8 @@ ggsave("figures/alternatives/fig2_altB_cyp_pscore_diff_by_state.png", p_b,
 
 res %>%
   filter(state != "us") %>%
-  mutate(adult_minus_cyp_pp = adult_pscore - cyp_pscore) %>%
-  reframe(across(c(cyp_pscore, adult_pscore, all_pscore, adult_minus_cyp_pp, cyp_vs_us_pp, cyp_vs_all_pp),
+  mutate(cyp_minus_adult_pp = cyp_pscore - adult_pscore) %>%
+  reframe(across(c(cyp_pscore, adult_pscore, all_pscore, cyp_minus_adult_pp, cyp_vs_us_pp, cyp_vs_all_pp),
                  list(min = ~ round(min(.x), 1), max = ~ round(max(.x), 1))),
           .by = year) %>%
   print(width = Inf)
