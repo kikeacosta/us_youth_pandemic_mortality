@@ -12,6 +12,7 @@
 #   D. age-standardised CYP p-score split into total (excess / expected), direct
 #      (COVID-19 deaths / expected) and indirect ((excess - COVID-19) /
 #      expected), each panel with its own scale and colours
+#   E. as D, but the three maps on one common blue-red log ratio scale
 #
 # Input : data_inter/cyp_vs_all_ages_by_state.rds (script 11)
 #         data_inter/us_states_cb_2022.rds (script 06)
@@ -19,6 +20,7 @@
 #         figures/alternatives/fig2_altB_cyp_pscore_diff_by_state.png
 #         figures/alternatives/fig2_altC_cyp_share_by_state.png
 #         figures/alternatives/fig2_altD_cyp_pscore_direct_indirect_by_state.png
+#         figures/alternatives/fig2_altE_cyp_pscore_direct_indirect_common_scale.png
 
 source("code/00_functions.R")
 source("code/alt_00_map_helpers.R")
@@ -151,3 +153,24 @@ res %>%
                  list(min = ~ round(min(.x), 1), med = ~ round(median(.x), 1), max = ~ round(max(.x), 1))),
           .by = year) %>%
   print(width = Inf)
+
+# E: total, direct and indirect on one common scale ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Same three quantities as D, all on the blue-red log ratio scale clipped at
+# +-30%, with a single legend; the direct component (never above 5%) reads as
+# the faintest column.
+cols_e <- c("#2166AC", "white", "#B2182B")
+p_e <-
+  draw_component_map(map_dat, "cyp_pscore_log", "Total: excess / expected",
+                     c(-lim_log, lim_log), cols_e, log10(r_breaks_map), psc_lab,
+                     "p-score (%), log ratio scale") +
+  draw_component_map(map_dat, "cyp_psc_direct_log", "Direct: COVID-19 deaths / expected",
+                     c(-lim_log, lim_log), cols_e, log10(r_breaks_map), psc_lab,
+                     "p-score (%), log ratio scale", show_years = FALSE) +
+  draw_component_map(map_dat, "cyp_psc_indirect_log", "Indirect: (excess \u2212 COVID-19) / expected",
+                     c(-lim_log, lim_log), cols_e, log10(r_breaks_map), psc_lab,
+                     "p-score (%), log ratio scale", show_years = FALSE) +
+  plot_layout(guides = "collect") & theme(legend.position = "bottom")
+
+ggsave("figures/alternatives/fig2_altE_cyp_pscore_direct_indirect_common_scale.png", p_e,
+       width = 8, height = fig_h(3, 8) + 0.3, dpi = 300)
