@@ -80,4 +80,4 @@ The repository's earlier content (a 2023 analysis of ICD-coded mortality microda
 
 ## Authors
 
-Figure and table code: Hallie Eilerts-Spinelli. Data preparation and excess-mortality estimation: Enrique Acosta. Baseline prediction intervals adapted from Jonas Schöley's [rbx2020](https://github.com/jschoeley/rbx2020).
+Code, data curation and analyses: Enrique Acosta, who also wrote the Data and Methods sections of the manuscript. Hallie Eilerts-Spinelli adapted the map code and wrote the rest of the manuscript. Baseline prediction intervals adapted from Jonas Schöley's [rbx2020](https://github.com/jschoeley/rbx2020).
