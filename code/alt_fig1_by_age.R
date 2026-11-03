@@ -74,7 +74,7 @@ comp_pts <-
   mutate(comp = factor(comp, levels = c("total", "direct", "indirect")))
 
 comp_cols   <- c(total = "grey50", direct = unname(cause_cols["c19"]), indirect = "black")   # same colours in every column
-comp_titles <- c(total = "Total", direct = "Direct", indirect = "Indirect")   # definitions in the caption
+comp_titles <- c(total = "Total\np-score", direct = "Direct\np-score", indirect = "Indirect\np-score")   # definitions in the caption
 comp_rng <-
   comp_pts %>%
   reframe(lo = min(log10(v_lb)), hi = max(log10(v_ub)), .by = comp) %>%
@@ -117,17 +117,17 @@ p_bars <-
   geom_col(position = "stack", width = 0.7, orientation = "y") +
   facet_grid(year ~ ., switch = "y") +
   scale_fill_manual(values = comp_cols, name = NULL,
-                    labels = c(total = "Total: excess deaths", direct = "Direct: COVID-19 deaths",
-                               indirect = "Indirect: excess - COVID-19 deaths")) +
+                    labels = c(total = "Total: excess deaths", direct = "Direct: registered COVID-19 deaths",
+                               indirect = "Indirect: excess - registered COVID-19 deaths")) +
   scale_x_continuous(breaks = seq(-40, 40, 10), minor_breaks = seq(-40, 40, 5), expand = expansion(mult = 0.1)) +
   theme(panel.grid.minor.x = element_line(colour = "grey92", linewidth = 0.25)) +
-  labs(x = NULL, y = NULL, title = "Deaths per 100,000") +
+  labs(x = NULL, y = NULL, title = "Death rates (/100K)") +
   alt_theme(first = FALSE) +
   theme(legend.position = "bottom", legend.direction = "horizontal")
 
 p_altA <- comp_panel("total", first = TRUE) + comp_panel("direct") + comp_panel("indirect") + p_bars +
   plot_layout(nrow = 1, guides = "collect", widths = unname(comp_w[c("total", "direct", "indirect", "total")])) +
-  plot_annotation(caption = paste0("Total = observed / expected, direct = 1 + COVID-19 deaths / expected, indirect = (observed - COVID-19) / expected;\n",
+  plot_annotation(caption = paste0("Total = observed / expected, direct = 1 + registered COVID-19 deaths / expected, indirect = (observed - registered COVID-19) / expected;\n",
                                    "p-scores on one common log ratio scale (panel width proportional to range), 95% CI of the baseline"),
                   theme = theme(plot.caption = element_text(size = 7, hjust = 0))) &
   theme(legend.position = "bottom")
