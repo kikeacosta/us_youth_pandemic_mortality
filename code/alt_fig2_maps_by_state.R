@@ -6,7 +6,7 @@
 #
 #   A. age-standardised p-scores of CYP and adults (25+, one group) and their
 #      difference (CYP minus adults), common colour scale
-#   B. CYP p-score minus the US CYP p-score, and minus the state's all-age p-score
+#   B. CYP p-score minus the US CYP p-score, and minus the state's adult (25+) p-score
 #   C. age-standardised CYP share of the state's excess deaths, of its COVID-19
 #      deaths and of its indirect excess (excess - COVID-19 deaths)
 #   D. age-standardised CYP p-score split into total (excess / expected), direct
@@ -59,13 +59,13 @@ p_a <-
 ggsave("figures/alternatives/fig2_altA_pscores_by_state.png", p_a,
        width = 8, height = fig_h(3, 8), dpi = 300)
 
-# B: CYP p-score relative to the US CYP p-score and to the state's all-age p-score ====
+# B: CYP p-score relative to the US CYP p-score and to the state's adult p-score ====
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 lim_b <- 25
 p_b <-
-  draw_pscore_map(map_dat, "cyp_vs_us_pp",  "CYP p-score: state minus US", lim_b, "percentage points") +
-  draw_pscore_map(map_dat, "cyp_vs_all_pp", "CYP p-score minus the state's all-age p-score", lim_b,
-                  "percentage points", show_years = FALSE) +
+  draw_pscore_map(map_dat, "cyp_vs_us_pp",  "CYP p-score: state minus US", lim_b, "%") +
+  draw_pscore_map(map_dat, "cyp_minus_adult_pp", "p-score difference, CYP minus adults", lim_b,
+                  "%", show_years = FALSE) +
   plot_layout(guides = "collect") & theme(legend.position = "bottom")
 
 ggsave("figures/alternatives/fig2_altB_cyp_pscore_diff_by_state.png", p_b,
