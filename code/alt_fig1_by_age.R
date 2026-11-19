@@ -7,6 +7,11 @@
 #      log ratio axis sharing one scale, panel widths proportional to range) plus
 #      a fourth column of stacked bars with the direct and
 #      indirect excess rates per 100,000
+#   C. p-score decomposition: one panel per year, age groups on the y axis;
+#      stacked bars split the p-score into direct (COVID-19 deaths / expected)
+#      and indirect ((excess - COVID-19 deaths) / expected) parts that add up to
+#      the total p-score (grey point, 95% CI of the baseline); linear scale. Same
+#      design as the state version (alt_fig1_by_state.R)
 #
 # Input : data_inter/excess_age.rds (script 04)
 #         data_inter/fig1_age_data.rds (script 05; COVID-19 deaths by age)
@@ -143,3 +148,59 @@ bind_rows(comp_pts %>%
          pscore_pct, pscore_lb, pscore_ub) %>%
   arrange(panel, component, year, age_group) %>%
   write_csv("figures/alternatives/fig1_altA_total_direct_indirect_by_age.csv")
+
+# C: p-score decomposition, stacked direct + indirect bars ====
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Total p-score = excess / expected = direct (COVID-19 deaths / expected) +
+# indirect ((excess - COVID-19 deaths) / expected), in % on a linear scale so
+# that the two parts stack; the point is the total with the 95% CI of the
+# baseline (observed / uc and observed / lc).
+decomp <-
+  alt %>%
+  transmute(year, age_group,
+            total    = 100 * (dts / bsn - 1),
+            total_lb = 100 * (dts / uc - 1),
+            total_ub = 100 * (dts / lc - 1),
+            direct   = 100 * c19 / bsn,
+            indirect = total - direct)
+
+decomp_bars <-
+  decomp %>%
+  select(year, age_group, direct, indirect) %>%
+  pivot_longer(c(direct, indirect), names_to = "comp", values_to = "v") %>%
+  bind_rows(decomp %>% transmute(year, age_group, comp = "total", v = 0)) %>%   # legend key only
+  mutate(comp = factor(comp, levels = c("total", "direct", "indirect")))
+
+p_altC <-
+  ggplot(decomp, aes(y = age_group)) +
+  geom_vline(xintercept = 0, linewidth = 0.3, colour = "grey40") +
+  geom_col(data = decomp_bars, aes(x = v, fill = comp), position = "stack",
+           width = 0.7, orientation = "y") +
+  geom_errorbar(aes(xmin = total_lb, xmax = total_ub), width = 0, orientation = "y",
+                linewidth = 0.4, colour = comp_cols["total"]) +
+  geom_point(aes(x = total), size = 2, colour = comp_cols["total"]) +
+  facet_grid(. ~ year) +
+  scale_fill_manual(values = comp_cols, name = NULL,
+                    labels = c(total = "Total p-score (95% CI)",
+                               direct = "Direct: registered COVID-19 deaths",
+                               indirect = "Indirect: excess - registered COVID-19 deaths")) +
+  scale_x_continuous(breaks = seq(-20, 40, 10), labels = function(x) sprintf("%+.0f%%", x),
+                     expand = expansion(mult = 0.06)) +
+  guides(fill = guide_legend(override.aes = list(colour = c(comp_cols["total"], NA, NA)))) +
+  labs(x = NULL, y = NULL,
+       caption = paste0("Total = observed / expected - 1 (point, 95% CI of the baseline); direct = registered COVID-19 deaths / expected;\n",
+                        "indirect = (excess - registered COVID-19 deaths) / expected; direct + indirect = total.")) +
+  theme_bars() +
+  theme(strip.text.x       = element_text(size = 9, face = "bold", hjust = 0),
+        panel.grid.major.x = element_line(colour = "grey88", linewidth = 0.3),
+        legend.position    = "bottom", legend.text = element_text(size = 8),
+        legend.key.size    = unit(9, "pt"),
+        plot.caption       = element_text(size = 7, hjust = 0))
+
+ggsave("figures/alternatives/fig1_altC_pscore_decomposition_by_age.png", p_altC,
+       width = 9, height = 3.2, dpi = 300)
+
+decomp %>%
+  mutate(across(total:indirect, ~ round(.x, 2))) %>%
+  arrange(year, age_group) %>%
+  write_csv("figures/alternatives/fig1_altC_pscore_decomposition_by_age.csv")
